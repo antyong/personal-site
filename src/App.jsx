@@ -39,62 +39,78 @@ const education = [
 
 const projects = [
   {
-    number: 'P.01',
+    number: 'CASE 01',
     title: '秀峤村传统村落重点改善提升',
     location: '福建 · 尤溪',
     year: '2024—2025',
-    scope: '项目主导 / 数据采集 / 方案设计 / 模型与图纸',
+    summary: '以传统村落重点改善为工作对象，从现场数据采集进入设计，形成方案、空间模型、效果表达与图纸成果的一体化工作链。',
+    role: '项目主导',
+    focus: '传统村落 / 公共空间 / 在地更新',
+    output: '调研 / 方案 / 模型 / 渲染 / 图纸',
     image: '/images/project-village.jpg',
-    className: 'project-wide',
+    className: '',
   },
   {
-    number: 'P.02',
+    number: 'CASE 02',
     title: '广平村传统村落重点改善提升',
     location: '福建 · 大田',
     year: '2024—2025',
-    scope: '项目主导 / 场所策略 / 效果图渲染 / 图纸绘制',
+    summary: '围绕村落空间改善开展数据采集与方案工作，在整体场所关系、空间表达和技术图纸之间建立清晰衔接。',
+    role: '项目主导',
+    focus: '村落更新 / 场所策略 / 空间体验',
+    output: '调研 / 方案 / 模型 / 渲染 / 图纸',
     image: '/images/project-heritage.jpg',
-    className: 'project-tall',
+    className: 'case-reverse',
   },
   {
-    number: 'P.03',
+    number: 'CASE 03',
     title: '坂头村重点改善提升',
     location: '福建 · 政和',
     year: '一期 / 二期',
-    scope: '方案设计 / 模型制作 / 施工表达 / 文本编订',
+    summary: '参与分期推进的传统村落改善工作，以方案设计、模型制作、效果图与文本编订支持项目从概念走向实施表达。',
+    role: '核心设计参与',
+    focus: '分期更新 / 空间节点 / 文化场景',
+    output: '方案 / 模型 / 渲染 / 图纸 / 文本',
     image: '/images/project-cultural.jpg',
-    className: 'project-standard',
+    className: '',
   },
+]
+
+const methods = [
+  { number: '01', en: 'READ', title: '读懂场所', text: '从环境、文化与使用者出发，识别真实问题。' },
+  { number: '02', en: 'FRAME', title: '建立策略', text: '把复杂条件整理为空间目标与设计优先级。' },
+  { number: '03', en: 'SHAPE', title: '塑造体验', text: '用动线、尺度、界面与节点组织空间叙事。' },
+  { number: '04', en: 'DELIVER', title: '推动落地', text: '以模型、图纸与现场协同保持设计完整度。' },
 ]
 
 const strengths = [
   {
-    icon: DraftingCompass,
+    icon: ScanLine,
     number: '01',
-    title: '全流程设计',
-    en: 'END-TO-END DESIGN',
-    text: '从文化调研、空间策划、概念方案到施工图深化和现场调整，保持设计逻辑在落地过程中的完整。',
+    title: '在地研究力',
+    en: 'CONTEXT RESEARCH',
+    text: '不从形式预设出发，而是先阅读地形、聚落肌理、文化线索与真实使用需求，让设计建立在场所证据上。',
   },
   {
     icon: Grid2X2,
     number: '02',
-    title: '场所叙事',
-    en: 'SPATIAL NARRATIVE',
-    text: '围绕项目定位与客群需求组织动线、场景与触点，让空间回应在地文化并建立可感知的体验。',
+    title: '空间策略力',
+    en: 'SPATIAL STRATEGY',
+    text: '把人群、运营、功能与场地限制转化为清晰的空间结构，建立从总体关系到关键节点的设计逻辑。',
   },
   {
     icon: Box,
     number: '03',
-    title: '视觉表达',
-    en: 'VISUALIZATION',
-    text: '熟练使用 CAD、SU、PS、AI、Lumion、C4D 与 PR，将空间策略转译为清晰、精准的设计表达。',
+    title: '场景叙事力',
+    en: 'EXPERIENCE DESIGN',
+    text: '通过动线节奏、尺度变化、界面关系与主题节点，让空间承载记忆、行为和可被感知的在地故事。',
   },
   {
-    icon: ScanLine,
+    icon: DraftingCompass,
     number: '04',
-    title: '数字研究',
-    en: 'DIGITAL RESEARCH',
-    text: '参与福建古建数字化测绘与分析，并开发基于 AI 的木质建筑构件识别检测程序，已进入应用阶段。',
+    title: '全流程落地力',
+    en: 'DESIGN DELIVERY',
+    text: '从概念、建模与效果表达延伸到施工图深化和现场调整，在技术条件中维护核心空间体验。',
   },
 ]
 
@@ -113,15 +129,7 @@ function App() {
       <a className="skip-link" href="#content">跳到主要内容</a>
       <main id="content">
         <section className="hero" id="top">
-          <video
-            className="hero-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/project-village.jpg"
-            aria-hidden="true"
-          >
+          <video className="hero-video" autoPlay muted loop playsInline poster="/images/project-village.jpg" aria-hidden="true">
             <source src="/video/hero-architecture.mp4" type="video/mp4" />
           </video>
           <div className="hero-shade" />
@@ -129,32 +137,85 @@ function App() {
           <header className="site-header frame">
             <a className="brand" href="#top" aria-label="返回首页">AT<span>®</span></a>
             <nav aria-label="主要导航">
-              <a href="#about"><span>关于</span></a>
-              <a href="#projects"><span>项目</span></a>
+              <a href="#projects"><span>案例</span></a>
               <a href="#strengths"><span>能力</span></a>
+              <a href="#about"><span>关于</span></a>
             </nav>
-            <a className="contact-link" href="#contact">
-              联系我 <ArrowUpRight size={18} strokeWidth={2.5} />
-            </a>
+            <a className="contact-link" href="#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
           </header>
 
           <div className="hero-copy frame">
-            <p className="eyebrow"><span>空间设计师</span> / 青岛 · 福州</p>
-            <h1><span>空间，</span><span>让场所发生。</span></h1>
-            <div className="hero-bottom">
-              <p>聚焦文旅空间、乡村振兴与历史文化场所，从在地研究与策略，到空间叙事与设计落地。</p>
-              <a href="#about" className="scroll-cue" aria-label="向下浏览"><ArrowDownRight size={30} /></a>
+            <p className="eyebrow"><span>SELECTED SPATIAL WORKS</span> / 2022—2026</p>
+            <h1><span>以空间，</span><span>回应场所。</span></h1>
+            <div className="hero-bottom hero-bottom-cases">
+              <p>我从在地文化与真实使用出发，把复杂问题转译为空间策略、体验场景与可落地的设计成果。</p>
+              <div className="hero-case-count" aria-label="案例概览">
+                <strong>03</strong><span>FEATURED CASES<br />READY FOR WORKS</span>
+              </div>
+              <a href="#projects" className="scroll-cue" aria-label="查看精选案例"><ArrowDownRight size={30} /></a>
             </div>
           </div>
 
-          <div className="hero-index">PORTFOLIO / 2026</div>
+          <div className="hero-index">CASE-LED PORTFOLIO / 2026</div>
           <div className="media-note">VIDEO PLACEHOLDER / REPLACEABLE</div>
+        </section>
+
+        <section className="projects section" id="projects">
+          <div className="section-frame">
+            <SectionHeading index="01" label="SELECTED CASES" title={'案例优先 /\n用过程证明能力'} light />
+
+            <div className="case-manifesto">
+              <p>CASE STUDY SYSTEM</p>
+              <h3>案例不是结果图的堆叠，而是一条从问题识别、策略建立到空间落地的证据链。</h3>
+              <div className="method-grid">
+                {methods.map((method) => (
+                  <div className="method-item" key={method.number}>
+                    <div><span>{method.number}</span><small>{method.en}</small></div>
+                    <h4>{method.title}</h4>
+                    <p>{method.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="case-list">
+              {projects.map((project) => (
+                <article className={`case-card ${project.className}`} key={project.number}>
+                  <div className="case-visual">
+                    <img src={project.image} alt="建筑空间视觉占位图，后续替换为项目实景" />
+                    <span className="placeholder-tag">VISUAL PLACEHOLDER / 待替换作品图</span>
+                    <span className="case-number">{project.number}</span>
+                  </div>
+
+                  <div className="case-copy">
+                    <div className="case-kicker"><span>{project.location}</span><span>{project.year}</span></div>
+                    <h3>{project.title}</h3>
+                    <p className="case-summary">{project.summary}</p>
+                    <div className="case-facts">
+                      <div><span>MY ROLE</span><p>{project.role}</p></div>
+                      <div><span>DESIGN FOCUS</span><p>{project.focus}</p></div>
+                      <div><span>OUTPUT</span><p>{project.output}</p></div>
+                    </div>
+                    <div className="case-ready">
+                      <span>CASE CONTENT READY</span>
+                      <p>已预设总览、过程、图纸与成果位置，待接入你的真实作品。</p>
+                      <ArrowUpRight size={26} strokeWidth={1.8} aria-hidden="true" />
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="case-upload-note">
+              <div><span>NEXT / 下一步</span><h3>把真实作品变成完整案例叙事。</h3></div>
+              <p>后续你可以提供项目照片、效果图、分析图、平面图、草图和项目说明。我会按“背景—问题—策略—过程—成果”的结构，为每个案例整理成可阅读、可展示的完整页面内容。</p>
+            </div>
+          </div>
         </section>
 
         <section className="about section" id="about">
           <div className="section-frame">
-            <SectionHeading index="01" label="PROFILE" title={'以研究建立秩序，\n以空间承载故事。'} />
-
+            <SectionHeading index="02" label="PROFILE" title={'以研究建立秩序，\n以空间承载故事。'} />
             <div className="about-grid">
               <figure className="portrait-block">
                 <img src="/images/an-tong-profile.jpg" alt="空间设计师安桐" />
@@ -162,8 +223,8 @@ function App() {
               </figure>
 
               <div className="bio-block">
-                <p className="lead">安桐，空间与建筑设计师。</p>
-                <p>拥有设计学与建筑学交叉背景，实践聚焦文旅空间、乡村振兴公共空间、历史文化街区及传统建筑保护。擅长从场所调研与文化线索出发，完成空间策划、场景设计、可视化表达与施工深化。</p>
+                <p className="lead">我关注空间如何回应真实生活，而不止于形式。</p>
+                <p>安桐，空间与建筑设计师。拥有设计学与建筑学交叉背景，实践聚焦文旅空间、乡村振兴公共空间、历史文化街区及传统建筑保护。习惯从场所调研和文化线索中找到设计支点，再通过空间结构、场景节点与技术表达推动方案落地。</p>
                 <div className="bio-meta">
                   <a href="mailto:1577288186@qq.com"><Mail size={18} /> 1577288186@qq.com</a>
                   <a href="tel:+8615653209989"><Phone size={18} /> +86 156 5320 9989</a>
@@ -192,7 +253,6 @@ function App() {
                   </article>
                 ))}
               </div>
-
               <div className="resume-column education-column">
                 <p className="column-label">教育背景 / EDUCATION</p>
                 {education.map((item) => (
@@ -206,35 +266,15 @@ function App() {
           </div>
         </section>
 
-        <section className="projects section" id="projects">
-          <div className="section-frame">
-            <SectionHeading index="02" label="SELECTED WORK" title={'精选项目 /\n在地空间实践'} />
-            <div className="project-list">
-              {projects.map((project) => (
-                <article className={`project-card ${project.className}`} key={project.number}>
-                  <div className="project-image">
-                    <img src={project.image} alt="建筑空间视觉占位图，后续替换为项目实景" />
-                    <span className="placeholder-tag">VISUAL PLACEHOLDER / 待替换作品图</span>
-                    <span className="project-number">{project.number}</span>
-                  </div>
-                  <div className="project-info">
-                    <div><p>{project.location} / {project.year}</p><h3>{project.title}</h3></div>
-                    <p className="project-scope">{project.scope}</p>
-                    <ArrowUpRight className="project-arrow" size={36} strokeWidth={1.8} aria-hidden="true" />
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="project-footnote">
-              <span>＋ 另参与 8 个传统村落、文化名村及保护规划项目</span>
-              <span>项目内容与图片将在下一阶段继续完善</span>
-            </div>
-          </div>
-        </section>
-
         <section className="strengths section swiss-dots" id="strengths">
           <div className="section-frame">
-            <SectionHeading index="03" label="CAPABILITIES" title={'把复杂问题，\n转译为清晰空间。'} />
+            <SectionHeading index="03" label="DESIGN CAPABILITIES" title={'不止会画空间，\n更能定义问题。'} />
+
+            <div className="capability-statement">
+              <p>我的空间设计能力建立在一条完整路径上：</p>
+              <h3>看见场所中尚未被表达的价值，建立清晰策略，再让它转化为可感知、可实施的空间体验。</h3>
+            </div>
+
             <div className="strength-grid">
               {strengths.map(({ icon: Icon, ...item }) => (
                 <article className="strength-card" key={item.number}>
@@ -254,10 +294,10 @@ function App() {
         <section className="contact-section" id="contact">
           <div className="contact-grid" aria-hidden="true" />
           <div className="contact-inner section-frame">
-            <SectionHeading index="04" label="CONTACT" title={'一起创造，\n值得发生的场所。'} light />
+            <SectionHeading index="04" label="CONTACT" title={'让下一个案例，\n从真实问题开始。'} light />
             <div className="contact-content">
-              <p>开放空间设计、建筑与文旅项目合作，也期待与你交流关于场所、文化与体验的想法。</p>
-              <a className="email-cta" href="mailto:1577288186@qq.com"><span>写邮件给我</span><Mail size={36} strokeWidth={1.7} /></a>
+              <p>如果你正在寻找能够理解场所、组织体验并推动落地的空间设计合作，欢迎联系我。</p>
+              <a className="email-cta" href="mailto:1577288186@qq.com"><span>聊聊你的项目</span><Mail size={36} strokeWidth={1.7} /></a>
             </div>
             <div className="contact-footer">
               <div><span>EMAIL</span><a href="mailto:1577288186@qq.com">1577288186@qq.com</a></div>
