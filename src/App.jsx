@@ -76,6 +76,65 @@ const projects = [
   },
 ]
 
+const projectArchive = [
+  {
+    number: '04',
+    title: '建瓯市第四次全国文物普查',
+    location: '福建 · 南平',
+    type: '文化遗产调查',
+    role: '项目负责人 / 培训 / 对接 / 数据采集',
+  },
+  {
+    number: '05',
+    title: '石兰自然村传统村落重点改善提升',
+    location: '福建 · 福鼎',
+    type: '传统村落更新',
+    role: '项目主导 / 方案 / 模型 / 图纸 / 文本',
+  },
+  {
+    number: '06',
+    title: '马尾船政局保护修缮图则编订',
+    location: '福建 · 福州',
+    type: '历史建筑保护',
+    role: '法规分析 / 图则 / 示意图 / 文本',
+  },
+  {
+    number: '07',
+    title: '山坊村保护发展规划与重点改善提升',
+    location: '福建',
+    type: '保护规划与更新',
+    role: '数据采集 / 分析图 / 图纸 / 文本',
+  },
+  {
+    number: '08',
+    title: '长校村传统村落重点改善提升',
+    location: '福建 · 清流',
+    type: '传统村落更新',
+    role: '数据采集 / 图纸 / 文本',
+  },
+  {
+    number: '09',
+    title: '岑兜村传统村落保护发展规划',
+    location: '福建 · 南安',
+    type: '保护发展规划 2024—2035',
+    role: '规划文本 / 模型渲染 / 分析图',
+  },
+  {
+    number: '10',
+    title: '前洋村中国传统村落重点提升',
+    location: '福建 · 古田',
+    type: '传统村落更新',
+    role: '方案 / 模型 / 渲染 / 图纸 / 文本',
+  },
+  {
+    number: '11',
+    title: '黄田村文农旅产业发展规划',
+    location: '福建 · 平和',
+    type: '文农旅规划 2023—2035',
+    role: '规划文本 / 模型渲染 / 分析图',
+  },
+]
+
 const methods = [
   { number: '01', en: 'READ', title: '读懂场所', text: '从环境、文化与使用者出发，识别真实问题。' },
   { number: '02', en: 'FRAME', title: '建立策略', text: '把复杂条件整理为空间目标与设计优先级。' },
@@ -137,9 +196,9 @@ function App() {
           <header className="site-header frame">
             <a className="brand" href="#top" aria-label="返回首页">AT<span>®</span></a>
             <nav aria-label="主要导航">
+              <a href="#about"><span>关于</span></a>
               <a href="#projects"><span>案例</span></a>
               <a href="#strengths"><span>能力</span></a>
-              <a href="#about"><span>关于</span></a>
             </nav>
             <a className="contact-link" href="#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
           </header>
@@ -150,7 +209,7 @@ function App() {
             <div className="hero-bottom hero-bottom-cases">
               <p>我从在地文化与真实使用出发，把复杂问题转译为空间策略、体验场景与可落地的设计成果。</p>
               <div className="hero-case-count" aria-label="案例概览">
-                <strong>03</strong><span>FEATURED CASES<br />READY FOR WORKS</span>
+                <strong>11</strong><span>PROJECT INDEX<br />03 FEATURED CASES</span>
               </div>
               <a href="#projects" className="scroll-cue" aria-label="查看精选案例"><ArrowDownRight size={30} /></a>
             </div>
@@ -160,9 +219,72 @@ function App() {
           <div className="media-note">VIDEO PLACEHOLDER / REPLACEABLE</div>
         </section>
 
+        <section className="about section" id="about">
+          <div className="section-frame">
+            <SectionHeading index="01" label="PROFILE" title={'以研究建立秩序，\n以空间承载故事。'} />
+            <div className="about-grid">
+              <figure className="portrait-block">
+                <img src="/images/an-tong-profile.jpg" alt="空间设计师安桐" />
+                <figcaption><span>AN TONG</span><span>SPATIAL DESIGNER</span></figcaption>
+              </figure>
+
+              <div className="bio-block">
+                <p className="lead">我关注空间如何回应真实生活，而不止于形式。</p>
+                <p>安桐，空间与建筑设计师。拥有设计学与建筑学交叉背景，实践聚焦文旅空间、乡村振兴公共空间、历史文化街区及传统建筑保护。习惯从场所调研和文化线索中找到设计支点，再通过空间结构、场景节点与技术表达推动方案落地。</p>
+                <div className="bio-meta">
+                  <a href="mailto:1577288186@qq.com"><Mail size={18} /> 1577288186@qq.com</a>
+                  <a href="tel:+8615653209989"><Phone size={18} /> +86 156 5320 9989</a>
+                  <span><MapPin size={18} /> 山东青岛 / 福建福州</span>
+                </div>
+              </div>
+
+              <div className="stats-grid" aria-label="项目数据">
+                {stats.map((stat) => (
+                  <div className="stat-card" key={stat.label}>
+                    <div><strong>{stat.value}</strong><sup>{stat.unit}</sup></div>
+                    <p>{stat.label}</p>
+                    <span className="stat-cross" aria-hidden="true">+</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="design-positioning" aria-label="空间设计能力定位">
+              <p>SPATIAL DESIGN POSITIONING</p>
+              <h3>我不把空间当作孤立的形式，而是把文化、行为、运营与建造条件组织成一个可被使用、感知和持续发生的场所系统。</h3>
+              <div className="positioning-points">
+                <span>01 / 发现空间价值</span>
+                <span>02 / 建立体验秩序</span>
+                <span>03 / 推动设计落地</span>
+              </div>
+            </div>
+
+            <div className="resume-grid">
+              <div className="resume-column">
+                <p className="column-label">工作经历 / EXPERIENCE</p>
+                {experience.map((item) => (
+                  <article className="timeline-row" key={item.period}>
+                    <time>{item.period}</time>
+                    <div><h3>{item.place}</h3><p className="role">{item.role}</p><p>{item.detail}</p></div>
+                  </article>
+                ))}
+              </div>
+              <div className="resume-column education-column">
+                <p className="column-label">教育背景 / EDUCATION</p>
+                {education.map((item) => (
+                  <article className="education-row" key={item.period}>
+                    <time>{item.period}</time>
+                    <div><h3>{item.school}</h3><p>{item.major}</p></div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="projects section" id="projects">
           <div className="section-frame">
-            <SectionHeading index="01" label="SELECTED CASES" title={'案例优先 /\n用过程证明能力'} light />
+            <SectionHeading index="02" label="SELECTED CASES" title={'案例优先 /\n用过程证明能力'} light />
 
             <div className="case-manifesto">
               <p>CASE STUDY SYSTEM</p>
@@ -206,62 +328,34 @@ function App() {
               ))}
             </div>
 
-            <div className="case-upload-note">
-              <div><span>NEXT / 下一步</span><h3>把真实作品变成完整案例叙事。</h3></div>
-              <p>后续你可以提供项目照片、效果图、分析图、平面图、草图和项目说明。我会按“背景—问题—策略—过程—成果”的结构，为每个案例整理成可阅读、可展示的完整页面内容。</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="about section" id="about">
-          <div className="section-frame">
-            <SectionHeading index="02" label="PROFILE" title={'以研究建立秩序，\n以空间承载故事。'} />
-            <div className="about-grid">
-              <figure className="portrait-block">
-                <img src="/images/an-tong-profile.jpg" alt="空间设计师安桐" />
-                <figcaption><span>AN TONG</span><span>SPATIAL DESIGNER</span></figcaption>
-              </figure>
-
-              <div className="bio-block">
-                <p className="lead">我关注空间如何回应真实生活，而不止于形式。</p>
-                <p>安桐，空间与建筑设计师。拥有设计学与建筑学交叉背景，实践聚焦文旅空间、乡村振兴公共空间、历史文化街区及传统建筑保护。习惯从场所调研和文化线索中找到设计支点，再通过空间结构、场景节点与技术表达推动方案落地。</p>
-                <div className="bio-meta">
-                  <a href="mailto:1577288186@qq.com"><Mail size={18} /> 1577288186@qq.com</a>
-                  <a href="tel:+8615653209989"><Phone size={18} /> +86 156 5320 9989</a>
-                  <span><MapPin size={18} /> 山东青岛 / 福建福州</span>
+            <div className="project-archive">
+              <div className="archive-heading">
+                <div>
+                  <span>PROJECT ARCHIVE / 04—11</span>
+                  <h3>更多项目，已经为后续作品材料预留完整展示入口。</h3>
                 </div>
+                <p>当前先以项目档案呈现。收到你的图片、图纸与说明后，可逐项升级为与上方一致的完整案例。</p>
               </div>
 
-              <div className="stats-grid" aria-label="项目数据">
-                {stats.map((stat) => (
-                  <div className="stat-card" key={stat.label}>
-                    <div><strong>{stat.value}</strong><sup>{stat.unit}</sup></div>
-                    <p>{stat.label}</p>
-                    <span className="stat-cross" aria-hidden="true">+</span>
-                  </div>
+              <div className="archive-grid">
+                {projectArchive.map((project) => (
+                  <article className="archive-card" key={project.number}>
+                    <div className="archive-number">{project.number}</div>
+                    <div className="archive-meta"><span>{project.location}</span><span>{project.type}</span></div>
+                    <h4>{project.title}</h4>
+                    <p>{project.role}</p>
+                    <div className="archive-status">
+                      <span>CASE SLOT / 待接入作品</span>
+                      <ArrowUpRight size={20} strokeWidth={1.8} aria-hidden="true" />
+                    </div>
+                  </article>
                 ))}
               </div>
             </div>
 
-            <div className="resume-grid">
-              <div className="resume-column">
-                <p className="column-label">工作经历 / EXPERIENCE</p>
-                {experience.map((item) => (
-                  <article className="timeline-row" key={item.period}>
-                    <time>{item.period}</time>
-                    <div><h3>{item.place}</h3><p className="role">{item.role}</p><p>{item.detail}</p></div>
-                  </article>
-                ))}
-              </div>
-              <div className="resume-column education-column">
-                <p className="column-label">教育背景 / EDUCATION</p>
-                {education.map((item) => (
-                  <article className="education-row" key={item.period}>
-                    <time>{item.period}</time>
-                    <div><h3>{item.school}</h3><p>{item.major}</p></div>
-                  </article>
-                ))}
-              </div>
+            <div className="case-upload-note">
+              <div><span>NEXT / 下一步</span><h3>11 个项目框架，等待你的真实作品进入。</h3></div>
+              <p>后续你可以提供项目照片、效果图、分析图、平面图、草图和项目说明。我会按“背景—问题—策略—过程—成果”的结构，为每个案例建立视觉节奏与叙事重点，让作品不只是被看见，也能清楚证明你的空间判断与落地能力。</p>
             </div>
           </div>
         </section>
