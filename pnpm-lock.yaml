@@ -17,6 +17,9 @@ importers:
       lucide-react:
         specifier: ^0.468.0
         version: 0.468.0(react@19.2.6)
+      pannellum:
+        specifier: ^2.5.7
+        version: 2.5.7
       react:
         specifier: 19.2.6
         version: 19.2.6
@@ -270,6 +273,9 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  pannellum@2.5.7:
+    resolution: {integrity: sha512-AHMRYdLPxetwhBg4lO5EgoZ55C/e+wrJF2WaFQIQA18HSVcvLvsdXEjDL7WpD8MPIFwNnH9qoUDsUqP8cF4pgA==}
+
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -507,6 +513,8 @@ snapshots:
       react: 19.2.6
 
   nanoid@3.3.18: {}
+
+  pannellum@2.5.7: {}
 
   picocolors@1.1.1: {}
 
