@@ -2,6 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ff3000" />
     <meta name="description" content="安桐空间与建筑设计案例集：从在地研究、空间策略与场景叙事，到设计表达与项目落地。" />
@@ -16,6 +17,14 @@
     <title>安桐｜空间设计师</title>
   </head>
   <body>
+    <!--[if IE]>
+      <script>if (window.location.pathname.toLowerCase() !== '/ie.html') { window.location.replace('/ie.html'); }</script>
+    <![endif]-->
+    <script>
+      if (document.documentMode && window.location.pathname.toLowerCase() !== '/ie.html') {
+        window.location.replace('/ie.html')
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
