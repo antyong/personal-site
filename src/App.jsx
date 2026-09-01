@@ -52,12 +52,12 @@ const projects = [
     role: '项目主导',
     focus: '文化叙事 / 廊道空间 / 在地更新',
     output: '调研 / 方案 / 模型 / 渲染 / 图纸',
-    image: '/images/guangping/concept-render.jpg',
+    image: '/images/guangping/built-entrance.jpg',
     gallery: [
-      { src: '/images/guangping/concept-render.jpg', label: '效果图 / CONCEPT', alt: '广平村孝文化长廊设计效果图' },
-      { src: '/images/guangping/built-entrance.jpg', label: '建成实景 / BUILT', alt: '广平村孝文化长廊建成入口' },
+      { src: '/images/guangping/built-entrance.jpg', label: '建成入口 / BUILT', alt: '广平村孝文化长廊建成入口' },
       { src: '/images/guangping/built-corridor-portrait.jpg', label: '廊道空间 / CORRIDOR', alt: '广平村孝文化长廊内部空间' },
       { src: '/images/guangping/built-aerial.jpg', label: '建成航拍 / AERIAL', alt: '广平村孝文化长廊建成航拍' },
+      { src: '/images/guangping/built-facade.jpg', label: '建成立面 / FACADE', alt: '广平村孝文化长廊木构立面实景' },
     ],
     href: '/?case=guangping',
     ready: true,
@@ -92,12 +92,12 @@ const projects = [
     role: '核心设计参与',
     focus: '旧房活化 / 文旅展览 / 夜景光影 / 舞美延展',
     output: '规划 / 方案 / 模型 / 渲染 / 施工图 / 落地',
-    image: '/images/huangtian/model.jpg',
+    image: '/images/huangtian/built-03.jpg',
     gallery: [
-      { src: '/images/huangtian/model.jpg', label: '模型效果 / CONCEPT', alt: '黄田文化馆更新设计模型效果' },
       { src: '/images/huangtian/built-03.jpg', label: '建成实景 / BUILT', alt: '黄田文化馆木构与夯土墙建成实景' },
+      { src: '/images/huangtian/built-01.jpg', label: '入口界面 / ENTRY', alt: '黄田文化馆入口与灰砖花墙建成实景' },
       { src: '/images/huangtian/night-02.jpg', label: '夜景光影 / NIGHT', alt: '黄田文化馆夜间光影空间' },
-      { src: '/images/huangtian/planning.jpg', label: '文旅规划 / PLANNING', alt: '黄田村村庄文农旅产业发展规划' },
+      { src: '/images/huangtian/built-04.jpg', label: '木构细部 / DETAIL', alt: '黄田文化馆层叠瓦檐与木构细部' },
     ],
     href: '/?case=huangtian',
     ready: true,
@@ -105,6 +105,26 @@ const projects = [
   },
   {
     number: 'CASE 04',
+    title: '石兰古村文旅活化改造设计',
+    location: '福建 · 福鼎',
+    year: '2025 / 在建',
+    summary: '以传统石厝保护与再生为底线，统筹古村保护、民宿旅居、文化展厅与业态导入；通过总体规划锁定文旅路径与功能节点，再以民居修缮、木构更新和展厅空间完成局部落地。',
+    role: '项目主导',
+    focus: '文旅规划 / 古建修缮 / 民宿活化 / 展陈空间',
+    output: '调研 / 总体规划 / 方案 / 效果图 / 施工图 / 现场配合',
+    image: '/images/shilan/tourism-render-01.jpg',
+    gallery: [
+      { src: '/images/shilan/tourism-render-01.jpg', label: '古村规划 / MASTERPLAN', alt: '石兰村古村保护与活化总体效果图' },
+      { src: '/images/shilan/homestay-built-01.jpg', label: '民宿修缮 / BUILT', alt: '石兰村民宿修缮建成实景' },
+      { src: '/images/shilan/exhibition-built-01.jpg', label: '文化展厅 / EXHIBITION', alt: '石兰村文化展厅建成外观' },
+      { src: '/images/shilan/tourism-render-02.jpg', label: '业态场景 / TOURISM', alt: '石兰村文旅业态整体效果图' },
+    ],
+    href: '/?case=shilan',
+    ready: true,
+    className: 'case-reverse',
+  },
+  {
+    number: 'CASE 05',
     title: '三旬火塘民谣小酒馆',
     location: '连锁品牌 · 商业空间',
     year: '已建成 / 运营中',
@@ -124,7 +144,7 @@ const projects = [
     className: '',
   },
   {
-    number: 'CASE 05',
+    number: 'CASE 06',
     title: 'LA NIKAR 线下体验店',
     location: '新潮服装品牌 · 商业空间',
     year: '已建成 / 运营中',
@@ -132,12 +152,12 @@ const projects = [
     role: '核心设计参与',
     focus: '品牌体验 / 零售陈列 / 直播运营',
     output: '方案讨论 / 效果图 / 部分施工图 / 落地',
-    image: '/images/lanikar/render-facade.jpg',
+    image: '/images/lanikar/built-facade.jpg',
     gallery: [
-      { src: '/images/lanikar/render-facade.jpg', label: '品牌门店 / CONCEPT', alt: 'LA NIKAR 服装品牌线下体验店门头效果图' },
       { src: '/images/lanikar/built-facade.jpg', label: '建成门店 / BUILT', alt: 'LA NIKAR 服装品牌线下体验店建成实景' },
       { src: '/images/lanikar/built-live-studio.jpg', label: '内容拍摄 / LIVE STUDIO', alt: 'LA NIKAR 门店直播与内容拍摄场景' },
-      { src: '/images/lanikar/render-overview-rear.jpg', label: '零售体验 / RETAIL', alt: 'LA NIKAR 线下体验店零售空间效果图' },
+      { src: '/images/lanikar/built-merchandise.jpg', label: '商品陈列 / RETAIL', alt: 'LA NIKAR 线下体验店商品陈列实景' },
+      { src: '/images/lanikar/render-lounge.jpg', label: '空间效果 / LOUNGE', alt: 'LA NIKAR 线下体验店会客区与零售空间效果图' },
     ],
     href: '/?case=lanikar',
     ready: true,
@@ -180,6 +200,147 @@ const tulanduoGroups = [
       { src: '/images/tulanduo/drawing-elevation.jpg', alt: '图兰朵品牌终端立面深化图' },
       { src: '/images/tulanduo/drawing-logo.jpg', alt: '图兰朵品牌终端商标尺寸与材质图' },
       { src: '/images/tulanduo/drawing-facade.jpg', alt: '图兰朵品牌终端门头商标立面图' },
+    ],
+  },
+]
+
+const fengyuGroups = [
+  {
+    key: 'corridor',
+    label: '景观长廊实景',
+    en: 'BUILT CORRIDOR',
+    images: [
+      { src: '/images/fengyu/corridor-overview.jpg', alt: '丰余村景观长廊建成全景' },
+      { src: '/images/fengyu/corridor-roof.jpg', alt: '丰余村景观长廊层叠瓦屋面' },
+      { src: '/images/fengyu/corridor-hillside.jpg', alt: '丰余村景观长廊靠山侧建成实景' },
+      { src: '/images/fengyu/corridor-structure.jpg', alt: '丰余村景观长廊木构施工完成实景' },
+      { src: '/images/fengyu/corridor-interior.jpg', alt: '丰余村景观长廊内部木构与座椅' },
+      { src: '/images/fengyu/corridor-entry.jpg', alt: '丰余村景观长廊入口及卵石墙' },
+    ],
+  },
+  {
+    key: 'facade',
+    label: '立面空间实景',
+    en: 'FACADE RENEWAL',
+    images: [
+      { src: '/images/fengyu/facade-street.jpg', alt: '丰余村沿街建筑立面整治实景' },
+      { src: '/images/fengyu/facade-timber.jpg', alt: '丰余村木构立面与格栅实景' },
+      { src: '/images/fengyu/facade-earth.jpg', alt: '丰余村夯土立面与木构檐口实景' },
+    ],
+  },
+  {
+    key: 'drawing',
+    label: '立面整治图纸',
+    en: 'FACADE DRAWINGS',
+    images: [
+      { src: '/images/fengyu/facade-detail-01.jpg', alt: '丰余村立面整治木构节点大样图一' },
+      { src: '/images/fengyu/facade-detail-02.jpg', alt: '丰余村立面整治屋面与梁柱节点图' },
+      { src: '/images/fengyu/facade-elevation-01.jpg', alt: '丰余村一号建筑立面整治正立面图' },
+      { src: '/images/fengyu/facade-elevation-02.jpg', alt: '丰余村一号建筑立面整治侧立面图' },
+    ],
+  },
+  {
+    key: 'drawing',
+    label: '长廊施工图纸',
+    en: 'CORRIDOR DRAWINGS',
+    images: [
+      { src: '/images/fengyu/corridor-plan.jpg', alt: '丰余村景观长廊平面图' },
+      { src: '/images/fengyu/corridor-section.jpg', alt: '丰余村景观长廊轴线立面图' },
+      { src: '/images/fengyu/corridor-detail-01.jpg', alt: '丰余村景观长廊梁柱连接节点大样图一' },
+      { src: '/images/fengyu/corridor-detail-02.jpg', alt: '丰余村景观长廊梁柱连接节点大样图二' },
+    ],
+  },
+]
+
+const likeGroups = [
+  {
+    key: 'built',
+    label: '民宿建成实景',
+    en: 'BUILT HOMESTAY',
+    images: [
+      { src: '/images/like/built-corridor.jpg', alt: '李窠村乡村民宿建成木构立面与外廊' },
+      { src: '/images/like/built-entry.jpg', alt: '李窠村乡村民宿建成入口与二层增建体量' },
+    ],
+  },
+  {
+    key: 'existing',
+    label: '旧房改造原址',
+    en: 'EXISTING CONDITION',
+    images: [
+      { src: '/images/like/existing-condition.jpg', alt: '李窠村民宿改造前的原建筑、村道与航拍原址综合对比图' },
+    ],
+  },
+  {
+    key: 'drawing',
+    label: '施工深化图纸',
+    en: 'DESIGN DELIVERY',
+    images: [
+      { src: '/images/like/drawing-timber-detail.jpg', alt: '李窠村民宿加建木构节点大样图' },
+      { src: '/images/like/drawing-timber-elevation.jpg', alt: '李窠村民宿加建木构构造立面图' },
+      { src: '/images/like/drawing-elevations.jpg', alt: '李窠村民宿建筑立面整治图' },
+      { src: '/images/like/drawing-south-elevation.jpg', alt: '李窠村民宿南立面施工图' },
+      { src: '/images/like/drawing-second-plan.jpg', alt: '李窠村民宿二层平面图' },
+      { src: '/images/like/drawing-first-plan.jpg', alt: '李窠村民宿首层平面图' },
+    ],
+  },
+]
+
+const xiuqiaoGroups = [
+  {
+    key: 'overview',
+    label: '建筑效果',
+    en: 'ARCHITECTURAL VISION',
+    images: [
+      { src: '/images/xiuqiao/hero-exterior-01.webp', alt: '秀峤村民宿与文旅活动中心建筑整体效果图' },
+      { src: '/images/xiuqiao/hero-exterior-02.webp', alt: '秀峤村民宿与文旅活动中心鸟瞰效果图' },
+      { src: '/images/xiuqiao/hero-exterior-03.webp', alt: '秀峤村滨水木构建筑群效果图' },
+    ],
+  },
+  {
+    key: 'homestay',
+    label: '民宿空间',
+    en: 'HOMESTAY INTERIOR',
+    images: [
+      { src: '/images/xiuqiao/homestay-interior-01.webp', alt: '民宿客房木构屋顶与床榻空间参考' },
+      { src: '/images/xiuqiao/homestay-interior-02.webp', alt: '民宿保留梁架的起居空间参考' },
+      { src: '/images/xiuqiao/homestay-interior-03.webp', alt: '民宿客房暖色室内氛围参考' },
+      { src: '/images/xiuqiao/homestay-interior-04.webp', alt: '民宿保留木柱的客房空间参考' },
+    ],
+  },
+  {
+    key: 'activity',
+    label: '活动中心',
+    en: 'ACTIVITY CENTRE',
+    images: [
+      { src: '/images/xiuqiao/activity-space-01.webp', alt: '文旅活动中心公共休憩空间参考' },
+      { src: '/images/xiuqiao/activity-space-02.webp', alt: '文旅活动中心公共长桌空间参考' },
+      { src: '/images/xiuqiao/activity-space-03.webp', alt: '文旅活动中心木构公共大厅空间参考' },
+    ],
+  },
+  {
+    key: 'drawings',
+    label: '施工图纸',
+    en: 'TECHNICAL DRAWINGS',
+    images: [
+      { src: '/images/xiuqiao/activity-drawing-01.webp', alt: '文旅活动中心一层平面施工图' },
+      { src: '/images/xiuqiao/activity-drawing-02.webp', alt: '文旅活动中心立面施工图' },
+      { src: '/images/xiuqiao/activity-drawing-03.webp', alt: '文旅活动中心木构节点施工图' },
+      { src: '/images/xiuqiao/activity-drawing-04.webp', alt: '文旅活动中心滨水步道平面施工图' },
+      { src: '/images/xiuqiao/homestay-drawing-01.webp', alt: '民宿地面铺装构造施工图' },
+      { src: '/images/xiuqiao/homestay-drawing-02.webp', alt: '民宿二层平面施工图' },
+      { src: '/images/xiuqiao/homestay-drawing-03.webp', alt: '民宿立面施工图' },
+      { src: '/images/xiuqiao/homestay-drawing-04.webp', alt: '民宿剖面施工图' },
+    ],
+  },
+  {
+    key: 'site',
+    label: '在建记录',
+    en: 'SITE PROGRESS',
+    images: [
+      { src: '/images/xiuqiao/site-01.webp', alt: '秀峤村文旅项目滨水场地施工现场' },
+      { src: '/images/xiuqiao/site-02.webp', alt: '秀峤村民宿木构走廊施工现场' },
+      { src: '/images/xiuqiao/site-03.webp', alt: '秀峤村民宿原木梁柱与夯土墙施工现场' },
+      { src: '/images/xiuqiao/site-04.webp', alt: '秀峤村民宿竹编隔墙施工现场' },
     ],
   },
 ]
@@ -361,9 +522,9 @@ const huangtianBuilt = [
   { src: '/images/huangtian/built-01.jpg', label: '01 / 入口与砖砌花墙', alt: '黄田文化馆入口与灰砖花墙建成实景' },
   { src: '/images/huangtian/built-02.jpg', label: '02 / 新旧界面的巷道', alt: '黄田文化馆传统木构与新建灰砖界面之间的巷道' },
   { src: '/images/huangtian/built-03.jpg', label: '03 / 夯土墙与木构屋架', alt: '黄田文化馆保留夯土墙与优化木构屋架建成实景', wide: true },
-  { src: '/images/huangtian/built-04.jpg', label: '04 / 层叠瓦檐与木构细部', alt: '黄田文化馆层叠瓦檐与现代优化木构细部' },
-  { src: '/images/huangtian/built-05.jpg', label: '05 / 展览空间外廊', alt: '黄田文化馆展览空间外廊与小青瓦构造' },
-  { src: '/images/huangtian/built-06.jpg', label: '06 / 社区交流路径', alt: '黄田文化馆连接展览与社区交流空间的院落路径', wide: true },
+  { src: '/images/huangtian/built-04.jpg', label: '04 / 层叠瓦檐与木构细部', alt: '黄田文化馆层叠瓦檐与现代优化木构细部', wide: true, feature: true },
+  { src: '/images/huangtian/built-05.jpg', label: '05 / 展览空间外廊', alt: '黄田文化馆展览空间外廊与小青瓦构造', portrait: true },
+  { src: '/images/huangtian/built-06.jpg', label: '06 / 社区交流路径', alt: '黄田文化馆连接展览与社区交流空间的院落路径', portrait: true },
 ]
 
 const huangtianDrawings = [
@@ -373,6 +534,54 @@ const huangtianDrawings = [
   { src: '/images/huangtian/drawing-04.jpg', label: '04 / 屋面与檐口节点', alt: '黄田文化馆屋面瓦作与木构檐口节点大样' },
   { src: '/images/huangtian/drawing-05.jpg', label: '05 / 灯光与电路布置', alt: '黄田文化馆室内外灯光与电路布置图' },
   { src: '/images/huangtian/drawing-06.jpg', label: '06 / 木构纵剖面', alt: '黄田文化馆木结构纵剖面深化图' },
+]
+
+const shilanTourism = [
+  { src: '/images/shilan/tourism-render-01.jpg', label: '01 / 核心古村更新', alt: '石兰村核心古村保护活化总体效果图' },
+  { src: '/images/shilan/tourism-render-02.jpg', label: '02 / 文旅业态场景', alt: '石兰村文旅业态与古村环境总体效果图' },
+  { src: '/images/shilan/tourism-plan.jpg', label: '03 / 保护发展规划', alt: '石兰村传统村落保护发展规划图' },
+]
+
+const shilanHomestayRenders = [
+  { src: '/images/shilan/homestay-interior-01.jpg', label: '01 / 石厝客房', alt: '石兰村民宿保留木构的客房室内效果图' },
+  { src: '/images/shilan/homestay-interior-02.jpg', label: '02 / 木构睡眠空间', alt: '石兰村民宿木构睡眠空间效果图' },
+  { src: '/images/shilan/homestay-render-01.jpg', label: '03 / 院落民宿', alt: '石兰村民宿建筑院落效果图' },
+  { src: '/images/shilan/homestay-render-02.jpg', label: '04 / 临水石厝', alt: '石兰村民宿建筑临水效果图' },
+]
+
+const shilanHomestayExisting = [
+  { src: '/images/shilan/homestay-existing-01.jpg', label: '01 / 修缮前整体原址', alt: '石兰村民宿建筑修缮前原址航拍' },
+  { src: '/images/shilan/homestay-existing-02.jpg', label: '02 / 修缮前石厝现状', alt: '石兰村民宿建筑修缮前石厝现状' },
+]
+
+const shilanHomestayBuilt = [
+  { src: '/images/shilan/homestay-built-01.jpg', label: '01 / 石墙与木构界面', alt: '石兰村民宿修缮后石墙与木构界面' },
+  { src: '/images/shilan/homestay-built-02.jpg', label: '02 / 新旧立面衔接', alt: '石兰村民宿修缮后新旧立面衔接' },
+  { src: '/images/shilan/homestay-built-03.jpg', label: '03 / 院落灰空间', alt: '石兰村民宿修缮后院落灰空间' },
+  { src: '/images/shilan/homestay-built-04.jpg', label: '04 / 木构廊道', alt: '石兰村民宿修缮后木构廊道' },
+]
+
+const shilanExhibitionBuilt = [
+  { src: '/images/shilan/exhibition-built-01.jpg', label: '01 / 祠堂文化展厅', alt: '石兰村祠堂改造文化展厅建成外观' },
+  { src: '/images/shilan/exhibition-built-02.jpg', label: '02 / 保留屋架', alt: '石兰村文化展厅修缮后屋架与栏板' },
+]
+
+const shilanExhibitionRenders = [
+  { src: '/images/shilan/exhibition-render-01.jpg', label: '01 / 族谱展示', alt: '石兰村文化展厅族谱展示空间效果图' },
+  { src: '/images/shilan/exhibition-render-02.jpg', label: '02 / 村史长廊', alt: '石兰村文化展厅村史长廊效果图' },
+  { src: '/images/shilan/exhibition-render-03.jpg', label: '03 / 文化陈列', alt: '石兰村文化展厅文化陈列空间效果图' },
+  { src: '/images/shilan/exhibition-render-04.jpg', label: '04 / 书画展陈', alt: '石兰村文化展厅书画展陈空间效果图' },
+]
+
+const shilanDrawings = [
+  { src: '/images/shilan/drawing-plan-01.jpg', label: '01 / 民宿一层平面', alt: '石兰村民宿修缮一层平面图' },
+  { src: '/images/shilan/drawing-plan-02.jpg', label: '02 / 展厅一层平面', alt: '石兰村文化展厅一层平面图' },
+  { src: '/images/shilan/drawing-plan-03.jpg', label: '03 / 展厅二层平面', alt: '石兰村文化展厅二层平面图' },
+  { src: '/images/shilan/drawing-elevation-01.jpg', label: '04 / 修缮立面图', alt: '石兰村建筑修缮立面图' },
+  { src: '/images/shilan/drawing-section.jpg', label: '05 / 建筑剖面图', alt: '石兰村建筑修缮剖面图' },
+  { src: '/images/shilan/drawing-exhibition-plan-01.jpg', label: '06 / 展厅平面深化', alt: '石兰村文化展厅平面深化图' },
+  { src: '/images/shilan/drawing-exhibition-plan-02.jpg', label: '07 / 展陈布置图', alt: '石兰村文化展厅展陈布置图' },
+  { src: '/images/shilan/drawing-roof-plan.jpg', label: '08 / 屋顶修缮图', alt: '石兰村建筑屋顶修缮图' },
 ]
 
 const sanxunBuilt = [
@@ -420,7 +629,7 @@ const lanikarDrawings = [
 
 const caseSequence = {
   guangping: {
-    previous: { number: '05', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
+    previous: { number: '06', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
     next: { number: '02', title: '坂头村文旅商业活化', href: '/?case=bantou' },
   },
   bantou: {
@@ -429,14 +638,18 @@ const caseSequence = {
   },
   huangtian: {
     previous: { number: '02', title: '坂头村文旅商业活化', href: '/?case=bantou' },
-    next: { number: '04', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
+    next: { number: '04', title: '石兰古村文旅活化改造设计', href: '/?case=shilan' },
+  },
+  shilan: {
+    previous: { number: '03', title: '黄田文化馆', href: '/?case=huangtian' },
+    next: { number: '05', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
   },
   sanxun: {
-    previous: { number: '03', title: '黄田文化馆', href: '/?case=huangtian' },
-    next: { number: '05', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
+    previous: { number: '04', title: '石兰古村文旅活化改造设计', href: '/?case=shilan' },
+    next: { number: '06', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
   },
   lanikar: {
-    previous: { number: '04', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
+    previous: { number: '05', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
     next: { number: '01', title: '广平村孝文化长廊', href: '/?case=guangping' },
   },
 }
@@ -531,11 +744,11 @@ function PanoramaViewer() {
   )
 }
 
-function TulanduoShowcase() {
+function SecondaryCaseShowcase({ id, number, title, label, summary, tags, groups }) {
   const [activeGroup, setActiveGroup] = useState(0)
   const [activeImage, setActiveImage] = useState(0)
   const [modalOpen, setModalOpen] = useState(false)
-  const group = tulanduoGroups[activeGroup]
+  const group = groups[activeGroup]
 
   const openGroup = (index) => {
     setActiveGroup(index)
@@ -562,28 +775,26 @@ function TulanduoShowcase() {
 
   return (
     <>
-      <section className="secondary-case-showcase" aria-labelledby="tulanduo-title">
+      <section className="secondary-case-showcase" aria-labelledby={`${id}-title`}>
         <div className="secondary-case-heading">
           <div>
-            <span>SECONDARY CASE 06 / S.I. DESIGN</span>
-            <h3 id="tulanduo-title">图兰朵<br />S.I.终端系统</h3>
+            <span>SECONDARY CASE {number} / {label}</span>
+            <h3 id={`${id}-title`}>{title}</h3>
           </div>
-          <p>以统一的门店界面、陈列秩序与模块化道具，建立可识别、可落地、可复制的品牌终端语言。</p>
+          <p>{summary}</p>
           <div className="secondary-case-tags" aria-label="项目关键词">
-            <span>品牌终端</span>
-            <span>陈列系统</span>
-            <span>标准化道具</span>
+            {tags.map((tag) => <span key={tag}>{tag}</span>)}
           </div>
         </div>
 
-        <div className="secondary-case-tabs" aria-label="图兰朵案例内容分类">
-          {tulanduoGroups.map((item, index) => (
+        <div className={`secondary-case-tabs secondary-case-tabs-${groups.length}`} aria-label={`${title}内容分类`}>
+          {groups.map((item, index) => (
             <button
               className={activeGroup === index ? 'active' : ''}
-              key={item.key}
+              key={`${item.key}-${index}`}
               onClick={() => openGroup(index)}
               aria-haspopup="dialog"
-              aria-controls="tulanduo-modal"
+              aria-controls={`${id}-modal`}
               type="button"
             >
               <span>0{index + 1}</span>
@@ -597,10 +808,10 @@ function TulanduoShowcase() {
       {modalOpen && (
         <div
           className="secondary-case-modal"
-          id="tulanduo-modal"
+          id={`${id}-modal`}
           role="dialog"
           aria-modal="true"
-          aria-labelledby="tulanduo-modal-title"
+          aria-labelledby={`${id}-modal-title`}
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) setModalOpen(false)
           }}
@@ -608,10 +819,10 @@ function TulanduoShowcase() {
           <div className="secondary-case-modal-panel">
             <header className="secondary-case-modal-header">
               <div>
-                <span>SECONDARY CASE 06 / S.I. DESIGN</span>
-                <h4 id="tulanduo-modal-title">{group.label} / {group.en}</h4>
+                <span>SECONDARY CASE {number} / {label}</span>
+                <h4 id={`${id}-modal-title`}>{group.label} / {group.en}</h4>
               </div>
-              <button type="button" onClick={() => setModalOpen(false)} aria-label="关闭图兰朵案例图集">
+              <button type="button" onClick={() => setModalOpen(false)} aria-label={`关闭${title}案例图集`}>
                 <X aria-hidden="true" />
               </button>
             </header>
@@ -620,7 +831,7 @@ function TulanduoShowcase() {
               <figure className={`secondary-case-main secondary-case-${group.key}`}>
                 <img src={group.images[activeImage].src} alt={group.images[activeImage].alt} />
                 <figcaption>
-                  <span>06.{activeGroup + 1}.{String(activeImage + 1).padStart(2, '0')}</span>
+                  <span>{number}.{activeGroup + 1}.{String(activeImage + 1).padStart(2, '0')}</span>
                   <strong>{group.label} / {group.en}</strong>
                 </figcaption>
               </figure>
@@ -903,12 +1114,6 @@ function HuangtianCasePage() {
     { number: '04', en: 'STAGE', title: '向舞美延展', text: '将光理解为组织视线、情绪与时间的媒介，这套方法可延展到舞台焦点、观演层次与场景切换。' },
   ]
 
-  const planningPoints = [
-    { number: '01', title: '资源识别', text: '从村庄区位、聚落肌理、文化资源与产业基础出发，建立文农旅协同发展的场所判断。' },
-    { number: '02', title: '产业引导', text: '以特色农业、乡村文化与旅游体验形成互补内容，让短时到访转化为可停留、可参与的村庄体验。' },
-    { number: '03', title: '节点落位', text: '把总体规划落实到重要建筑、公共空间与游线节点，文化馆成为村庄更新体系中的示范性触媒。' },
-  ]
-
   return (
     <main className="case-study-page huangtian-case-page" id="case-content">
       <header className="case-detail-header frame">
@@ -963,8 +1168,8 @@ function HuangtianCasePage() {
               <figcaption><span>01</span> 建筑原址 / BEFORE</figcaption>
             </figure>
             <figure>
-              <img src="/images/huangtian/model.jpg" alt="黄田文化馆更新设计模型效果" loading="lazy" />
-              <figcaption><span>02</span> 新旧共生策略 / CONCEPT</figcaption>
+              <img src="/images/huangtian/built-03.jpg" alt="黄田文化馆更新建成后的木构与夯土墙界面" loading="lazy" />
+              <figcaption><span>02</span> 建成现状 / AFTER</figcaption>
             </figure>
           </div>
         </div>
@@ -979,7 +1184,7 @@ function HuangtianCasePage() {
           </div>
           <div className="built-photo-grid huangtian-built-grid">
             {huangtianBuilt.map((image) => (
-              <figure className={image.wide ? 'wide' : ''} key={image.src}>
+              <figure className={`${image.wide ? 'wide' : ''} ${image.feature ? 'feature-wide' : ''} ${image.portrait ? 'portrait' : ''}`} key={image.src}>
                 <img src={image.src} alt={image.alt} loading="lazy" />
                 <figcaption>{image.label}</figcaption>
               </figure>
@@ -1027,17 +1232,7 @@ function HuangtianCasePage() {
           </div>
           <figure className="huangtian-planning-board">
             <img src="/images/huangtian/planning.jpg" alt="黄田村村庄文农旅产业发展规划总览" loading="lazy" />
-            <figcaption><span>MASTER PLAN</span> 黄田村村庄文农旅产业发展规划</figcaption>
           </figure>
-          <div className="huangtian-planning-points">
-            {planningPoints.map((point) => (
-              <article key={point.number}>
-                <span>{point.number}</span>
-                <h3>{point.title}</h3>
-                <p>{point.text}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -1057,6 +1252,122 @@ function HuangtianCasePage() {
             ))}
           </div>
           <CaseNavigation current="huangtian" />
+        </div>
+      </section>
+    </main>
+  )
+}
+
+function ShilanCasePage() {
+  const planningPoints = [
+    { number: '01', en: 'PROTECT', title: '石厝保护再生', text: '以传统石厝、瓦屋面、木构架和院落尺度为基础，修缮而非复制，让村落记忆继续成为空间主角。' },
+    { number: '02', en: 'STAY', title: '旅居功能植入', text: '以民宿、餐饮和公共活动节点补足旅居体验，使闲置建筑转化为可使用、可停留、可运营的目的地。' },
+    { number: '03', en: 'CULTURE', title: '祠堂文化再述', text: '将旧有祠堂转化为文化展厅，以展陈、族谱与村史内容延续集体记忆并服务公共文化活动。' },
+    { number: '04', en: 'OPERATE', title: '规划带动业态', text: '从整体游线、核心节点到局部空间，建立可分期实施的文旅系统，以设计持续吸引多元业态。' },
+  ]
+
+  return (
+    <main className="case-study-page shilan-case-page" id="case-content">
+      <header className="case-detail-header frame">
+        <a className="brand" href="/#top" aria-label="返回作品集首页">AT<span>®</span></a>
+        <nav aria-label="案例导航">
+          <a href="#shilan-overview">项目概览</a>
+          <a href="#shilan-tourism">整体规划</a>
+          <a href="#shilan-homestay">民宿活化</a>
+          <a href="#shilan-exhibition">文化展厅</a>
+          <a href="#shilan-drawings">技术图纸</a>
+        </nav>
+        <a className="contact-link" href="/#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
+      </header>
+
+      <section className="case-detail-hero" id="case-top">
+        <div className="case-detail-hero-media">
+          <img src="/images/shilan/tourism-render-01.jpg" alt="石兰村传统古村保护与活化总体效果图" />
+          <span>MASTERPLAN RENDER / 古村总体效果</span>
+        </div>
+        <div className="case-detail-title frame">
+          <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
+          <p><span>CASE 04</span> / RURAL CONSERVATION & ACTIVATION</p>
+          <h1>石兰古村文旅<br />活化改造设计</h1>
+          <div className="case-detail-intro">
+            <p>从古村整体保护发展到民宿旅居与祠堂展陈，让石厝、文化和可持续运营在同一套空间系统中重新发生。</p>
+            <span>FUJIAN · FUDING<br />2025 / ONGOING</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="case-overview case-detail-section" id="shilan-overview">
+        <div className="section-frame">
+          <div className="case-section-label"><span>01</span><p>PROJECT OVERVIEW / 项目概览</p></div>
+          <div className="case-overview-grid">
+            <div className="case-overview-copy">
+              <h2>以石厝保护为底线，把旅游区整体规划落到可使用的建筑与场景。</h2>
+              <p>石兰村项目以渔村传统石厝的保护与再生为核心，通过民居修缮、民宿改造与村文化馆建设，构建“保护 + 旅居 + 康养”三位一体的更新体系。总体规划先梳理资源、游线、节点与业态关系，再将策略落实至民宿客房、院落灰空间和祠堂展厅。</p>
+              <p>设计不止于修复建筑外观，而是同时处理保护尺度、空间体验、游客停留与长期运营：保留石墙、木构和瓦屋面形成的场所记忆，以适度增建、动线重组和展陈植入回应当代文旅需求。</p>
+            </div>
+            <dl className="case-meta-list">
+              <div><dt>项目类型</dt><dd>古村保护 / 文旅规划 / 民宿与展厅改造</dd></div>
+              <div><dt>项目地点</dt><dd>福建省福鼎市石兰村</dd></div>
+              <div><dt>项目时间</dt><dd>2025 / 在建</dd></div>
+              <div><dt>个人角色</dt><dd>项目主导</dd></div>
+              <div><dt>工作内容</dt><dd>调研 / 总体规划 / 方案 / 效果图 / 施工图 / 现场配合</dd></div>
+            </dl>
+          </div>
+          <div className="concept-built-grid">
+            <figure><img src="/images/shilan/tourism-render-02.jpg" alt="石兰村文旅业态与古村整体效果图" loading="lazy" /><figcaption><span>01</span> 整体更新 / MASTERPLAN</figcaption></figure>
+            <figure><img src="/images/shilan/homestay-built-01.jpg" alt="石兰村民宿修缮落地实景" loading="lazy" /><figcaption><span>02</span> 局部落地 / BUILT</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="tourism-strategy case-detail-section" id="shilan-tourism">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>02</span><p>TOURISM FRAMEWORK / 整体文旅规划</p></div>
+          <div className="built-gallery-heading"><h2>用总体规划建立保护、体验、业态与运营的共同框架。</h2><p>以古村为整体而非孤立单体来组织设计：传统石厝是基底，旅居停留是支撑，文化体验与公共服务共同形成持续吸引人的目的地系统。</p></div>
+          <div className="tourism-strategy-grid">
+            {planningPoints.map((point) => <article key={point.number}><div><span>{point.number}</span><small>{point.en}</small></div><h3>{point.title}</h3><p>{point.text}</p></article>)}
+          </div>
+          <div className="concept-built-grid">
+            {shilanTourism.slice(0, 2).map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}
+          </div>
+          <figure className="huangtian-planning-board"><img src="/images/shilan/tourism-plan.jpg" alt="石兰村传统村落保护发展规划图" loading="lazy" /><figcaption>总体保护发展规划 / MASTER PLAN</figcaption></figure>
+        </div>
+      </section>
+
+      <section className="tourism-programs case-detail-section" id="shilan-homestay">
+        <div className="section-frame">
+          <div className="case-section-label"><span>03</span><p>HOMESTAY ACTIVATION / 民宿修缮与旅居空间</p></div>
+          <div className="drawing-heading"><h2>保留石厝气质，以新功能和清晰动线提升旅居体验。</h2><p>从修缮前的建筑研判到客房、院落和廊道的重组，设计通过新旧材质对照、灰空间串联与可维护的木构细部，让民宿兼具在地体验、舒适性与运营弹性。</p></div>
+          <div className="program-list">
+            <article className="program-block">
+              <div className="program-copy"><div><span>01</span><small>RENDER</small></div><h3>从客房到院落的旅居体验</h3><p>室内保留原有屋架和木构尺度，辅以克制的现代界面；建筑层面通过院落、屋檐和石墙延续古村肌理。</p></div>
+              <div className="program-photo-grid program-photo-grid-4">{shilanHomestayRenders.map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+            </article>
+            <article className="program-block">
+              <div className="program-copy"><div><span>02</span><small>BEFORE / AFTER</small></div><h3>从原址研判到建成转化</h3><p>原址的石厝体量、屋面关系和场地高差被保留并重新组织；新的木构廊道、界面与院落路径让抵达、停留和服务动线更加清晰。</p></div>
+              <div className="program-photo-grid program-photo-grid-2">{shilanHomestayExisting.map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+            </article>
+          </div>
+          <div className="built-photo-grid huangtian-built-grid">{shilanHomestayBuilt.map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+        </div>
+      </section>
+
+      <section className="huangtian-lighting case-detail-section" id="shilan-exhibition">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>04</span><p>CULTURAL EXHIBITION / 祠堂文化展厅</p></div>
+          <div className="built-gallery-heading"><h2>让祠堂从静态遗存转为可阅读、可停留的文化展厅。</h2><p>以保留的梁架、屋面和原有空间秩序承载村史、族谱与文化展陈；新增的照明、展柜和行走路径以轻介入的方式强化叙事与观看体验。</p></div>
+          <div className="huangtian-night-grid">{shilanExhibitionBuilt.slice(0, 2).map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+          <div className="concept-built-grid">{shilanExhibitionRenders.slice(0, 2).map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+          <div className="lanikar-render-grid">{shilanExhibitionRenders.slice(2).map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+        </div>
+      </section>
+
+      <section className="technical-drawings case-detail-section" id="shilan-drawings">
+        <div className="section-frame">
+          <div className="case-section-label"><span>05</span><p>TECHNICAL DELIVERY / 技术图纸</p></div>
+          <div className="drawing-heading"><h2>从总体策略到单体图纸，建立可实施的修缮与活化依据。</h2><p>平面、立面、剖面、屋面与展陈布置图共同呈现从古村级更新到民宿、展厅局部空间的设计控制能力。</p></div>
+          <div className="drawing-grid">{shilanDrawings.map((drawing) => <figure key={drawing.src}><img src={drawing.src} alt={drawing.alt} loading="lazy" /><figcaption>{drawing.label}</figcaption></figure>)}</div>
+          <CaseNavigation current="shilan" />
         </div>
       </section>
     </main>
@@ -1092,7 +1403,7 @@ function SanxunCasePage() {
         </div>
         <div className="case-detail-title frame">
           <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
-          <p><span>CASE 04</span> / BRAND COMMERCIAL SPACE</p>
+          <p><span>CASE 05</span> / BRAND COMMERCIAL SPACE</p>
           <h1>三旬火塘<br />民谣小酒馆</h1>
           <div className="case-detail-intro">
             <p>让品牌故事、现场演艺与餐饮运营共同发生，把空间设计转化为可感知、可消费、可复制的连锁门店体验。</p>
@@ -1220,7 +1531,7 @@ function LanikarCasePage() {
         </div>
         <div className="case-detail-title frame">
           <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
-          <p><span>CASE 05</span> / BRAND RETAIL EXPERIENCE</p>
+          <p><span>CASE 06</span> / BRAND RETAIL EXPERIENCE</p>
           <h1>LA NIKAR<br />线下体验店</h1>
           <div className="case-detail-intro">
             <p>把零售、社交与直播内容生产组织在同一空间中，让线下门店成为品牌体验、运营转化与持续传播的共同载体。</p>
@@ -1357,6 +1668,11 @@ function App() {
         description: '以尊古不复古与新旧共生为核心，呈现黄田文化馆从旧房活化、文旅展览、夜景光影到村庄文农旅规划的完整实践。',
         image: '/images/huangtian/model.jpg',
       },
+      shilan: {
+        title: '石兰古村文旅活化改造设计｜安桐空间设计作品集',
+        description: '从古村保护发展规划到石厝民宿、祠堂文化展厅与技术图纸，呈现石兰村保护、旅居、康养一体化的文旅更新实践。',
+        image: '/images/shilan/tourism-render-01.jpg',
+      },
       sanxun: {
         title: '三旬火塘民谣小酒馆｜安桐空间设计作品集',
         description: '面向连锁品牌的商业空间设计：以火塘舞台、民谣演艺、吧台与客席动线，协同品牌识别、消费体验与门店运营。',
@@ -1402,6 +1718,10 @@ function App() {
     return <HuangtianCasePage />
   }
 
+  if (activeCase === 'shilan') {
+    return <ShilanCasePage />
+  }
+
   if (activeCase === 'sanxun') {
     return <SanxunCasePage />
   }
@@ -1436,7 +1756,7 @@ function App() {
             <div className="hero-bottom hero-bottom-cases">
               <p>我从在地文化与真实使用出发，把复杂问题转译为空间策略、体验场景与可落地的设计成果。</p>
               <div className="hero-case-count" aria-label="案例概览">
-                <strong>13</strong><span>PROJECT INDEX<br />05 FEATURED CASES</span>
+                <strong>14</strong><span>PROJECT INDEX<br />06 FEATURED CASES</span>
               </div>
               <a href="#projects" className="scroll-cue" aria-label="查看精选案例"><ArrowDownRight size={30} /></a>
             </div>
@@ -1579,7 +1899,47 @@ function App() {
               ))}
             </div>
 
-            <TulanduoShowcase />
+            <div className="secondary-case-row">
+              <SecondaryCaseShowcase
+                id="tulanduo"
+                number="07"
+                label="S.I. DESIGN"
+                title="图兰朵 S.I.终端系统"
+                summary="以统一的门店界面、陈列秩序与模块化道具，建立可识别、可落地、可复制的品牌终端语言。"
+                tags={['品牌终端', '陈列系统', '标准化道具']}
+                groups={tulanduoGroups}
+              />
+
+              <SecondaryCaseShowcase
+                id="fengyu"
+                number="08"
+                label="RURAL RENEWAL"
+                title="丰余村环境提升设计"
+                summary="以“微更新、轻介入、重在地”为核心，围绕建筑立面修缮、公共灰空间重构与景观长廊建设，让传统村落的日常交往重新发生。"
+                tags={['环境场景', '立面修缮', '木构长廊']}
+                groups={fengyuGroups}
+              />
+
+              <SecondaryCaseShowcase
+                id="like"
+                number="09"
+                label="RURAL HOMESTAY"
+                title="李窠村乡村民宿改造"
+                summary="在保留旧房尺度与乡村肌理的前提下，二层木构增建释放客房容量，并以外廊串联到达、停留与住宿，清晰分离客人与后勤流线，使小体量改造兼具舒适体验与运营效率。由平面分区、立面重构与木构节点深化，可见我从存量建筑研判、民宿动线组织到施工图表达和文旅场景营造的完整能力。"
+                tags={['旧房改造', '民宿动线', '文旅场景']}
+                groups={likeGroups}
+              />
+
+              <SecondaryCaseShowcase
+                id="xiuqiao"
+                number="10"
+                label="RURAL ACTIVATION"
+                title="秀峤村民宿与文旅活动中心"
+                summary="以穿斗木构为骨、滨水景观为境，活化老宅为集旅居、康养与公共活动于一体的复合空间。设计完整保留并修复原有木构梁柱、夯土墙面与青瓦坡顶，通过空间重组与功能植入，让旧屋成为可栖居、可共享的乡野活力载体。"
+                tags={['旧屋改造', '民宿旅居', '滨水活动']}
+                groups={xiuqiaoGroups}
+              />
+            </div>
 
             <div className="project-archive">
               <div className="archive-heading">

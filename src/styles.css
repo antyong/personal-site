@@ -209,7 +209,9 @@ h1 span:last-child { margin-left: 10vw; }
 .case-ready p { margin-top: 10px; color: #aaa; font-size: 11px; line-height: 1.65; }
 .case-ready:not(.case-ready-link) svg { position: absolute; right: 0; top: 19px; color: var(--red); transform: rotate(-45deg); transition: transform .18s linear; }
 .case-card:hover .case-ready svg { transform: rotate(0); }
+.secondary-case-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin-top: clamp(110px, 13vw, 210px); }
 .secondary-case-showcase { width: calc(50% + 2px); min-height: 390px; margin-top: clamp(110px, 13vw, 210px); border: 3px solid white; background: #050505; }
+.secondary-case-row .secondary-case-showcase { width: 100%; margin-top: 0; }
 .secondary-case-heading { min-height: 282px; display: grid; grid-template-columns: minmax(0, 6fr) minmax(170px, 3.4fr) minmax(120px, 1.8fr); }
 .secondary-case-heading > div:first-child { padding: clamp(28px, 2.7vw, 46px); border-right: 3px solid white; }
 .secondary-case-heading > div:first-child > span { color: var(--red); font-size: 10px; font-weight: 900; letter-spacing: .15em; }
@@ -218,6 +220,7 @@ h1 span:last-child { margin-left: 10vw; }
 .secondary-case-tags { display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; }
 .secondary-case-tags span { padding: 12px 0; border-top: 1px solid #555; font-size: 8px; font-weight: 800; letter-spacing: .1em; }
 .secondary-case-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid white; }
+.secondary-case-tabs-4 { grid-template-columns: repeat(4, 1fr); }
 .secondary-case-tabs button { min-width: 0; min-height: 102px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; padding: 18px; color: white; background: #050505; border: 0; border-right: 3px solid white; cursor: pointer; text-align: left; transition: color .15s linear, background .15s linear; }
 .secondary-case-tabs button:last-child { border-right: 0; }
 .secondary-case-tabs button:hover, .secondary-case-tabs button.active { color: black; background: var(--red); }
@@ -394,6 +397,7 @@ h1 span:last-child { margin-left: 10vw; }
 .program-copy h3 { font-size: clamp(38px, 4.4vw, 72px); line-height: .95; letter-spacing: -.06em; }
 .program-copy > p { color: #555; font-size: 14px; line-height: 1.8; }
 .program-photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid black; border-left: 3px solid black; }
+.program-photo-grid-2 { grid-template-columns: repeat(2, 1fr); }
 .program-photo-grid-4 { grid-template-columns: repeat(2, 1fr); }
 .program-photo-grid figure { position: relative; min-width: 0; overflow: hidden; border-right: 3px solid black; border-bottom: 3px solid black; background: #111; }
 .program-photo-grid figure.program-wide { grid-column: 1 / -1; }
@@ -408,6 +412,9 @@ h1 span:last-child { margin-left: 10vw; }
 .huangtian-case-page .case-detail-hero-media img { object-position: center 46%; }
 .huangtian-before-after img { filter: none; }
 .huangtian-built-grid figure:nth-child(2) img, .huangtian-built-grid figure:nth-child(4) img { object-position: center 44%; }
+.huangtian-built-grid figure.feature-wide img { aspect-ratio: 16 / 9; object-position: center center; }
+.huangtian-built-grid figure.portrait { display: block; background: #111; }
+.huangtian-built-grid figure.portrait img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
 .huangtian-lighting { color: white; background: #050505; }
 .huangtian-night-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 3px solid white; border-left: 3px solid white; }
 .huangtian-night-grid figure { position: relative; overflow: hidden; border-right: 3px solid white; border-bottom: 3px solid white; background: #111; }
@@ -517,6 +524,7 @@ h1 span:last-child { margin-left: 10vw; }
   .case-montage .montage-main { grid-column: 1 / -1; }
   .case-montage figure:last-child { grid-column: 1 / -1; }
   .case-copy { min-height: 590px; border-top: 3px solid white; border-left: 0; }
+  .secondary-case-row { grid-template-columns: 1fr; }
   .secondary-case-showcase { width: 100%; }
   .secondary-case-heading { min-height: 0; grid-template-columns: 1fr; }
   .secondary-case-heading > div:first-child, .secondary-case-heading > p { border-right: 0; border-bottom: 3px solid white; }
@@ -591,7 +599,7 @@ h1 span:last-child { margin-left: 10vw; }
   .program-photo-grid, .program-photo-grid-4 { grid-template-columns: 1fr; }
   .program-photo-grid figure.program-wide { grid-column: auto; }
   .program-photo-grid .program-wide img { aspect-ratio: 4 / 3; }
-  .huangtian-night-grid, .huangtian-planning-points { grid-template-columns: 1fr; }
+  .huangtian-planning-points { grid-template-columns: 1fr; }
   .huangtian-planning-points article { min-height: 250px; }
   .panorama-toolbar { align-items: stretch; flex-direction: column; gap: 18px; }
   .panorama-tabs { width: max-content; }
@@ -632,7 +640,6 @@ h1 span:last-child { margin-left: 10vw; }
   .case-sequence-nav .case-sequence-link, .case-sequence-nav .case-sequence-home { min-height: 170px; }
   .tourism-strategy-grid { grid-template-columns: 1fr; }
   .tourism-strategy-grid article { min-height: 280px; }
-  .huangtian-night-grid { grid-template-columns: 1fr; }
   .huangtian-planning-board figcaption { align-items: flex-start; flex-direction: column; gap: 8px; }
   .huangtian-planning-points { margin-top: 48px; }
   .panorama-toolbar { padding: 18px; }
