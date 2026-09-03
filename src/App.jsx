@@ -6,19 +6,22 @@ import {
   DraftingCompass,
   Grid2X2,
   Mail,
-  MapPin,
   Phone,
   ScanLine,
   X,
 } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import 'pannellum/build/pannellum.css'
 import 'pannellum/build/pannellum.js'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const stats = [
-  { value: '13', unit: '+', label: '累计参与项目' },
-  { value: '03', unit: '', label: '主导项目' },
-  { value: '06', unit: '', label: '落地项目' },
+  { value: '20', unit: '+', label: '累计参与项目' },
+  { value: '07', unit: '', label: '主导项目' },
+  { value: '14', unit: '', label: '落地项目' },
   { value: '03', unit: '', label: '在施工项目' },
 ]
 
@@ -26,20 +29,20 @@ const experience = [
   {
     period: '2023.09—2026.05',
     place: '福建福大建筑规划设计研究院有限公司',
-    role: '建筑设计师',
-    detail: '文旅节点、乡村振兴公共空间、历史文化街区与建筑保护规划；负责从在地调研、方案策划到施工图深化与落地配合。',
+    role: '设计师',
+    detail: '专注文旅更新、精品民宿酒店、特色餐饮酒馆、服饰零售等商业空间设计；统筹在地调研、业态策划、方案创作到施工图深化及现场落地，擅长打造文化沉浸式商业场景。',
   },
   {
     period: '2022.07—2023.07',
     place: '青岛市城市建设设计研究院有限公司',
-    role: '建筑师助理',
-    detail: '参与公共建筑方案、施工图绘制与汇报文本制作，承担规范校核及报建资料整理。',
+    role: '设计师助理',
+    detail: '参与公共建筑与文旅商业空间设计，完成方案文本、图纸绘制、规范校核及项目报建，熟悉项目全流程落地管控。',
   },
 ]
 
 const education = [
-  { period: '2023.09—2026.06', school: '福州大学', major: '建筑学 / 硕士研究生' },
-  { period: '2018.09—2023.06', school: '济南大学', major: '设计学 / 本科' },
+  { period: '2023.09—2026.06', school: '福州大学', major: '建筑学 / 硕士研究生', detail: '研究历史建筑数字化保护与文化商业空间更新；掌握三维点云古建测绘技术，结合 AI 完成福建木结构古建筑病害检测修缮研究，相关论文已发表。' },
+  { period: '2018.09—2023.06', school: '济南大学', major: '设计学 / 本科', detail: '深耕室内外一体化空间叙事、文旅与商业场景营造设计。' },
 ]
 
 const projects = [
@@ -67,7 +70,7 @@ const projects = [
     number: 'CASE 02',
     title: '坂头村文旅商业活化设计',
     location: '福建 · 政和',
-    year: '一期 / 二期',
+    year: '2024—2025',
     summary: '以古村活化与文旅融合为核心，将古建保护、风貌整治、餐饮咖啡、民宿集群和滨水游线统筹为一套可运营的乡村文旅空间系统。',
     role: '核心设计参与',
     focus: '文旅策划 / 商业植入 / 古村活化',
@@ -85,7 +88,7 @@ const projects = [
   },
   {
     number: 'CASE 03',
-    title: '黄田文化馆',
+    title: '黄田文化空间',
     location: '福建 · 平和',
     year: '2023 / 已建成',
     summary: '以“尊古不复古”为核心，将坍塌古民居更新为兼具文旅展示、社区交流与夜间活动能力的文化空间，并把单体改造纳入黄田村文农旅发展规划。',
@@ -117,7 +120,7 @@ const projects = [
       { src: '/images/shilan/tourism-render-01.jpg', label: '古村规划 / MASTERPLAN', alt: '石兰村古村保护与活化总体效果图' },
       { src: '/images/shilan/homestay-built-01.jpg', label: '民宿修缮 / BUILT', alt: '石兰村民宿修缮建成实景' },
       { src: '/images/shilan/exhibition-built-01.jpg', label: '文化展厅 / EXHIBITION', alt: '石兰村文化展厅建成外观' },
-      { src: '/images/shilan/tourism-render-02.jpg', label: '业态场景 / TOURISM', alt: '石兰村文旅业态整体效果图' },
+      { src: '/images/shilan/homestay-interior-01.jpg', label: '民宿室内 / INTERIOR', alt: '石兰村民宿改造室内空间效果图' },
     ],
     href: '/?case=shilan',
     ready: true,
@@ -345,6 +348,214 @@ const xiuqiaoGroups = [
   },
 ]
 
+const sishuGroups = [
+  {
+    key: 'space',
+    label: '空间实景',
+    en: 'BUILT CULTURAL SPACE',
+    images: [
+      { src: '/images/sishu/space-01.webp', alt: '私塾馆分层夯土墙与公共活动空间实景' },
+      { src: '/images/sishu/space-02.webp', alt: '私塾馆木门与竹构院落空间实景' },
+      { src: '/images/sishu/space-03.webp', alt: '私塾馆分层夯土与木饰面空间实景' },
+      { src: '/images/sishu/space-04.webp', alt: '私塾馆青瓦木构院落空间实景' },
+      { src: '/images/sishu/space-05.webp', alt: '私塾馆青砖透砌墙与夯土走廊实景' },
+      { src: '/images/sishu/space-06.webp', alt: '私塾馆竹木屏风与旧屋架实景' },
+      { src: '/images/sishu/space-07.webp', alt: '私塾馆夯土院墙与木构檐下活动实景' },
+      { src: '/images/sishu/space-08.webp', alt: '私塾馆不同色阶夯土肌理实景' },
+    ],
+  },
+  {
+    key: 'drawings',
+    label: '施工图纸',
+    en: 'TECHNICAL DRAWINGS',
+    images: [
+      { src: '/images/sishu/drawing-01.webp', alt: '私塾馆二层平面大样施工图' },
+      { src: '/images/sishu/drawing-02.webp', alt: '私塾馆一层灯具布置施工图' },
+      { src: '/images/sishu/drawing-03.webp', alt: '私塾馆卫生间给排水大样施工图' },
+      { src: '/images/sishu/drawing-04.webp', alt: '私塾馆一层平面施工图' },
+      { src: '/images/sishu/drawing-05.webp', alt: '私塾馆剖面施工图' },
+      { src: '/images/sishu/drawing-06.webp', alt: '私塾馆立面施工图' },
+    ],
+  },
+]
+
+const robinhoodGroups = [
+  {
+    key: 'panorama',
+    label: '360° 全景',
+    en: 'INTERACTIVE PANORAMA',
+    panorama: true,
+    images: [
+      { src: '/images/robinhood/panorama-01.webp', alt: '罗宾汉连锁服装门店室内360度全景效果图' },
+    ],
+  },
+  {
+    key: 'render',
+    label: '门店效果',
+    en: 'STOREFRONT RENDER',
+    images: [
+      { src: '/images/robinhood/render-facade.webp', alt: '罗宾汉连锁服装门店外立面效果图' },
+    ],
+  },
+  {
+    key: 'built',
+    label: '落地实拍',
+    en: 'BUILT STORE',
+    images: [
+      { src: '/images/robinhood/built-facade.webp', alt: '罗宾汉连锁服装门店建成实拍' },
+    ],
+  },
+  {
+    key: 'drawings',
+    label: '施工图纸',
+    en: 'TECHNICAL DRAWINGS',
+    images: [
+      { src: '/images/robinhood/drawing-plan.webp', alt: '罗宾汉门店平面尺寸图' },
+      { src: '/images/robinhood/drawing-switch.webp', alt: '罗宾汉门店开关布置图' },
+      { src: '/images/robinhood/drawing-elevation.webp', alt: '罗宾汉门店衣架立面图' },
+      { src: '/images/robinhood/drawing-display-detail.webp', alt: '罗宾汉门店展台节点大样图' },
+      { src: '/images/robinhood/drawing-cashier-detail.webp', alt: '罗宾汉门店收银台节点大样图' },
+    ],
+  },
+]
+
+const fanhuayinGroups = [
+  {
+    key: 'panorama',
+    label: '360° 全景',
+    en: 'INTERACTIVE PANORAMA',
+    panorama: true,
+    images: [
+      { src: '/images/fanhuayin/panorama-01.webp', alt: '繁花吟珠宝门店室内360度全景效果图' },
+    ],
+  },
+  {
+    key: 'render',
+    label: '空间效果',
+    en: 'JEWELLERY INTERIOR',
+    images: [
+      { src: '/images/fanhuayin/render-01.webp', alt: '繁花吟珠宝门店陈列与洽谈空间效果图' },
+      { src: '/images/fanhuayin/render-02.webp', alt: '繁花吟珠宝门店中岛陈列空间效果图' },
+      { src: '/images/fanhuayin/render-03.webp', alt: '繁花吟珠宝门店洽谈桌与旋梯空间效果图' },
+      { src: '/images/fanhuayin/render-04.webp', alt: '繁花吟珠宝门店环形珠宝陈列空间效果图' },
+      { src: '/images/fanhuayin/render-05.webp', alt: '繁花吟珠宝门店饰品陈列墙效果图' },
+      { src: '/images/fanhuayin/render-06.webp', alt: '繁花吟珠宝门店首层陈列空间效果图' },
+      { src: '/images/fanhuayin/render-07.webp', alt: '繁花吟珠宝门店休息与陈列空间效果图' },
+    ],
+  },
+  {
+    key: 'drawings',
+    label: '施工图纸',
+    en: 'TECHNICAL DRAWINGS',
+    images: [
+      { src: '/images/fanhuayin/drawing-plan-01.webp', alt: '繁花吟珠宝门店一层平面尺寸图' },
+      { src: '/images/fanhuayin/drawing-plan-02.webp', alt: '繁花吟珠宝门店一层灯具定位图' },
+      { src: '/images/fanhuayin/drawing-plan-03.webp', alt: '繁花吟珠宝门店一层照明控制图' },
+      { src: '/images/fanhuayin/drawing-plan-04.webp', alt: '繁花吟珠宝门店二层平面尺寸图' },
+      { src: '/images/fanhuayin/drawing-elevation-01.webp', alt: '繁花吟珠宝门店立面施工图' },
+      { src: '/images/fanhuayin/drawing-detail-01.webp', alt: '繁花吟珠宝门店钢结构大样图' },
+    ],
+  },
+]
+
+const nailsalonGroups = [
+  {
+    key: 'panorama',
+    label: '360° 全景',
+    en: 'INTERACTIVE PANORAMA',
+    panorama: true,
+    images: [
+      { src: '/images/nailsalon/panorama-01.webp', alt: '美甲店甜品复合空间360度全景效果图' },
+    ],
+  },
+  {
+    key: 'render',
+    label: '空间效果',
+    en: 'SPACE VISUALS',
+    images: [
+      { src: '/images/nailsalon/render-01.webp', alt: '美甲店服务区空间效果图' },
+      { src: '/images/nailsalon/render-02.webp', alt: '美甲店等候与服务区空间效果图' },
+      { src: '/images/nailsalon/render-03.webp', alt: '美甲店服务动线空间效果图' },
+      { src: '/images/nailsalon/render-04.webp', alt: '美甲店门头效果图' },
+    ],
+  },
+  {
+    key: 'drawings',
+    label: '施工图纸',
+    en: 'TECHNICAL DRAWINGS',
+    images: [
+      { src: '/images/nailsalon/drawing-plan-01.webp', alt: '美甲店平面尺寸图' },
+      { src: '/images/nailsalon/drawing-plan-02.webp', alt: '美甲店平面布置图' },
+      { src: '/images/nailsalon/drawing-plan-03.webp', alt: '美甲店天花放线图' },
+      { src: '/images/nailsalon/drawing-plan-04.webp', alt: '美甲店开关示意图' },
+      { src: '/images/nailsalon/drawing-elevation-01.webp', alt: '美甲店隔断立面图A-2' },
+      { src: '/images/nailsalon/drawing-elevation-02.webp', alt: '美甲店隔断立面图D-1' },
+    ],
+  },
+]
+
+const liveFashionGroups = [
+  {
+    key: 'panorama',
+    label: '360° 全景',
+    en: 'INTERACTIVE PANORAMA',
+    panorama: true,
+    images: [
+      { src: '/images/live-fashion/panorama-01.webp', alt: '服装品牌直播展示空间360度全景效果图' },
+    ],
+  },
+  {
+    key: 'render',
+    label: '空间效果',
+    en: 'SPACE VISUALS',
+    images: [
+      { src: '/images/live-fashion/render-01.webp', alt: '服装品牌直播展示空间效果图一' },
+      { src: '/images/live-fashion/render-02.webp', alt: '服装品牌直播展示空间效果图二' },
+      { src: '/images/live-fashion/render-03.webp', alt: '服装品牌直播展示空间效果图三' },
+      { src: '/images/live-fashion/render-04.webp', alt: '服装品牌直播展示空间效果图四' },
+    ],
+  },
+  {
+    key: 'layout',
+    label: '空间布局',
+    en: 'SPATIAL LAYOUT',
+    images: [
+      { src: '/images/live-fashion/layout-01.webp', alt: '服装品牌直播展示空间布局图' },
+    ],
+  },
+]
+
+const disneyLiveGroups = [
+  {
+    key: 'panorama',
+    label: '360° 全景',
+    en: 'INTERACTIVE PANORAMA',
+    panorama: true,
+    images: [
+      { src: '/images/disney-live/panorama-01.webp', alt: '迪士尼家纺直播展示空间360度全景效果图' },
+    ],
+  },
+  {
+    key: 'render',
+    label: '空间效果',
+    en: 'SPACE VISUALS',
+    images: [
+      { src: '/images/disney-live/render-01.webp', alt: '迪士尼家纺直播展示空间效果图一' },
+      { src: '/images/disney-live/render-02.webp', alt: '迪士尼家纺卧室场景效果图' },
+      { src: '/images/disney-live/render-03.webp', alt: '迪士尼家纺直播画面模拟图' },
+      { src: '/images/disney-live/render-04.webp', alt: '迪士尼家纺直播场景效果图' },
+    ],
+  },
+  {
+    key: 'layout',
+    label: '空间布局',
+    en: 'SPATIAL LAYOUT',
+    images: [
+      { src: '/images/disney-live/layout-01.webp', alt: '迪士尼家纺直播展示空间布局图' },
+    ],
+  },
+]
+
 const projectArchive = [
   {
     number: '07',
@@ -436,14 +647,14 @@ const strengths = [
 ]
 
 const guangpingBuilt = [
-  { src: '/images/guangping/built-aerial.jpg', label: '01 / 建成航拍', alt: '孝文化长廊及周边村落建成航拍' },
+  { src: '/images/guangping/built-aerial.jpg', label: '01 / 建成航拍', alt: '孝文化长廊及周边村落建成航拍', wide: true },
   { src: '/images/guangping/built-entrance.jpg', label: '02 / 入口与木构节点', alt: '孝文化长廊入口和木构节点' },
   { src: '/images/guangping/built-overview.jpg', label: '03 / 村落中的连续屋面', alt: '孝文化长廊连续坡屋面实景' },
   { src: '/images/guangping/built-street.jpg', label: '04 / 街巷界面', alt: '孝文化长廊沿街建成实景' },
   { src: '/images/guangping/built-facade.jpg', label: '05 / 廊道立面', alt: '孝文化长廊木构立面实景' },
   { src: '/images/guangping/built-pavilion.jpg', label: '06 / 停留节点', alt: '孝文化长廊亭廊停留节点' },
-  { src: '/images/guangping/built-corridor-wide.jpg', label: '07 / 空间序列', alt: '孝文化长廊横向空间序列' },
   { src: '/images/guangping/built-corridor-portrait.jpg', label: '08 / 廊下体验', alt: '孝文化长廊纵深空间体验' },
+  { src: '/images/guangping/built-corridor-wide.jpg', label: '07 / 空间序列', alt: '孝文化长廊横向空间序列', wide: true },
   { src: '/images/guangping/built-timber-detail.jpg', label: '09 / 木构节点近景', alt: '孝文化长廊木构屋架建成细节' },
   { src: '/images/guangping/built-roof-detail.jpg', label: '10 / 屋架与采光', alt: '孝文化长廊屋架与自然采光细节' },
 ]
@@ -744,6 +955,37 @@ function PanoramaViewer() {
   )
 }
 
+function SecondaryPanoramaViewer({ panorama }) {
+  const viewerElement = useRef(null)
+
+  useEffect(() => {
+    if (!viewerElement.current || !window.pannellum) return undefined
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const viewer = window.pannellum.viewer(viewerElement.current, {
+      type: 'equirectangular',
+      panorama: panorama.src,
+      autoLoad: true,
+      autoRotate: reduceMotion ? false : -1.2,
+      autoRotateInactivityDelay: 4500,
+      pitch: -4,
+      yaw: 0,
+      hfov: 100,
+      minHfov: 52,
+      maxHfov: 115,
+      showControls: true,
+      showFullscreenCtrl: true,
+      keyboardZoom: true,
+      mouseZoom: true,
+      compass: false,
+      backgroundColor: [8, 8, 8],
+    })
+
+    return () => viewer.destroy()
+  }, [panorama.src])
+
+  return <div className="secondary-case-panorama" ref={viewerElement} aria-label={`${panorama.alt}，360度球型全景`} />
+}
+
 function SecondaryCaseShowcase({ id, number, title, label, summary, tags, groups }) {
   const [activeGroup, setActiveGroup] = useState(0)
   const [activeImage, setActiveImage] = useState(0)
@@ -827,31 +1069,38 @@ function SecondaryCaseShowcase({ id, number, title, label, summary, tags, groups
               </button>
             </header>
 
-            <div className="secondary-case-modal-body">
-              <figure className={`secondary-case-main secondary-case-${group.key}`}>
-                <img src={group.images[activeImage].src} alt={group.images[activeImage].alt} />
-                <figcaption>
-                  <span>{number}.{activeGroup + 1}.{String(activeImage + 1).padStart(2, '0')}</span>
-                  <strong>{group.label} / {group.en}</strong>
-                </figcaption>
-              </figure>
-
-              <div className="secondary-case-thumbnails" aria-label={`${group.label}图片选择`}>
-                {group.images.map((image, index) => (
-                  <button
-                    className={activeImage === index ? 'active' : ''}
-                    key={image.src}
-                    onClick={() => setActiveImage(index)}
-                    aria-label={`查看${group.label}图片 ${index + 1}`}
-                    aria-pressed={activeImage === index}
-                    type="button"
-                  >
-                    <img src={image.src} alt="" loading="lazy" />
-                    <span>{String(index + 1).padStart(2, '0')}</span>
-                  </button>
-                ))}
+            {group.panorama ? (
+              <div className="secondary-case-modal-body secondary-case-panorama-body">
+                <SecondaryPanoramaViewer panorama={group.images[0]} />
+                <div className="secondary-case-panorama-note"><span>360° SPHERICAL VIEW</span><span>拖动画面环视空间，滚轮缩放</span></div>
               </div>
-            </div>
+            ) : (
+              <div className="secondary-case-modal-body">
+                <figure className={`secondary-case-main secondary-case-${group.key}`}>
+                  <img src={group.images[activeImage].src} alt={group.images[activeImage].alt} />
+                  <figcaption>
+                    <span>{number}.{activeGroup + 1}.{String(activeImage + 1).padStart(2, '0')}</span>
+                    <strong>{group.label} / {group.en}</strong>
+                  </figcaption>
+                </figure>
+
+                <div className="secondary-case-thumbnails" aria-label={`${group.label}图片选择`}>
+                  {group.images.map((image, index) => (
+                    <button
+                      className={activeImage === index ? 'active' : ''}
+                      key={image.src}
+                      onClick={() => setActiveImage(index)}
+                      aria-label={`查看${group.label}图片 ${index + 1}`}
+                      aria-pressed={activeImage === index}
+                      type="button"
+                    >
+                      <img src={image.src} alt="" loading="lazy" />
+                      <span>{String(index + 1).padStart(2, '0')}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -936,8 +1185,8 @@ function GuangpingCasePage() {
             <p>航拍呈现长廊与村落建筑的整体关系；街巷、入口、亭廊与室内视角进一步记录尺度、结构和连续步行体验。</p>
           </div>
           <div className="built-photo-grid">
-            {guangpingBuilt.map((image, index) => (
-              <figure className={index === 0 || index === 6 ? 'wide' : ''} key={image.src}>
+            {guangpingBuilt.map((image) => (
+              <figure className={image.wide ? 'wide' : ''} key={image.src}>
                 <img src={image.src} alt={image.alt} loading="lazy" />
                 <figcaption>{image.label}</figcaption>
               </figure>
@@ -1648,8 +1897,386 @@ function LanikarCasePage() {
   )
 }
 
+function ResearchCasePage() {
+  return (
+    <main className="case-study-page research-case-page" id="case-content">
+      <header className="case-detail-header frame">
+        <a className="brand" href="/#top" aria-label="返回作品集首页">AT<span>®</span></a>
+        <nav aria-label="研究项目导航">
+          <a href="#research-insight">业务洞察</a>
+          <a href="#research-architecture">产品架构</a>
+          <a href="#research-validation">验证落地</a>
+        </nav>
+        <a className="contact-link" href="/#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
+      </header>
+
+      <section className="research-detail-hero" id="research-top">
+        <div className="frame">
+          <a className="research-back" href="/#projects"><ArrowLeft size={20} /> 返回作品目录</a>
+          <p className="research-kicker">PERSONAL RESEARCH / CROSS-DISCIPLINARY AI PRODUCT</p>
+          <h1>古建筑木结构<br />点云智能检测<br />修缮系统</h1>
+          <div className="research-detail-lead">
+            <p>面向古建筑修缮勘察工程师的 B 端产品原型。以“现场采集—智能分析—国标评估—工程交付”为完整业务链路，将多源技术转译为可执行的修缮决策。</p>
+            <dl><div><dt>项目角色</dt><dd>项目负责人 / 产品方案主导</dd></div><div><dt>技术融合</dt><dd>点云采集 / AI / 几何算法 / 文保国标</dd></div></dl>
+          </div>
+        </div>
+        <figure className="research-detail-hero-image">
+          <img src="/images/research/heritage-pointcloud.webp" alt="大田琵琶堡与永盛梁氏宗祠三维点云扫描成果" />
+          <figcaption>REAL-WORLD TEST CASES / 大田琵琶堡 · 永盛梁氏宗祠</figcaption>
+        </figure>
+      </section>
+
+      <section className="research-detail-section research-insight-section" id="research-insight">
+        <div className="section-frame">
+          <div className="case-section-label"><span>01</span><p>BUSINESS INSIGHT / 业务洞察与需求定义</p></div>
+          <div className="research-detail-heading">
+            <h2>不是做一个“识别模型”，而是重构古建筑修缮的检测与决策流程。</h2>
+            <p>用户是古建筑修缮勘察工程师与文保项目负责人。产品从源头采集质量出发，将模糊、依赖经验的勘测诉求拆解为可输入、可计算、可评估、可交付的系统能力。</p>
+          </div>
+          <div className="research-pain-grid">
+            <article><span>01</span><h3>采集源头失控</h3><p>空间狭窄、构件遮挡与非接触约束容易造成漏扫和密度不均，原始点云不合格会直接使后续分析失效。</p></article>
+            <article><span>02</span><h3>人工判断难量化</h3><p>倾斜、挠度与隐蔽位置依赖人工经验，缺少统一量化标准，也难以覆盖高危节点。</p></article>
+            <article><span>03</span><h3>技术与业务脱节</h3><p>通用模型无法适配复杂古建；分类点云也不能直接转换为残损等级、修缮建议和工程图纸。</p></article>
+          </div>
+          <div className="research-demand-strip"><span>采集层：标准化作业与质检</span><span>能力层：柱 / 墙 / 梁枋识别</span><span>计算层：尺寸、倾斜、挠度</span><span>规则层：国标风险与修缮</span><span>交付层：报告、图纸与安全结论</span></div>
+        </div>
+      </section>
+
+      <section className="research-detail-section research-architecture-section" id="research-architecture">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>02</span><p>PRODUCT ARCHITECTURE / 端到端产品架构</p></div>
+          <div className="research-detail-heading light">
+            <h2>用六个模块，把现场原始数据变成工程师能够直接使用的依据。</h2>
+            <p>我负责定义各模块的目标、输入、输出与业务约束，评估技术组合与能力边界；AI 语义分割只作为中间能力，不直接作为最终产品交付。</p>
+          </div>
+          <ol className="research-detail-flow">
+            <li><b>01</b><strong>外业采集</strong><span>分区扫描、正面扫描与侧面补扫；定义距离、分辨率、重叠率和补扫规则。</span></li>
+            <li><b>02</b><strong>点云预处理</strong><span>ICP 配准、非本体剔除、滤波去噪、体素下采样与坐标归一化。</span></li>
+            <li><b>03</b><strong>AI 语义分割</strong><span>基于 RandLA-Net 识别柱、墙、梁枋；以类别权重、数据增强和交叉验证处理古建数据差异。</span></li>
+            <li><b>04</b><strong>几何后处理</strong><span>DBSCAN、RANSAC、PCA、KDE 组合为构件处理链路，提取尺寸、倾斜、挠度等参数。</span></li>
+            <li><b>05</b><strong>国标规则引擎</strong><span>依据 GB/T 50165-2020，将数值映射为残损等级、风险提示与修缮建议。</span></li>
+            <li><b>06</b><strong>工程交付物</strong><span>输出质检报告、参数表、风险标注图、补充 CAD 图与整体安全评估报告。</span></li>
+          </ol>
+          <div className="research-detail-images">
+            <figure><img src="/images/research/semantic-dataset.webp" alt="福建古建筑点云语义数据集" loading="lazy" /><figcaption><b>数据集建设</b>完成 9 座福建古建筑的点云采集与标注，建立场景专用训练与测试数据集。</figcaption></figure>
+            <figure><img src="/images/research/wall-segmentation.webp" alt="墙体点云分割过程" loading="lazy" /><figcaption><b>能力边界</b>AI 输出为粗分割点云，仍需通过独立几何后处理得到可用于修缮的物理参数。</figcaption></figure>
+          </div>
+          <div className="research-component-grid">
+            <article><h3>木柱</h3><p>实例提纯 → 粗拟合 → 点云补全 → 精拟合</p><span>直径 / 高度 / 倾斜角 / 柱头偏移 / 无支高度</span></article>
+            <article><h3>墙体</h3><p>降噪与墙地分离 → 双约束聚类 → 单体拆分</p><span>尺寸 / 倾斜角 / 偏移量</span></article>
+            <article><h3>梁枋</h3><p>连通域拆分 → 全局方向识别 → 高度分层 → 曲线拟合</p><span>长度 / 挠度变形参数</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="research-detail-section research-validation-section" id="research-validation">
+        <div className="section-frame">
+          <div className="case-section-label"><span>03</span><p>VALIDATION & DELIVERY / 验证、评估与工程落地</p></div>
+          <div className="research-detail-heading">
+            <h2>把检测数值翻译为国标化风险判断，并在真实文保项目中验证完整链路。</h2>
+            <p>以大田琵琶堡、永盛梁氏宗祠为测试案例，完成从外业采集、数据处理、构件分析到评估输出的全流程验证，同时识别现场遮挡、扫描噪声、模型误差与构件残缺等适用边界。</p>
+          </div>
+          <div className="research-validation-layout">
+            <figure><img src="/images/research/stability-assessment.webp" alt="古建筑梁架四向稳定性检测与风险评估" loading="lazy" /><figcaption>四级评估模型：勘查项目残损等级 → 单构件安全等级 → 构件集安全等级 → 结构体系安全等级。</figcaption></figure>
+            <div className="research-results">
+              <article><strong>±1cm</strong><span>木柱直径误差</span></article>
+              <article><strong>≤2mm</strong><span>梁枋挠度误差</span></article>
+              <article><strong>≤10cm</strong><span>墙体检测误差</span></article>
+              <p>检测发现：大田琵琶堡约 80% 木柱倾斜超限；永盛梁氏宗祠超过 60% 墙体存在中重度残损，为人工勘测中容易遗漏的隐患提供量化依据。</p>
+            </div>
+          </div>
+          <div className="research-results-heading">
+            <p>STANDARD-BASED COMPUTATION / 国标模型运算成果</p>
+            <h3>从构件识别到风险判断，所有检测成果均基于国标构建的模型完成运算。</h3>
+          </div>
+          <div className="research-results-gallery">
+            <article>
+              <div><span>01</span><h3>柱体检测成果</h3><p>柱体定位与截面拟合，输出偏移、倾斜等可量化检测结果。</p></div>
+              <div className="research-result-images"><figure><img src="/images/research/results/column-layout.png" alt="古建筑木柱平面检测与偏移标注成果" loading="lazy" /></figure><figure><img src="/images/research/results/column-fit.png" alt="古建筑木柱截面拟合检测成果" loading="lazy" /></figure></div>
+            </article>
+            <article>
+              <div><span>02</span><h3>梁架检测成果</h3><p>基于梁架点云的构件识别、挠度计算与形变结果输出。</p></div>
+              <div className="research-result-images"><figure><img src="/images/research/results/beam-detection.png" alt="古建筑梁架构件检测与编号成果" loading="lazy" /></figure><figure><img src="/images/research/results/beam-fit.png" alt="古建筑梁枋拟合与挠度检测成果" loading="lazy" /></figure></div>
+            </article>
+            <article>
+              <div><span>03</span><h3>墙体检测成果</h3><p>以国标评价规则计算墙体偏移、倾斜及残损风险等级。</p></div>
+              <div className="research-result-images"><figure><img src="/images/research/results/wall-detection.png" alt="古建筑墙体检测与定位成果" loading="lazy" /></figure><figure><img src="/images/research/results/wall-assessment.png" alt="古建筑墙体国标模型评估成果" loading="lazy" /></figure></div>
+            </article>
+          </div>
+          <div className="research-rollout"><span>前期勘察<br /><b>采集 + 智能检测</b></span><span>施工阶段<br /><b>重复采集与形变比对</b></span><span>修缮验收<br /><b>点云核验修缮效果</b></span><span>后期运维<br /><b>定期监测与风险预警</b></span></div>
+          <a className="research-return" href="/#projects">返回作品目录 <ArrowUpRight size={20} /></a>
+        </div>
+      </section>
+    </main>
+  )
+}
+
 function App() {
   const activeCase = new URLSearchParams(window.location.search).get('case')
+  const [headerPinned, setHeaderPinned] = useState(false)
+
+  useLayoutEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+
+    const root = document.querySelector(activeCase ? '#case-content' : '#content')
+    if (!root) return undefined
+
+    const splitRestorers = []
+    const ctx = gsap.context(() => {
+      const revealItems = (items, options = {}) => {
+        const elements = gsap.utils.toArray(items)
+        if (!elements.length) return
+        elements.forEach((element, index) => {
+          gsap.fromTo(element,
+            { clipPath: 'inset(0 0 100% 0)', y: options.y ?? 88, scale: options.scale ?? 1 },
+            {
+              clipPath: 'inset(0 0 0% 0)',
+              y: 0,
+              scale: 1,
+              duration: options.duration ?? 1.25,
+              delay: options.perItem ? 0 : index * (options.stagger ?? 0.16),
+              ease: 'power4.out',
+              force3D: true,
+              onComplete: () => gsap.set(element, { clearProps: 'clipPath,willChange' }),
+              scrollTrigger: {
+                trigger: options.perItem ? element : (options.trigger ?? elements[0]),
+                start: options.start ?? 'top 82%',
+                once: true,
+              },
+            },
+          )
+        })
+      }
+
+      if (!activeCase) {
+        const splitIntoVisualLines = (element) => {
+          if (!element) return []
+          const originalMarkup = element.innerHTML
+          const text = element.textContent
+          const characters = Array.from(text)
+          element.setAttribute('aria-label', text)
+          element.textContent = ''
+          const characterNodes = characters.map((character) => {
+            const node = document.createElement('span')
+            node.className = 'motion-character'
+            node.textContent = character === ' ' ? '\u00a0' : character
+            element.append(node)
+            return node
+          })
+
+          const groups = []
+          characterNodes.forEach((node) => {
+            const line = groups.at(-1)
+            if (!line || Math.abs(line.top - node.offsetTop) > 2) groups.push({ top: node.offsetTop, nodes: [node] })
+            else line.nodes.push(node)
+          })
+
+          element.textContent = ''
+          const lines = groups.map(({ nodes }) => {
+            const line = document.createElement('span')
+            line.className = 'motion-line'
+            nodes.forEach((node) => line.append(node))
+            element.append(line)
+            return line
+          })
+          splitRestorers.push(() => {
+            element.innerHTML = originalMarkup
+            element.removeAttribute('aria-label')
+          })
+          return lines
+        }
+
+        const bioLines = splitIntoVisualLines(document.querySelector('.bio-block > p:not(.lead)'))
+        const opening = gsap.timeline({ defaults: { ease: 'power4.out' } })
+        opening
+          .set('.hero-opening-mask', { autoAlpha: 1, clipPath: 'inset(0 0 0 0)' })
+          .set('.site-header', { autoAlpha: 0, y: -28 })
+          .set('.hero-copy .eyebrow, .hero-bottom, .hero-index, .media-note', { autoAlpha: 0, y: 34 })
+          .set('.hero-copy h1 span', { autoAlpha: 0, yPercent: 120, scaleY: 0.7, transformOrigin: '0% 100%' })
+          .set('.hero-video', { scale: 1.16 })
+          .to('.hero-opening-mask', { clipPath: 'inset(0 0 0 100%)', duration: 1.15, ease: 'expo.inOut' })
+          .to('.hero-video', { scale: 1, duration: 2.7, ease: 'power3.out' }, 0.24)
+          .to('.site-header', { autoAlpha: 1, y: 0, duration: 1.3 }, 0.48)
+          .to('.hero-copy .eyebrow', { autoAlpha: 1, y: 0, duration: 1.15 }, 0.82)
+          .to('.hero-copy h1 span', { autoAlpha: 1, yPercent: 0, scaleY: 1, duration: 1.75, stagger: 0.2, ease: 'expo.out' }, 0.96)
+          .to('.hero-bottom, .hero-index, .media-note', { autoAlpha: 1, y: 0, duration: 1.25, stagger: 0.14 }, 1.52)
+
+        gsap.utils.toArray('.section-heading').forEach((heading) => {
+          const label = heading.querySelector('p')
+          const title = heading.querySelector('h2')
+          const timeline = gsap.timeline({ scrollTrigger: { trigger: heading, start: 'top 82%', once: true } })
+          timeline
+            .from(label, { autoAlpha: 0, xPercent: -55, duration: 0.85, ease: 'power4.out' })
+            .from(title, { autoAlpha: 0, yPercent: 58, scaleX: 0.76, transformOrigin: '0% 100%', duration: 1.35, ease: 'expo.out' }, 0.16)
+        })
+
+        revealItems('.about-grid > *', { trigger: '.about-grid', stagger: 0.14 })
+        if (bioLines.length) {
+          gsap.from(bioLines, {
+            autoAlpha: 0,
+            y: 34,
+            duration: 1.05,
+            stagger: 0.16,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: '.bio-block', start: 'top 82%', once: true },
+          })
+        }
+        revealItems('.design-positioning > p, .design-positioning > h3, .positioning-points > span', { trigger: '.design-positioning', y: 68, stagger: 0.12 })
+        revealItems('.resume-grid > *', { trigger: '.resume-grid', y: 64, stagger: 0.08, duration: 0.75 })
+        revealItems('.case-manifesto > p, .case-manifesto > h3', { trigger: '.case-manifesto', y: 76, stagger: 0.12 })
+        revealItems('.method-item', { trigger: '.method-grid', y: 76, stagger: 0.1 })
+        revealItems('.case-card', { y: 120, perItem: true })
+        revealItems('.personal-research', { y: 96, duration: 1.1 })
+        revealItems('.capability-statement', { y: 86 })
+        revealItems('.strength-card', { trigger: '.strength-grid', y: 86, stagger: 0.1 })
+        revealItems('.tool-strip', { y: 54 })
+        revealItems('.contact-content, .contact-footer', { trigger: '.contact-content', y: 72, stagger: 0.15 })
+
+        gsap.utils.toArray('.portrait-block img, .case-visual > img, .case-montage img').forEach((image) => {
+          gsap.fromTo(image,
+            { clipPath: 'inset(10% 0 10% 0)', scale: 1.16, yPercent: -5 },
+            {
+              clipPath: 'inset(0% 0 0% 0)',
+              scale: 1,
+              yPercent: 4,
+              ease: 'none',
+              scrollTrigger: { trigger: image.parentElement, start: 'top 92%', end: 'bottom 8%', scrub: 0.9, invalidateOnRefresh: true },
+            },
+          )
+        })
+
+        gsap.utils.toArray('.case-card').forEach((card) => {
+          const frames = card.querySelectorAll('.case-montage figure, .case-visual > img')
+          const copy = card.querySelectorAll('.case-kicker, .case-copy > h3, .case-summary, .case-facts > div, .case-ready')
+          const timeline = gsap.timeline({ scrollTrigger: { trigger: card, start: 'top 80%', once: true } })
+          if (frames.length) {
+            timeline.fromTo(frames,
+              { clipPath: 'inset(0 0 100% 0)', x: -54 },
+              {
+                clipPath: 'inset(0 0 0% 0)',
+                x: 0,
+                duration: 1.35,
+                stagger: 0.24,
+                ease: 'power4.out',
+                onComplete: () => gsap.set(frames, { clearProps: 'clipPath,willChange' }),
+              },
+              0,
+            )
+          }
+          timeline.from(copy, { autoAlpha: 0, y: 38, duration: 0.85, stagger: 0.13, ease: 'power3.out' }, 0.28)
+        })
+
+        gsap.utils.toArray('.secondary-case-showcase').forEach((card) => {
+          const headingModules = card.querySelectorAll('.secondary-case-heading > *')
+          const tabModules = card.querySelectorAll('.secondary-case-tabs button')
+          gsap.fromTo(headingModules,
+            { clipPath: 'inset(0 100% 0 0)', x: -68 },
+            {
+              clipPath: 'inset(0 0% 0 0)',
+              x: 0,
+              duration: 0.98,
+              stagger: 0.14,
+              ease: 'power4.out',
+              onComplete: () => gsap.set(headingModules, { clearProps: 'clipPath,willChange' }),
+              scrollTrigger: { trigger: card, start: 'top 84%', once: true },
+            },
+          )
+          gsap.fromTo(tabModules,
+            { clipPath: 'inset(100% 0 0 0)', y: 68 },
+            {
+              clipPath: 'inset(0% 0 0 0)',
+              y: 0,
+              duration: 0.88,
+              stagger: 0.13,
+              ease: 'power4.out',
+              onComplete: () => gsap.set(tabModules, { clearProps: 'clipPath,willChange' }),
+              scrollTrigger: { trigger: card, start: 'top 84%', once: true },
+            },
+          )
+        })
+      } else {
+        revealItems('.case-detail-hero h1, .research-detail-hero h1', { y: 108, duration: 1.35, stagger: 0.1, start: 'top 92%' })
+        if (activeCase === 'research') {
+          gsap.fromTo('.research-detail-lead > *',
+            { clipPath: 'inset(0 0 100% 0)', y: 68 },
+            {
+              clipPath: 'inset(0 0 0% 0)',
+              y: 0,
+              duration: 1.2,
+              stagger: 0.16,
+              ease: 'power4.out',
+              onComplete: () => gsap.set('.research-detail-lead > *', { clearProps: 'clipPath,willChange' }),
+              scrollTrigger: { trigger: '.research-detail-lead', start: 'top 86%', once: true },
+            },
+          )
+          gsap.fromTo('.research-detail-hero-image',
+            { clipPath: 'inset(12% 0 12% 0)', scale: 1.08, y: 72 },
+            {
+              clipPath: 'inset(0% 0 0% 0)',
+              scale: 1,
+              y: 0,
+              duration: 1.45,
+              ease: 'power4.out',
+              onComplete: () => gsap.set('.research-detail-hero-image', { clearProps: 'clipPath,willChange' }),
+              scrollTrigger: { trigger: '.research-detail-hero-image', start: 'top 86%', once: true },
+            },
+          )
+          const resultHeading = document.querySelector('.research-results-heading')
+          const resultCards = document.querySelectorAll('.research-results-gallery > article')
+          if (resultHeading && resultCards.length) {
+            const resultTimeline = gsap.timeline({ scrollTrigger: { trigger: resultHeading, start: 'top 82%', once: true } })
+            resultTimeline
+              .from(resultHeading.querySelector('p'), { autoAlpha: 0, xPercent: -45, duration: 0.85, ease: 'power4.out' })
+              .from(resultHeading.querySelector('h3'), { autoAlpha: 0, yPercent: 42, scaleX: 0.82, duration: 1.25, ease: 'expo.out' }, 0.1)
+              .from(resultCards, { clipPath: 'inset(0 0 100% 0)', y: 84, duration: 1.05, stagger: 0.14, ease: 'power4.out' }, 0.24)
+              .from('.research-results-gallery h3, .research-results-gallery p, .research-result-images figure', { autoAlpha: 0, y: 32, duration: 0.75, stagger: 0.05, ease: 'power3.out' }, 0.48)
+          }
+        }
+        gsap.utils.toArray('.case-detail-section, .research-detail-section').forEach((section) => {
+          const label = section.querySelector('.case-section-label')
+          const heading = section.querySelector('h2')
+          const cards = Array.from(section.querySelectorAll('article, figure, .research-detail-flow li')).filter((card) => !card.closest('.research-results-gallery'))
+          if (label || heading) {
+            const textBlocks = section.querySelectorAll('p, h3, h4, dt, dd, time, figcaption, a')
+            gsap.timeline({ scrollTrigger: { trigger: section, start: 'top 80%', once: true } })
+              .from(label, { autoAlpha: 0, xPercent: -45, duration: 0.75, ease: 'power4.out' })
+              .from(heading, { autoAlpha: 0, yPercent: 45, scaleX: 0.82, duration: 1.05, ease: 'expo.out' }, 0.1)
+              .from(cards, { clipPath: 'inset(0 0 100% 0)', y: 72, duration: 0.9, stagger: 0.09, ease: 'power4.out' }, 0.24)
+              .from(textBlocks, { autoAlpha: 0, x: -30, duration: 0.72, stagger: 0.025, ease: 'power3.out' }, 0.34)
+          }
+        })
+      }
+    }, root)
+
+    const refreshId = window.requestAnimationFrame(() => ScrollTrigger.refresh())
+
+    return () => {
+      window.cancelAnimationFrame(refreshId)
+      ctx.revert()
+      splitRestorers.forEach((restore) => restore())
+    }
+  }, [activeCase])
+
+  useEffect(() => {
+    if (activeCase) {
+      setHeaderPinned(false)
+      return undefined
+    }
+
+    const updateHeaderPinned = () => {
+      const hero = document.querySelector('.hero')
+      const threshold = Math.max(0, (hero?.offsetHeight || window.innerHeight) - 88)
+      setHeaderPinned(window.scrollY >= threshold)
+    }
+
+    updateHeaderPinned()
+    window.addEventListener('scroll', updateHeaderPinned, { passive: true })
+    window.addEventListener('resize', updateHeaderPinned)
+    return () => {
+      window.removeEventListener('scroll', updateHeaderPinned)
+      window.removeEventListener('resize', updateHeaderPinned)
+    }
+  }, [activeCase])
 
   useEffect(() => {
     const metadata = {
@@ -1682,6 +2309,11 @@ function App() {
         title: 'LA NIKAR 线下体验店｜安桐空间设计作品集',
         description: '面向新潮连锁服装品牌的商业空间设计：整合零售陈列、顾客体验、直播拍摄与品牌运营。',
         image: '/images/lanikar/render-facade.jpg',
+      },
+      research: {
+        title: '古建筑木结构点云智能检测修缮系统｜安桐个人研究',
+        description: '以点云采集、AI 构件识别、几何处理、国标评估与工程交付串联的古建筑修缮 B 端产品原型研究。',
+        image: '/images/research/heritage-pointcloud.webp',
       },
       home: {
         title: '安桐｜空间设计师',
@@ -1730,6 +2362,10 @@ function App() {
     return <LanikarCasePage />
   }
 
+  if (activeCase === 'research') {
+    return <ResearchCasePage />
+  }
+
   return (
     <>
       <a className="skip-link" href="#content">跳到主要内容</a>
@@ -1739,12 +2375,14 @@ function App() {
             <source src="/video/hero-architecture.mp4" type="video/mp4" />
           </video>
           <div className="hero-shade" />
+          <div className="hero-opening-mask" aria-hidden="true" />
 
-          <header className="site-header frame">
+          <header className={`site-header frame${headerPinned ? ' is-pinned' : ''}`}>
             <a className="brand" href="#top" aria-label="返回首页">AT<span>®</span></a>
             <nav aria-label="主要导航">
               <a href="#about"><span>关于</span></a>
-              <a href="#projects"><span>案例</span></a>
+              <a href="#projects"><span>作品</span></a>
+              <a href="#product-prototype"><span>研发项目</span></a>
               <a href="#strengths"><span>能力</span></a>
             </nav>
             <a className="contact-link" href="#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
@@ -1755,8 +2393,8 @@ function App() {
             <h1><span>以空间，</span><span>回应场所。</span></h1>
             <div className="hero-bottom hero-bottom-cases">
               <p>我从在地文化与真实使用出发，把复杂问题转译为空间策略、体验场景与可落地的设计成果。</p>
-              <div className="hero-case-count" aria-label="案例概览">
-                <strong>14</strong><span>PROJECT INDEX<br />06 FEATURED CASES</span>
+              <div className="hero-case-count" aria-label="作品概览">
+                <strong>16</strong><span>PROJECT INDEX<br />06 FEATURED CASES</span>
               </div>
               <a href="#projects" className="scroll-cue" aria-label="查看精选案例"><ArrowDownRight size={30} /></a>
             </div>
@@ -1777,11 +2415,10 @@ function App() {
 
               <div className="bio-block">
                 <p className="lead">我关注空间如何回应真实生活，而不止于形式。</p>
-                <p>安桐，空间与建筑设计师。拥有设计学与建筑学交叉背景，实践聚焦文旅空间、乡村振兴公共空间、历史文化街区及传统建筑保护。习惯从场所调研和文化线索中找到设计支点，再通过空间结构、场景节点与技术表达推动方案落地。</p>
+                <p>兼具设计学与建筑学复合背景，专注文化赋能型商业与文旅空间设计，涵盖民宿、餐饮、连锁品牌门店、品牌零售、文旅空间、历史街区与古建活化。依托场地调研挖掘在地文化内核，平衡品牌经营诉求与沉浸式场景营造，从场所调研和文化线索中找到设计支点，再通过空间结构、场景节点与技术表达推动方案落地。</p>
                 <div className="bio-meta">
                   <a href="mailto:1577288186@qq.com"><Mail size={18} /> 1577288186@qq.com</a>
                   <a href="tel:+8615653209989"><Phone size={18} /> +86 156 5320 9989</a>
-                  <span><MapPin size={18} /> 山东青岛 / 福建福州</span>
                 </div>
               </div>
 
@@ -1807,35 +2444,34 @@ function App() {
             </div>
 
             <div className="resume-grid">
-              <div className="resume-column">
-                <p className="column-label">工作经历 / EXPERIENCE</p>
-                {experience.map((item) => (
-                  <article className="timeline-row" key={item.period}>
-                    <time>{item.period}</time>
-                    <div><h3>{item.place}</h3><p className="role">{item.role}</p><p>{item.detail}</p></div>
-                  </article>
-                ))}
-              </div>
-              <div className="resume-column education-column">
-                <p className="column-label">教育背景 / EDUCATION</p>
-                {education.map((item) => (
-                  <article className="education-row" key={item.period}>
-                    <time>{item.period}</time>
-                    <div><h3>{item.school}</h3><p>{item.major}</p></div>
-                  </article>
-                ))}
-              </div>
+              <p className="column-label">工作经历 / EXPERIENCE</p>
+              <p className="column-label">教育背景 / EDUCATION</p>
+              {experience.map((item, index) => {
+                const study = education[index]
+                return (
+                  <Fragment key={item.period}>
+                    <article className="timeline-row">
+                      <time>{item.period}</time>
+                      <div><h3>{item.place}</h3><p className="role">{item.role}</p><p>{item.detail}</p></div>
+                    </article>
+                    <article className="education-row">
+                      <time>{study.period}</time>
+                      <div><h3>{study.school}</h3><p>{study.major}</p><p className="education-detail">{study.detail}</p></div>
+                    </article>
+                  </Fragment>
+                )
+              })}
             </div>
           </div>
         </section>
 
         <section className="projects section" id="projects">
           <div className="section-frame">
-            <SectionHeading index="02" label="SELECTED CASES" title={'案例优先 /\n用过程证明能力'} light />
+            <SectionHeading index="02" label="SELECTED CASES" title={'作品优先 /\n用过程证明能力'} light />
 
             <div className="case-manifesto">
               <p>CASE STUDY SYSTEM</p>
-              <h3>案例不是结果图的堆叠，而是一条从问题识别、策略建立到空间落地的证据链。</h3>
+              <h3>作品不是结果图的堆叠，而是一条从问题识别、策略建立到空间落地的探讨。</h3>
               <div className="method-grid">
                 {methods.map((method) => (
                   <div className="method-item" key={method.number}>
@@ -1925,7 +2561,7 @@ function App() {
                 number="09"
                 label="RURAL HOMESTAY"
                 title="李窠村乡村民宿改造"
-                summary="在保留旧房尺度与乡村肌理的前提下，二层木构增建释放客房容量，并以外廊串联到达、停留与住宿，清晰分离客人与后勤流线，使小体量改造兼具舒适体验与运营效率。由平面分区、立面重构与木构节点深化，可见我从存量建筑研判、民宿动线组织到施工图表达和文旅场景营造的完整能力。"
+                summary="在保留旧房尺度与乡村肌理的前提下，二层木构增建释放客房容量，并以外廊串联到达、停留与住宿，清晰分离客人与后勤流线，使小体量改造兼具舒适体验与运营效率。"
                 tags={['旧房改造', '民宿动线', '文旅场景']}
                 groups={likeGroups}
               />
@@ -1939,36 +2575,74 @@ function App() {
                 tags={['旧屋改造', '民宿旅居', '滨水活动']}
                 groups={xiuqiaoGroups}
               />
+
+              <SecondaryCaseShowcase
+                id="sishu"
+                number="11"
+                label="CULTURAL SPACE"
+                title="私塾馆文化空间改造"
+                summary="以在地文化和教育空间的重塑为目标，通过分层夯土工艺的再演绎，将不同色阶的夯土肌理转化为空间叙事；竹木、青砖与旧屋架共同延续古建记忆，并为文化展示、小型沙龙与乡村公共活动提供舒适场所。"
+                tags={['分层夯土', '竹木青砖', '文化教育']}
+                groups={sishuGroups}
+              />
+
+              <SecondaryCaseShowcase
+                id="robinhood"
+                number="12"
+                label="RETAIL INTERIOR"
+                title="罗宾汉连锁服装门店"
+                summary="围绕连锁服装门店的品牌识别、陈列效率与顾客停留展开空间设计：以简洁的灰白基调、品牌绿和山形光带建立统一视觉，并通过入口橱窗、收银服务、展示中岛与试衣动线形成清晰、可复制的零售体验。"
+                tags={['连锁零售', '陈列体验', '标准化落地']}
+                groups={robinhoodGroups}
+              />
+
+              <SecondaryCaseShowcase
+                id="fanhuayin"
+                number="13"
+                label="JEWELLERY RETAIL"
+                title="繁花吟珠宝门店"
+                summary="围绕连锁珠宝门店的陈列秩序与体验氛围展开：以深色木饰面、柔和米色基底和弧形界面组织空间，串联首饰展示、服饰搭配、顾客洽谈与休憩场景；中岛展柜与墙面陈列共同建立清晰的浏览节奏与品牌记忆。"
+                tags={['珠宝陈列', '零售体验', '连锁门店']}
+                groups={fanhuayinGroups}
+              />
+              <SecondaryCaseShowcase
+                id="nailsalon"
+                number="14"
+                label="INDEPENDENT STORE"
+                title="美甲店·甜品复合空间"
+                summary="以独立门店的风格化体验为核心，将等候休闲、美甲服务、产品展示与后勤功能沿清晰动线组织；以柔和中性色、木质家具与弧形界面建立轻松而有辨识度的复合消费场景。"
+                tags={['风格化门店', '动线组织', '复合体验']}
+                groups={nailsalonGroups}
+              />
+              <SecondaryCaseShowcase
+                id="live-fashion"
+                number="15"
+                label="LIVE COMMERCE RETAIL"
+                title="服装品牌直播展示空间"
+                summary="围绕服装品牌的直播与展示需求，将镜头取景、产品陈列、主播动线与观众体验统筹组织；以温润材质、层叠界面与可切换的展示背景，建立适配线上视觉传播和线下到店体验的复合空间。"
+                tags={['品牌直播', '视觉场景', '展示动线']}
+                groups={liveFashionGroups}
+              />
+              <SecondaryCaseShowcase
+                id="disney-live"
+                number="16"
+                label="LIVE COMMERCE HOME"
+                title="迪士尼家纺直播展示空间"
+                summary="以家纺产品的生活方式表达为主线，将睡眠场景、直播背景、产品展示与设备支持整合在连续平面中；以柔和色彩和主题化画面建立更具记忆点的直播视觉，并兼顾品牌展示与实景体验。"
+                tags={['品牌直播', '家纺展示', '画面设计']}
+                groups={disneyLiveGroups}
+              />
             </div>
 
-            <div className="project-archive">
-              <div className="archive-heading">
+            <div className="personal-research" id="product-prototype">
+              <a className="research-home-link" href="/?case=research" aria-label="查看古建筑木结构点云智能检测修缮系统研究详情">
                 <div>
-                  <span>PROJECT ARCHIVE / 07—13</span>
-                  <h3>更多项目，已经为后续作品材料预留完整展示入口。</h3>
+                  <span>PERSONAL RESEARCH / 01</span>
+                  <h3>古建筑木结构<br />点云智能检测<br />修缮系统</h3>
+                  <p>项目负责人，以产品视角主导项目全流程：主导现场采集流程与方案规划，开展行业痛点调研与用户需求挖掘，完成整体产品方案、业务规则体系建模，定义各模块输入输出；设计外业采集至内业分析的全链路验证方案，明确产品交付成果，规划工程落地范式，推动算法落地验证。</p>
+                  <strong className="research-home-cta">进入项目详情 <ArrowUpRight size={26} /></strong>
                 </div>
-                <p>当前先以项目档案呈现。收到你的图片、图纸与说明后，可逐项升级为与上方一致的完整案例。</p>
-              </div>
-
-              <div className="archive-grid">
-                {projectArchive.map((project) => (
-                  <article className="archive-card" key={project.number}>
-                    <div className="archive-number">{project.number}</div>
-                    <div className="archive-meta"><span>{project.location}</span><span>{project.type}</span></div>
-                    <h4>{project.title}</h4>
-                    <p>{project.role}</p>
-                    <div className="archive-status">
-                      <span>CASE SLOT / 待接入作品</span>
-                      <ArrowUpRight size={20} strokeWidth={1.8} aria-hidden="true" />
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className="case-upload-note">
-              <div><span>NEXT / 下一步</span><h3>5 个重点案例，持续扩展完整作品档案。</h3></div>
-              <p>后续你可以提供项目照片、效果图、分析图、平面图、草图和项目说明。我会按“背景—问题—策略—过程—成果”的结构，为每个案例建立视觉节奏与叙事重点，让作品不只是被看见，也能清楚证明你的空间判断与落地能力。</p>
+              </a>
             </div>
           </div>
         </section>
@@ -2009,7 +2683,7 @@ function App() {
             <div className="contact-footer">
               <div><span>EMAIL</span><a href="mailto:1577288186@qq.com">1577288186@qq.com</a></div>
               <div><span>PHONE</span><a href="tel:+8615653209989">+86 156 5320 9989</a></div>
-              <div><span>BASED IN</span><p>QINGDAO / FUZHOU</p></div>
+              <div><span>BASED IN</span><p>QINGDAO / HANGZHOU</p></div>
               <a className="back-top" href="#top">回到顶部 <ArrowUpRight size={20} /></a>
             </div>
           </div>
