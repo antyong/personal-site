@@ -2371,7 +2371,7 @@ function App() {
       <a className="skip-link" href="#content">跳到主要内容</a>
       <main id="content">
         <section className="hero" id="top">
-          <video className="hero-video" autoPlay muted loop playsInline poster="/images/project-village.jpg" aria-hidden="true">
+          <video className="hero-video" autoPlay muted loop playsInline preload="auto" poster="/images/project-village.jpg" aria-hidden="true">
             <source src="/video/hero-architecture.mp4" type="video/mp4" />
           </video>
           <div className="hero-shade" />
@@ -2409,7 +2409,7 @@ function App() {
             <SectionHeading index="01" label="PROFILE" title={'以研究建立秩序，\n以空间承载故事。'} />
             <div className="about-grid">
               <figure className="portrait-block">
-                <img src="/images/an-tong-profile.jpg" alt="空间设计师安桐" />
+                <img src="/images/an-tong-profile.jpg" alt="空间设计师安桐" loading="lazy" decoding="async" />
                 <figcaption><span>AN TONG</span><span>SPATIAL DESIGNER</span></figcaption>
               </figure>
 
@@ -2491,7 +2491,7 @@ function App() {
                       <div className="case-montage">
                         {project.gallery.map((image, index) => (
                           <figure className={index === 0 ? 'montage-main' : ''} key={image.src}>
-                            <img src={image.src} alt={image.alt} loading={index === 0 ? 'eager' : 'lazy'} />
+                            <img src={image.src} alt={image.alt} loading={project.number === 'CASE 01' && index === 0 ? 'eager' : 'lazy'} decoding="async" />
                             <figcaption>{image.label}</figcaption>
                           </figure>
                         ))}
