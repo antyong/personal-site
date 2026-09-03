@@ -2371,7 +2371,7 @@ function App() {
       <a className="skip-link" href="#content">跳到主要内容</a>
       <main id="content">
         <section className="hero" id="top">
-          <video className="hero-video" autoPlay muted loop playsInline preload="auto" poster="/images/project-village.jpg" aria-hidden="true">
+          <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster="/images/project-village.jpg" aria-hidden="true">
             <source src="/video/hero-architecture.mp4" type="video/mp4" />
           </video>
           <div className="hero-shade" />
