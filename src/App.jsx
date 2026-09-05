@@ -134,7 +134,7 @@ const projects = [
     summary: '以环形中庭、城市沙盘与巨型影像屏为视觉核心，在极简素雅的空间基底中组织人流动线、政务接待与公众观展两种使用场景，兼顾落地窗采光和结构柱网对视线的影响。',
     role: '核心设计参与',
     focus: '展厅展馆 / 动线组织 / 公共展示',
-    output: '空间布局 / 建模 / 效果表达 / 部分施工图 / 落地',
+    output: '建模 / 效果表达 / 部分施工图 / 落地',
     image: '/images/rizhao/IMG_20240228_160422.webp',
     gallery: [
       { src: '/images/rizhao/IMG_20240228_160422.webp', label: '环形中庭 / ATRIUM', alt: '日照城市规划展厅环形中庭与城市沙盘实景' },
@@ -867,6 +867,7 @@ const rizhaoConcepts = [
   { src: '/images/rizhao/concept-06.webp', label: '06 / 弧形展墙空间', alt: '日照城市规划展厅弧形展墙与公共动线方案效果图' },
   { src: '/images/rizhao/concept-07.webp', label: '07 / 城市规划展陈', alt: '日照城市规划展厅城市规划展陈方案效果图' },
   { src: '/images/rizhao/concept-08.webp', label: '08 / 接待与公共服务', alt: '日照城市规划展厅接待与公共服务空间方案效果图' },
+  { src: '/images/rizhao/concept-09.webp', label: '09 / 沙盘展示空间', alt: '日照城市规划展厅沙盘展示空间方案效果图' },
 ]
 
 const rizhaoBuilt = [
@@ -879,16 +880,15 @@ const rizhaoBuilt = [
   { src: '/images/rizhao/IMG_20240228_160633.webp', label: '07 / 接待台与弧形界面', alt: '日照城市规划展厅接待台与弧形界面建成实景' },
   { src: '/images/rizhao/IMG_20240228_160518.webp', label: '08 / 沙盘近景', alt: '日照城市规划展厅城市沙盘近景建成实景', wide: true },
   { src: '/images/rizhao/IMG_20240228_160651.webp', label: '09 / 后勤通道', alt: '日照城市规划展厅后勤通道建成实景' },
-  { src: '/images/rizhao/IMG_20240228_160726.webp', label: '10 / 卫生间与配套空间', alt: '日照城市规划展厅卫生间与配套空间建成实景' },
 ]
 
 const rizhaoDrawings = [
-  { src: '/images/rizhao/8ef1a90209cc2c85132eab832b1447e4.webp', label: '01 / 大厅立面图', alt: '日照城市规划展厅大厅立面施工图' },
-  { src: '/images/rizhao/9a693725876ca44be93f3347c02c57db.webp', label: '02 / 一层平面布置图', alt: '日照城市规划展厅一层平面布置施工图' },
-  { src: '/images/rizhao/58c22fe2c7027a9129290d0bb9068d7d.webp', label: '03 / 儿童区立面图', alt: '日照城市规划展厅儿童区阅读区立面施工图' },
-  { src: '/images/rizhao/1562653b9612987ca018dc555d7ccc1d.webp', label: '04 / 走廊与展厅立面', alt: '日照城市规划展厅走廊与展厅立面施工图' },
-  { src: '/images/rizhao/a2ac17819e9e8e757e5a86081ffb4b09.webp', label: '05 / 地面铺装图', alt: '日照城市规划展厅地面铺装施工图' },
-  { src: '/images/rizhao/b70ba134141fa61c5cbbfe3ba94cdd26.webp', label: '06 / 展陈布置图', alt: '日照城市规划展厅展陈布置施工图' },
+  { src: '/images/rizhao/9a693725876ca44be93f3347c02c57db.webp', label: '01 / 一层平面布置图', alt: '日照城市规划展厅一层平面布置施工图' },
+  { src: '/images/rizhao/a2ac17819e9e8e757e5a86081ffb4b09.webp', label: '02 / 地面铺装图', alt: '日照城市规划展厅地面铺装施工图' },
+  { src: '/images/rizhao/b70ba134141fa61c5cbbfe3ba94cdd26.webp', label: '03 / 展陈布置图', alt: '日照城市规划展厅展陈布置施工图' },
+  { src: '/images/rizhao/8ef1a90209cc2c85132eab832b1447e4.webp', label: '04 / 大厅立面图', alt: '日照城市规划展厅大厅立面施工图' },
+  { src: '/images/rizhao/58c22fe2c7027a9129290d0bb9068d7d.webp', label: '05 / 儿童区立面图', alt: '日照城市规划展厅儿童区阅读区立面施工图' },
+  { src: '/images/rizhao/1562653b9612987ca018dc555d7ccc1d.webp', label: '06 / 走廊与展厅立面', alt: '日照城市规划展厅走廊与展厅立面施工图' },
   { src: '/images/rizhao/ed425e92ea9793b393b9515c757cf44b.webp', label: '07 / 展柜节点大样', alt: '日照城市规划展厅展柜节点施工图' },
   { src: '/images/rizhao/6b97d73f74b6582f2fb63ccd67e5aca9.webp', label: '08 / 墙面与顶面节点', alt: '日照城市规划展厅墙面与顶面节点施工图' },
 ]
@@ -2000,7 +2000,7 @@ function RizhaoCasePage() {
               <div><dt>项目地点</dt><dd>山东省日照市学苑路北片区</dd></div>
               <div><dt>项目时间</dt><dd>2023—2024 / 已落地</dd></div>
               <div><dt>个人角色</dt><dd>核心设计参与</dd></div>
-              <div><dt>工作内容</dt><dd>空间布局 / 动线设计 / 建模 / 部分施工图</dd></div>
+              <div><dt>工作内容</dt><dd>建模 / 部分施工图绘制</dd></div>
             </dl>
           </div>
           <div className="concept-built-grid">
