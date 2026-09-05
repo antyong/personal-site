@@ -864,22 +864,20 @@ const rizhaoConcepts = [
   { src: '/images/rizhao/concept-03.webp', label: '03 / 展示界面与导视', alt: '日照城市规划展厅弧形展示界面方案效果图' },
   { src: '/images/rizhao/concept-04.webp', label: '04 / 环形平面布局', alt: '日照城市规划展厅环形平面布局方案图' },
   { src: '/images/rizhao/concept-05.webp', label: '05 / 展陈空间氛围', alt: '日照城市规划展厅展陈空间方案效果图' },
-  { src: '/images/rizhao/concept-06.webp', label: '06 / 弧形展墙空间', alt: '日照城市规划展厅弧形展墙与公共动线方案效果图' },
-  { src: '/images/rizhao/concept-07.webp', label: '07 / 城市规划展陈', alt: '日照城市规划展厅城市规划展陈方案效果图' },
-  { src: '/images/rizhao/concept-08.webp', label: '08 / 接待与公共服务', alt: '日照城市规划展厅接待与公共服务空间方案效果图' },
-  { src: '/images/rizhao/concept-09.webp', label: '09 / 沙盘展示空间', alt: '日照城市规划展厅沙盘展示空间方案效果图' },
+  { src: '/images/rizhao/concept-08.webp', label: '06 / 接待与公共服务', alt: '日照城市规划展厅接待与公共服务空间方案效果图' },
+  { src: '/images/rizhao/concept-09.webp', label: '07 / 沙盘展示空间', alt: '日照城市规划展厅沙盘展示空间方案效果图' },
 ]
 
 const rizhaoBuilt = [
   { src: '/images/rizhao/IMG_20240228_160422.webp', label: '01 / 沙盘与巨型大屏', alt: '日照城市规划展厅城市沙盘与巨型大屏建成实景', wide: true },
   { src: '/images/rizhao/IMG_20240228_160359.webp', label: '02 / 中庭主视角', alt: '日照城市规划展厅环形中庭主视角建成实景' },
   { src: '/images/rizhao/IMG_20240228_160549.webp', label: '03 / 环形展厅动线', alt: '日照城市规划展厅环形展厅动线建成实景' },
-  { src: '/images/rizhao/IMG_20240228_160912.webp', label: '04 / 天窗与环形灯带', alt: '日照城市规划展厅天窗与环形灯带建成实景', wide: true },
-  { src: '/images/rizhao/IMG_20240228_160435.webp', label: '05 / 沙盘边界与采光', alt: '日照城市规划展厅沙盘边界、落地窗与采光建成实景' },
-  { src: '/images/rizhao/IMG_20240228_160621.webp', label: '06 / 柱网与服务空间', alt: '日照城市规划展厅柱网与接待服务空间建成实景' },
-  { src: '/images/rizhao/IMG_20240228_160633.webp', label: '07 / 接待台与弧形界面', alt: '日照城市规划展厅接待台与弧形界面建成实景' },
-  { src: '/images/rizhao/IMG_20240228_160518.webp', label: '08 / 沙盘近景', alt: '日照城市规划展厅城市沙盘近景建成实景', wide: true },
-  { src: '/images/rizhao/IMG_20240228_160651.webp', label: '09 / 后勤通道', alt: '日照城市规划展厅后勤通道建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160912.webp', label: '04 / 天窗与环形灯带', alt: '日照城市规划展厅天窗与环形灯带建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160621.webp', label: '05 / 柱网与服务空间', alt: '日照城市规划展厅柱网与接待服务空间建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160633.webp', label: '06 / 接待台与弧形界面', alt: '日照城市规划展厅接待台与弧形界面建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160518.webp', label: '07 / 沙盘近景', alt: '日照城市规划展厅城市沙盘近景建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160651.webp', label: '08 / 后勤通道', alt: '日照城市规划展厅后勤通道建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160435.webp', label: '09 / 沙盘边界与采光', alt: '日照城市规划展厅沙盘边界、落地窗与采光建成实景' },
 ]
 
 const rizhaoDrawings = [
