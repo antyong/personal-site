@@ -866,6 +866,8 @@ const rizhaoConcepts = [
   { src: '/images/rizhao/concept-05.webp', label: '05 / 展陈空间氛围', alt: '日照城市规划展厅展陈空间方案效果图' },
   { src: '/images/rizhao/concept-06.webp', label: '06 / 弧形展墙空间', alt: '日照城市规划展厅弧形展墙与公共动线方案效果图' },
   { src: '/images/rizhao/concept-07.webp', label: '07 / 城市规划展陈', alt: '日照城市规划展厅城市规划展陈方案效果图' },
+  { src: '/images/rizhao/concept-08.webp', label: '08 / 接待与公共服务', alt: '日照城市规划展厅接待与公共服务空间方案效果图' },
+  { src: '/images/rizhao/concept-09.webp', label: '09 / 沙盘展示空间', alt: '日照城市规划展厅沙盘展示空间方案效果图' },
 ]
 
 const rizhaoBuilt = [
