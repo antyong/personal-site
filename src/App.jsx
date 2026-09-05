@@ -128,6 +128,26 @@ const projects = [
   },
   {
     number: 'CASE 05',
+    title: '日照城市规划展厅室内空间设计',
+    location: '山东 · 日照',
+    year: '2023—2024 / 已落地',
+    summary: '以环形中庭、城市沙盘与巨型影像屏为视觉核心，在极简素雅的空间基底中组织人流动线、政务接待与公众观展两种使用场景，兼顾落地窗采光和结构柱网对视线的影响。',
+    role: '核心设计参与',
+    focus: '展厅展馆 / 动线组织 / 公共展示',
+    output: '空间布局 / 建模 / 效果表达 / 部分施工图 / 落地',
+    image: '/images/rizhao/IMG_20240228_160422.webp',
+    gallery: [
+      { src: '/images/rizhao/IMG_20240228_160422.webp', label: '环形中庭 / ATRIUM', alt: '日照城市规划展厅环形中庭与城市沙盘实景' },
+      { src: '/images/rizhao/IMG_20240228_160359.webp', label: '沙盘与大屏 / MODEL + SCREEN', alt: '日照城市规划展厅城市沙盘与巨型大屏实景' },
+      { src: '/images/rizhao/concept-01.webp', label: '方案效果 / CONCEPT', alt: '日照城市规划展厅方案效果图' },
+      { src: '/images/rizhao/9a693725876ca44be93f3347c02c57db.webp', label: '施工图纸 / DRAWING', alt: '日照城市规划展厅平面施工图' },
+    ],
+    href: '/?case=rizhao',
+    ready: true,
+    className: '',
+  },
+  {
+    number: 'CASE 06',
     title: '三旬火塘民谣小酒馆',
     location: '连锁品牌 · 商业空间',
     year: '已建成 / 运营中',
@@ -147,7 +167,7 @@ const projects = [
     className: '',
   },
   {
-    number: 'CASE 06',
+    number: 'CASE 07',
     title: 'LA NIKAR 线下体验店',
     location: '新潮服装品牌 · 商业空间',
     year: '已建成 / 运营中',
@@ -838,6 +858,41 @@ const lanikarDrawings = [
   { src: '/images/lanikar/drawing-detail.jpg', label: '06 / 软膜灯箱大样', alt: 'LA NIKAR 线下体验店软膜灯箱与墙面大样' },
 ]
 
+const rizhaoConcepts = [
+  { src: '/images/rizhao/concept-01.webp', label: '01 / 环形中庭与沙盘核心', alt: '日照城市规划展厅环形中庭、城市沙盘与巨型屏幕方案效果图', wide: true },
+  { src: '/images/rizhao/concept-02.webp', label: '02 / 入口与主展厅视线', alt: '日照城市规划展厅入口及主展厅视线关系方案效果图' },
+  { src: '/images/rizhao/concept-03.webp', label: '03 / 展示界面与导视', alt: '日照城市规划展厅弧形展示界面方案效果图' },
+  { src: '/images/rizhao/concept-04.webp', label: '04 / 环形平面布局', alt: '日照城市规划展厅环形平面布局方案图' },
+  { src: '/images/rizhao/concept-05.webp', label: '05 / 展陈空间氛围', alt: '日照城市规划展厅展陈空间方案效果图' },
+  { src: '/images/rizhao/concept-06.webp', label: '06 / 弧形展墙空间', alt: '日照城市规划展厅弧形展墙与公共动线方案效果图' },
+  { src: '/images/rizhao/concept-07.webp', label: '07 / 城市规划展陈', alt: '日照城市规划展厅城市规划展陈方案效果图' },
+  { src: '/images/rizhao/concept-08.webp', label: '08 / 接待与公共服务', alt: '日照城市规划展厅接待与公共服务空间方案效果图' },
+]
+
+const rizhaoBuilt = [
+  { src: '/images/rizhao/IMG_20240228_160422.webp', label: '01 / 沙盘与巨型大屏', alt: '日照城市规划展厅城市沙盘与巨型大屏建成实景', wide: true },
+  { src: '/images/rizhao/IMG_20240228_160359.webp', label: '02 / 中庭主视角', alt: '日照城市规划展厅环形中庭主视角建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160549.webp', label: '03 / 环形展厅动线', alt: '日照城市规划展厅环形展厅动线建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160912.webp', label: '04 / 天窗与环形灯带', alt: '日照城市规划展厅天窗与环形灯带建成实景', wide: true },
+  { src: '/images/rizhao/IMG_20240228_160435.webp', label: '05 / 沙盘边界与采光', alt: '日照城市规划展厅沙盘边界、落地窗与采光建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160621.webp', label: '06 / 柱网与服务空间', alt: '日照城市规划展厅柱网与接待服务空间建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160633.webp', label: '07 / 接待台与弧形界面', alt: '日照城市规划展厅接待台与弧形界面建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160518.webp', label: '08 / 沙盘近景', alt: '日照城市规划展厅城市沙盘近景建成实景', wide: true },
+  { src: '/images/rizhao/IMG_20240228_160651.webp', label: '09 / 后勤通道', alt: '日照城市规划展厅后勤通道建成实景' },
+  { src: '/images/rizhao/IMG_20240228_160726.webp', label: '10 / 卫生间与配套空间', alt: '日照城市规划展厅卫生间与配套空间建成实景' },
+]
+
+const rizhaoDrawings = [
+  { src: '/images/rizhao/8ef1a90209cc2c85132eab832b1447e4.webp', label: '01 / 大厅立面图', alt: '日照城市规划展厅大厅立面施工图' },
+  { src: '/images/rizhao/9a693725876ca44be93f3347c02c57db.webp', label: '02 / 一层平面布置图', alt: '日照城市规划展厅一层平面布置施工图' },
+  { src: '/images/rizhao/58c22fe2c7027a9129290d0bb9068d7d.webp', label: '03 / 儿童区立面图', alt: '日照城市规划展厅儿童区阅读区立面施工图' },
+  { src: '/images/rizhao/1562653b9612987ca018dc555d7ccc1d.webp', label: '04 / 走廊与展厅立面', alt: '日照城市规划展厅走廊与展厅立面施工图' },
+  { src: '/images/rizhao/a2ac17819e9e8e757e5a86081ffb4b09.webp', label: '05 / 地面铺装图', alt: '日照城市规划展厅地面铺装施工图' },
+  { src: '/images/rizhao/b70ba134141fa61c5cbbfe3ba94cdd26.webp', label: '06 / 展陈布置图', alt: '日照城市规划展厅展陈布置施工图' },
+  { src: '/images/rizhao/ed425e92ea9793b393b9515c757cf44b.webp', label: '07 / 展柜节点大样', alt: '日照城市规划展厅展柜节点施工图' },
+  { src: '/images/rizhao/6b97d73f74b6582f2fb63ccd67e5aca9.webp', label: '08 / 墙面与顶面节点', alt: '日照城市规划展厅墙面与顶面节点施工图' },
+]
+
 const caseSequence = {
   guangping: {
     previous: { number: '06', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
@@ -853,14 +908,18 @@ const caseSequence = {
   },
   shilan: {
     previous: { number: '03', title: '黄田文化馆', href: '/?case=huangtian' },
-    next: { number: '05', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
+    next: { number: '05', title: '日照城市规划展厅', href: '/?case=rizhao' },
+  },
+  rizhao: {
+    previous: { number: '04', title: '石兰古村文旅活化改造设计', href: '/?case=shilan' },
+    next: { number: '06', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
   },
   sanxun: {
-    previous: { number: '04', title: '石兰古村文旅活化改造设计', href: '/?case=shilan' },
-    next: { number: '06', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
+    previous: { number: '05', title: '日照城市规划展厅', href: '/?case=rizhao' },
+    next: { number: '07', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
   },
   lanikar: {
-    previous: { number: '05', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
+    previous: { number: '06', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
     next: { number: '01', title: '广平村孝文化长廊', href: '/?case=guangping' },
   },
 }
@@ -1897,6 +1956,124 @@ function LanikarCasePage() {
   )
 }
 
+function RizhaoCasePage() {
+  return (
+    <main className="case-study-page" id="case-content">
+      <header className="case-detail-header frame">
+        <a className="brand" href="/#top" aria-label="返回作品集首页">AT<span>®</span></a>
+        <nav aria-label="案例导航">
+          <a href="#rizhao-overview">项目概览</a>
+          <a href="#rizhao-concepts">设计效果</a>
+          <a href="#rizhao-built">落地实景</a>
+          <a href="#rizhao-drawings">施工图纸</a>
+        </nav>
+        <a className="contact-link" href="/#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
+      </header>
+
+      <section className="case-detail-hero" id="case-top">
+        <div className="case-detail-hero-media">
+          <img src="/images/rizhao/IMG_20240228_160422.webp" alt="日照城市规划展厅环形中庭与城市沙盘建成实景" />
+          <span>BUILT SPACE / 落地实景</span>
+        </div>
+        <div className="case-detail-title frame">
+          <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
+          <p><span>CASE 05</span> / PUBLIC EXHIBITION SPACE</p>
+          <h1>日照城市规划<br />展厅室内空间设计</h1>
+          <div className="case-detail-intro">
+            <p>让城市沙盘成为空间的视觉中心，让观展、接待与城市内容在一条连续动线上自然发生。</p>
+            <span>SHANDONG · RIZHAO<br />2023—2024 / BUILT</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="case-overview case-detail-section" id="rizhao-overview">
+        <div className="section-frame">
+          <div className="case-section-label"><span>01</span><p>PROJECT OVERVIEW / 项目概览</p></div>
+          <div className="case-overview-grid">
+            <div className="case-overview-copy">
+              <h2>用一个环形中庭，把城市展示变成可被行走和阅读的空间体验。</h2>
+              <p>项目为日照城市规划展厅，属于公共展示类空间。整体以环形中庭、巨型沙盘与大屏为视觉核心，设计以极简素雅的基底收纳展陈内容，让空间成为城市影像与模型的“画布”。</p>
+              <p>我主要参与整体空间布局与人流动线设计，负责空间建模及部分施工图绘制；重点处理落地窗采光、大圆柱结构对参观视线的影响，并兼顾政务接待与公众观展两种使用场景。</p>
+            </div>
+            <dl className="case-meta-list">
+              <div><dt>项目类型</dt><dd>公共展示类空间 / 城市规划展厅</dd></div>
+              <div><dt>项目地点</dt><dd>山东省日照市学苑路北片区</dd></div>
+              <div><dt>项目时间</dt><dd>2023—2024 / 已落地</dd></div>
+              <div><dt>个人角色</dt><dd>核心设计参与</dd></div>
+              <div><dt>工作内容</dt><dd>空间布局 / 动线设计 / 建模 / 部分施工图</dd></div>
+            </dl>
+          </div>
+          <div className="concept-built-grid">
+            <figure>
+              <img src="/images/rizhao/concept-01.webp" alt="日照城市规划展厅环形中庭方案效果图" />
+              <figcaption><span>01</span> 设计效果 / CONCEPT</figcaption>
+            </figure>
+            <figure>
+              <img src="/images/rizhao/IMG_20240228_160422.webp" alt="日照城市规划展厅环形中庭建成实景" />
+              <figcaption><span>02</span> 建成实景 / BUILT</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="built-gallery case-detail-section" id="rizhao-concepts">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>02</span><p>DESIGN INTENT / 设计效果</p></div>
+          <div className="built-gallery-heading">
+            <h2>以环形秩序承载城市内容，让造型退后，让展示成为主角。</h2>
+            <p>方案效果图集中呈现中庭核心、弧形展墙、主入口与公共服务空间的关系，展示从空间布局到展陈界面的设计推演。</p>
+          </div>
+          <div className="built-photo-grid">
+            {rizhaoConcepts.map((image) => (
+              <figure className={`${image.wide ? 'wide ' : ''}rizhao-concept-image`} key={image.src}>
+                <img src={image.src} alt={image.alt} loading="lazy" />
+                <figcaption>{image.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="built-gallery case-detail-section" id="rizhao-built">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>03</span><p>BUILT WORK / 落地实景</p></div>
+          <div className="built-gallery-heading">
+            <h2>从效果图到真实空间，环形中庭、沙盘与大屏完成了设计意图的落地。</h2>
+            <p>落地照片记录中庭主视角、环形灯带、柱网与落地窗采光，以及服务空间与后勤动线等关键节点。</p>
+          </div>
+          <div className="built-photo-grid">
+            {rizhaoBuilt.map((image) => (
+              <figure className={image.wide ? 'wide' : ''} key={image.src}>
+                <img src={image.src} alt={image.alt} loading="lazy" />
+                <figcaption>{image.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="technical-drawings case-detail-section" id="rizhao-drawings">
+        <div className="section-frame">
+          <div className="case-section-label"><span>04</span><p>TECHNICAL DELIVERY / 技术图纸</p></div>
+          <div className="drawing-heading">
+            <h2>通过平面、立面与节点图纸，把展厅秩序落实到施工表达。</h2>
+            <p>图纸内容覆盖总体平面、环形展陈、走廊与展厅立面，以及展柜、墙面和顶面节点，体现从建模到部分施工图深化的工作链路。</p>
+          </div>
+          <div className="drawing-grid">
+            {rizhaoDrawings.map((drawing) => (
+              <figure key={drawing.src}>
+                <img src={drawing.src} alt={drawing.alt} loading="lazy" />
+                <figcaption>{drawing.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <CaseNavigation current="rizhao" />
+        </div>
+      </section>
+    </main>
+  )
+}
+
 function ResearchCasePage() {
   return (
     <main className="case-study-page research-case-page" id="case-content">
@@ -2300,6 +2477,11 @@ function App() {
         description: '从古村保护发展规划到石厝民宿、祠堂文化展厅与技术图纸，呈现石兰村保护、旅居、康养一体化的文旅更新实践。',
         image: '/images/shilan/tourism-render-01.jpg',
       },
+      rizhao: {
+        title: '日照城市规划展厅室内空间设计｜安桐空间设计作品集',
+        description: '公共展示类空间案例：围绕环形中庭、城市沙盘与巨型大屏组织观展动线、政务接待与展陈界面，呈现方案效果、落地实景与施工图纸。',
+        image: '/images/rizhao/IMG_20240228_160422.webp',
+      },
       sanxun: {
         title: '三旬火塘民谣小酒馆｜安桐空间设计作品集',
         description: '面向连锁品牌的商业空间设计：以火塘舞台、民谣演艺、吧台与客席动线，协同品牌识别、消费体验与门店运营。',
@@ -2354,6 +2536,10 @@ function App() {
     return <ShilanCasePage />
   }
 
+  if (activeCase === 'rizhao') {
+    return <RizhaoCasePage />
+  }
+
   if (activeCase === 'sanxun') {
     return <SanxunCasePage />
   }
@@ -2394,7 +2580,7 @@ function App() {
             <div className="hero-bottom hero-bottom-cases">
               <p>我从在地文化与真实使用出发，把复杂问题转译为空间策略、体验场景与可落地的设计成果。</p>
               <div className="hero-case-count" aria-label="作品概览">
-                <strong>16</strong><span>PROJECT INDEX<br />06 FEATURED CASES</span>
+                <strong>17</strong><span>PROJECT INDEX<br />07 FEATURED CASES</span>
               </div>
               <a href="#projects" className="scroll-cue" aria-label="查看精选案例"><ArrowDownRight size={30} /></a>
             </div>
@@ -2538,7 +2724,7 @@ function App() {
             <div className="secondary-case-row">
               <SecondaryCaseShowcase
                 id="tulanduo"
-                number="07"
+                number="08"
                 label="S.I. DESIGN"
                 title="图兰朵 S.I.终端系统"
                 summary="以统一的门店界面、陈列秩序与模块化道具，建立可识别、可落地、可复制的品牌终端语言。"
@@ -2548,7 +2734,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="fengyu"
-                number="08"
+                number="09"
                 label="RURAL RENEWAL"
                 title="丰余村环境提升设计"
                 summary="以“微更新、轻介入、重在地”为核心，围绕建筑立面修缮、公共灰空间重构与景观长廊建设，让传统村落的日常交往重新发生。"
@@ -2558,7 +2744,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="like"
-                number="09"
+                number="10"
                 label="RURAL HOMESTAY"
                 title="李窠村乡村民宿改造"
                 summary="在保留旧房尺度与乡村肌理的前提下，二层木构增建释放客房容量，并以外廊串联到达、停留与住宿，清晰分离客人与后勤流线，使小体量改造兼具舒适体验与运营效率。"
@@ -2568,7 +2754,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="xiuqiao"
-                number="10"
+                number="11"
                 label="RURAL ACTIVATION"
                 title="秀峤村民宿与文旅活动中心"
                 summary="以穿斗木构为骨、滨水景观为境，活化老宅为集旅居、康养与公共活动于一体的复合空间。设计完整保留并修复原有木构梁柱、夯土墙面与青瓦坡顶，通过空间重组与功能植入，让旧屋成为可栖居、可共享的乡野活力载体。"
@@ -2578,7 +2764,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="sishu"
-                number="11"
+                number="12"
                 label="CULTURAL SPACE"
                 title="私塾馆文化空间改造"
                 summary="以在地文化和教育空间的重塑为目标，通过分层夯土工艺的再演绎，将不同色阶的夯土肌理转化为空间叙事；竹木、青砖与旧屋架共同延续古建记忆，并为文化展示、小型沙龙与乡村公共活动提供舒适场所。"
@@ -2588,7 +2774,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="robinhood"
-                number="12"
+                number="13"
                 label="RETAIL INTERIOR"
                 title="罗宾汉连锁服装门店"
                 summary="围绕连锁服装门店的品牌识别、陈列效率与顾客停留展开空间设计：以简洁的灰白基调、品牌绿和山形光带建立统一视觉，并通过入口橱窗、收银服务、展示中岛与试衣动线形成清晰、可复制的零售体验。"
@@ -2598,7 +2784,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="fanhuayin"
-                number="13"
+                number="14"
                 label="JEWELLERY RETAIL"
                 title="繁花吟珠宝门店"
                 summary="围绕连锁珠宝门店的陈列秩序与体验氛围展开：以深色木饰面、柔和米色基底和弧形界面组织空间，串联首饰展示、服饰搭配、顾客洽谈与休憩场景；中岛展柜与墙面陈列共同建立清晰的浏览节奏与品牌记忆。"
@@ -2607,7 +2793,7 @@ function App() {
               />
               <SecondaryCaseShowcase
                 id="nailsalon"
-                number="14"
+                number="15"
                 label="INDEPENDENT STORE"
                 title="美甲店·甜品复合空间"
                 summary="以独立门店的风格化体验为核心，将等候休闲、美甲服务、产品展示与后勤功能沿清晰动线组织；以柔和中性色、木质家具与弧形界面建立轻松而有辨识度的复合消费场景。"
@@ -2616,7 +2802,7 @@ function App() {
               />
               <SecondaryCaseShowcase
                 id="live-fashion"
-                number="15"
+                number="16"
                 label="LIVE COMMERCE RETAIL"
                 title="服装品牌直播展示空间"
                 summary="围绕服装品牌的直播与展示需求，将镜头取景、产品陈列、主播动线与观众体验统筹组织；以温润材质、层叠界面与可切换的展示背景，建立适配线上视觉传播和线下到店体验的复合空间。"
@@ -2625,7 +2811,7 @@ function App() {
               />
               <SecondaryCaseShowcase
                 id="disney-live"
-                number="16"
+                number="17"
                 label="LIVE COMMERCE HOME"
                 title="迪士尼家纺直播展示空间"
                 summary="以家纺产品的生活方式表达为主线，将睡眠场景、直播背景、产品展示与设备支持整合在连续平面中；以柔和色彩和主题化画面建立更具记忆点的直播视觉，并兼顾品牌展示与实景体验。"
