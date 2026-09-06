@@ -2792,12 +2792,12 @@ function App() {
         image: '/images/research/heritage-pointcloud.webp',
       },
       home: {
-        title: '安桐｜空间设计师',
+        title: '小安的站',
         description: '案例优先的空间设计作品集：从场所问题、设计策略到空间体验与项目落地。',
         image: '/og.png',
       },
     }[activeCase] || {
-      title: '安桐｜空间设计师',
+      title: '小安的站',
       description: '案例优先的空间设计作品集：从场所问题、设计策略到空间体验与项目落地。',
       image: '/og.png',
     }
