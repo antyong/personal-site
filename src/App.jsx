@@ -2726,7 +2726,10 @@ function App() {
 
     const updateHeaderPinned = () => {
       const hero = document.querySelector('.hero')
-      const threshold = Math.max(0, (hero?.offsetHeight || window.innerHeight) - 88)
+      const isMobile = window.matchMedia('(max-width: 800px)').matches
+      const threshold = isMobile
+        ? 1
+        : Math.max(0, (hero?.offsetHeight || window.innerHeight) - 88)
       setHeaderPinned(window.scrollY >= threshold)
     }
 
