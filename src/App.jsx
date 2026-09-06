@@ -20,23 +20,23 @@ gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
   { value: '20', unit: '+', label: '累计参与项目' },
-  { value: '07', unit: '', label: '主导项目' },
+  { value: '05', unit: '', label: '主导项目' },
   { value: '14', unit: '', label: '落地项目' },
   { value: '03', unit: '', label: '在施工项目' },
 ]
 
 const experience = [
   {
-    period: '2023.09—2026.05',
+    period: '2024.07-2026.07',
     place: '福建福大建筑规划设计研究院有限公司',
     role: '设计师',
     detail: '专注文旅更新、精品民宿酒店、特色餐饮酒馆、服饰零售等商业空间设计；统筹在地调研、业态策划、方案创作到施工图深化及现场落地，擅长打造文化沉浸式商业场景。',
   },
   {
-    period: '2022.07—2023.07',
+    period: '2022.07-2024.07',
     place: '青岛市城市建设设计研究院有限公司',
     role: '设计师助理',
-    detail: '参与公共建筑与文旅商业空间设计，完成方案文本、图纸绘制、规范校核及项目报建，熟悉项目全流程落地管控。',
+    detail: '参与公共建筑与文旅商业空间设计，完成方案文本、模型绘制、图纸绘制、规范校核及项目报建，熟悉项目全流程落地管控。',
   },
 ]
 
@@ -90,7 +90,7 @@ const projects = [
     number: 'CASE 03',
     title: '黄田文化空间',
     location: '福建 · 平和',
-    year: '2023 / 已建成',
+    year: '2024 / 已建成',
     summary: '以“尊古不复古”为核心，将坍塌古民居更新为兼具文旅展示、社区交流与夜间活动能力的文化空间，并把单体改造纳入黄田村文农旅发展规划。',
     role: '核心设计参与',
     focus: '旧房活化 / 文旅展览 / 夜景光影 / 舞美延展',
@@ -110,7 +110,7 @@ const projects = [
     number: 'CASE 04',
     title: '石兰古村文旅活化改造设计',
     location: '福建 · 福鼎',
-    year: '2025 / 在建',
+    year: '2026 / 在建',
     summary: '以传统石厝保护与再生为底线，统筹古村保护、民宿旅居、文化展厅与业态导入；通过总体规划锁定文旅路径与功能节点，再以民居修缮、木构更新和展厅空间完成局部落地。',
     role: '项目主导',
     focus: '文旅规划 / 古建修缮 / 民宿活化 / 展陈空间',
@@ -133,14 +133,14 @@ const projects = [
     year: '2023—2024 / 已落地',
     summary: '以环形中庭、城市沙盘与巨型影像屏为视觉核心，在极简素雅的空间基底中组织人流动线、政务接待与公众观展两种使用场景，兼顾落地窗采光和结构柱网对视线的影响。',
     role: '核心设计参与',
-    focus: '展厅展馆 / 动线组织 / 公共展示',
+    focus: '展厅展馆 / 公共展示',
     output: '建模 / 效果表达 / 部分施工图 / 落地',
     image: '/images/rizhao/IMG_20240228_160422.webp',
     gallery: [
       { src: '/images/rizhao/IMG_20240228_160422.webp', label: '环形中庭 / ATRIUM', alt: '日照城市规划展厅环形中庭与城市沙盘实景' },
       { src: '/images/rizhao/IMG_20240228_160359.webp', label: '沙盘与大屏 / MODEL + SCREEN', alt: '日照城市规划展厅城市沙盘与巨型大屏实景' },
       { src: '/images/rizhao/concept-01.webp', label: '方案效果 / CONCEPT', alt: '日照城市规划展厅方案效果图' },
-      { src: '/images/rizhao/9a693725876ca44be93f3347c02c57db.webp', label: '施工图纸 / DRAWING', alt: '日照城市规划展厅平面施工图' },
+      { src: '/images/rizhao/IMG_20240228_160549.webp', label: '环形动线 / BUILT', alt: '日照城市规划展厅环形展厅动线建成实景' },
     ],
     href: '/?case=rizhao',
     ready: true,
@@ -148,6 +148,66 @@ const projects = [
   },
   {
     number: 'CASE 06',
+    title: '济南轨道交通集团职工活动中心',
+    location: '山东 · 济南',
+    year: '2024 / 已建成',
+    summary: '面向企业职工的复合型公共活动空间，将阅读、休闲、健身、交流、展示与多功能活动整合为一套明亮、开放且可持续使用的职工生活服务场景。',
+    role: '核心设计参与',
+    focus: '公共空间整合 / 场景营造',
+    output: '建模 / 部分施工图 / 落地配合',
+    image: '/images/jinan/built-gym-overview.jpg',
+    gallery: [
+      { src: '/images/jinan/built-gym-overview.jpg', label: '健身空间 / FITNESS', alt: '济南轨道交通集团职工活动中心健身空间建成实景' },
+      { src: '/images/jinan/built-reading.jpg', label: '阅读交流 / READING', alt: '济南轨道交通集团职工活动中心阅读交流区建成实景' },
+      { src: '/images/jinan/built-multipurpose.jpg', label: '多功能活动 / MULTIUSE', alt: '济南轨道交通集团职工活动中心多功能活动区建成实景' },
+      { src: '/images/jinan/built-signage.jpg', label: '入口标识 / ENTRY', alt: '济南轨道交通集团职工活动中心入口标识建成实景' },
+    ],
+    href: '/?case=jinan',
+    ready: true,
+    className: 'case-reverse',
+  },
+  {
+    number: 'CASE 07',
+    title: '山东省供销社幼儿园改造',
+    location: '山东 · 济南',
+    year: '2024 / 已建成',
+    summary: '围绕门厅、走廊、楼梯等公共空间进行适幼化更新，以原木、圆角、童趣开窗和互动展示把交通廊道转化为可玩耍、可展示、可探索的成长场景。',
+    role: '核心设计参与',
+    focus: '存量改造 / 儿童友好 / 导视与文化墙',
+    output: '建模 / 部分施工图 / 落地配合',
+    image: '/images/kindergarten/built-lobby.jpg',
+    gallery: [
+      { src: '/images/kindergarten/built-lobby.jpg', label: '门厅空间 / LOBBY', alt: '山东省供销社幼儿园门厅建成实景' },
+      { src: '/images/kindergarten/built-stair.jpg', label: '互动楼梯 / STAIR', alt: '山东省供销社幼儿园互动楼梯建成实景' },
+      { src: '/images/kindergarten/built-corridor-gallery.jpg', label: '作品走廊 / GALLERY', alt: '山东省供销社幼儿园作品展示走廊建成实景' },
+      { src: '/images/kindergarten/built-library.jpg', label: '阅读空间 / LIBRARY', alt: '山东省供销社幼儿园阅读空间建成实景' },
+    ],
+    href: '/?case=kindergarten',
+    ready: true,
+    className: '',
+  },
+  {
+    number: 'CASE 08',
+    title: '自由鸟·阳朔民宿',
+    location: '广西 · 阳朔',
+    year: '已建成 / 运营中',
+    summary: '依托阳朔喀斯特峰林景观，将客房、公区、屋顶观景庭院与户外草坪活动空间组织为一套兼具沉浸体验、社交传播与运营效率的山水度假民宿。',
+    role: '核心设计参与',
+    focus: '文旅度假 / 借景山水 / 运营场景',
+    output: '前期调研 / 运营探讨 / 建模 / 落地配合',
+    image: '/images/yangshuo/built-aerial.jpg',
+    gallery: [
+      { src: '/images/yangshuo/built-aerial.jpg', label: '山水田园 / AERIAL', alt: '自由鸟阳朔民宿与喀斯特山水环境' },
+      { src: '/images/yangshuo/built-suite-view.jpg', label: '客房借景 / SUITE VIEW', alt: '自由鸟阳朔民宿客房观景界面' },
+      { src: '/images/yangshuo/built-rooftop.jpg', label: '屋顶水景 / ROOFTOP', alt: '自由鸟阳朔民宿屋顶观景水景' },
+      { src: '/images/yangshuo/built-pool-lawn.jpg', label: '草坪活动 / LAWN', alt: '自由鸟阳朔民宿户外草坪与泳池' },
+    ],
+    href: '/?case=yangshuo',
+    ready: true,
+    className: 'case-reverse',
+  },
+  {
+    number: 'CASE 09',
     title: '三旬火塘民谣小酒馆',
     location: '连锁品牌 · 商业空间',
     year: '已建成 / 运营中',
@@ -167,7 +227,7 @@ const projects = [
     className: '',
   },
   {
-    number: 'CASE 07',
+    number: 'CASE 10',
     title: 'LA NIKAR 线下体验店',
     location: '新潮服装品牌 · 商业空间',
     year: '已建成 / 运营中',
@@ -893,6 +953,88 @@ const rizhaoDrawings = [
   { src: '/images/rizhao/6b97d73f74b6582f2fb63ccd67e5aca9.webp', label: '08 / 墙面与顶面节点', alt: '日照城市规划展厅墙面与顶面节点施工图' },
 ]
 
+const jinanComparisons = [
+  { concept: '/images/jinan/concept-20.jpg', built: '/images/jinan/built-lounge.jpg', label: '01 / 休闲交流区', alt: '职工活动中心休闲交流区方案效果与建成实景' },
+  { concept: '/images/jinan/concept-22.jpg', built: '/images/jinan/built-boxing.jpg', label: '02 / 运动康复区', alt: '职工活动中心运动康复区方案效果与建成实景' },
+  { concept: '/images/jinan/concept-24.jpg', built: '/images/jinan/built-reading.jpg', label: '03 / 阅读交流区', alt: '职工活动中心阅读交流区方案效果与建成实景' },
+  { concept: '/images/jinan/concept-28.jpg', built: '/images/jinan/built-multipurpose.jpg', label: '04 / 多功能活动区', alt: '职工活动中心多功能活动区方案效果与建成实景' },
+  { concept: '/images/jinan/concept-34.jpg', built: '/images/jinan/built-yoga.jpg', label: '05 / 瑜伽活动区', alt: '职工活动中心瑜伽活动区方案效果与建成实景' },
+  { concept: '/images/jinan/concept-37.jpg', built: '/images/jinan/built-culture-corridor.jpg', label: '06 / 企业文化走廊', alt: '职工活动中心企业文化走廊方案效果与建成实景' },
+  { concept: '/images/jinan/concept-38.jpg', built: '/images/jinan/built-table-tennis-wide.jpg', label: '07 / 运动活动区', alt: '职工活动中心运动活动区方案效果与建成实景' },
+]
+
+const jinanBuilt = [
+  { src: '/images/jinan/built-signage.jpg', label: '01 / 职工活动中心入口标识', alt: '济南轨道交通集团职工活动中心入口标识', wide: true },
+  { src: '/images/jinan/built-opening.jpg', label: '02 / 活动中心启用现场', alt: '济南轨道交通集团职工活动中心启用现场' },
+  { src: '/images/jinan/built-table-tennis.jpg', label: '03 / 日常运动场景', alt: '济南轨道交通集团职工活动中心乒乓球日常活动' },
+]
+
+const jinanDrawings = [
+  { src: '/images/jinan/drawing-ceiling-plan.jpg', label: '01 / 天花布置平面图', alt: '济南轨道交通集团职工活动中心天花布置平面图' },
+  { src: '/images/jinan/drawing-layout-plan.jpg', label: '02 / 平面布置图', alt: '济南轨道交通集团职工活动中心平面布置图' },
+  { src: '/images/jinan/drawing-electrical-plan.jpg', label: '03 / 机电点位图', alt: '济南轨道交通集团职工活动中心机电点位图' },
+  { src: '/images/jinan/drawing-elevation-index.jpg', label: '04 / 立面索引图', alt: '济南轨道交通集团职工活动中心立面索引图' },
+  { src: '/images/jinan/drawing-reading-elevations.jpg', label: '05 / 阅读空间立面图', alt: '济南轨道交通集团职工活动中心阅读空间立面图' },
+  { src: '/images/jinan/drawing-boxing-elevations.jpg', label: '06 / 运动空间立面图', alt: '济南轨道交通集团职工活动中心运动空间立面图' },
+  { src: '/images/jinan/drawing-node-details.jpg', label: '07 / 构造节点大样', alt: '济南轨道交通集团职工活动中心墙面与顶面构造节点' },
+  { src: '/images/jinan/drawing-wall-details.jpg', label: '08 / 墙面与柜体节点', alt: '济南轨道交通集团职工活动中心墙面与柜体节点' },
+]
+
+const kindergartenComparisons = [
+  { concept: '/images/kindergarten/concept-17.jpg', built: '/images/kindergarten/built-lobby.jpg', label: '01 / 门厅迎宾空间', alt: '幼儿园门厅迎宾空间方案效果与建成实景' },
+  { concept: '/images/kindergarten/concept-31.jpg', built: '/images/kindergarten/built-corridor-gallery.jpg', label: '02 / 作品展示走廊', alt: '幼儿园作品展示走廊方案效果与建成实景' },
+  { concept: '/images/kindergarten/concept-washroom.jpg', built: '/images/kindergarten/built-washroom.jpg', label: '03 / 儿童卫生间', alt: '幼儿园儿童卫生间方案效果与建成实景' },
+]
+
+const kindergartenBuilt = [
+  { src: '/images/kindergarten/built-exterior-entry.jpg', label: '01 / 改造后园区入口', alt: '山东省供销社幼儿园改造后园区入口', wide: true },
+  { src: '/images/kindergarten/built-exterior-side.jpg', label: '02 / 园区外立面', alt: '山东省供销社幼儿园改造后外立面' },
+  { src: '/images/kindergarten/built-brand-wall.jpg', label: '03 / 园所形象与导视', alt: '山东省供销社幼儿园园所形象与导视墙' },
+  { src: '/images/kindergarten/built-classroom.jpg', label: '04 / 主题班级空间', alt: '山东省供销社幼儿园主题班级空间' },
+  { src: '/images/kindergarten/built-library.jpg', label: '05 / 阅读空间', alt: '山东省供销社幼儿园阅读空间' },
+]
+
+const kindergartenDrawings = [
+  { src: '/images/kindergarten/drawing-second-floor-layout.jpg', label: '01 / 二层平面布置图', alt: '山东省供销社幼儿园二层平面布置图' },
+  { src: '/images/kindergarten/drawing-second-floor-lighting.jpg', label: '02 / 二层灯具连线图', alt: '山东省供销社幼儿园二层灯具连线图' },
+  { src: '/images/kindergarten/drawing-second-floor-lighting-points.jpg', label: '03 / 二层灯具定位图', alt: '山东省供销社幼儿园二层灯具定位图' },
+  { src: '/images/kindergarten/drawing-second-floor-electrical.jpg', label: '04 / 二层机电点位图', alt: '山东省供销社幼儿园二层机电点位图' },
+  { src: '/images/kindergarten/drawing-lobby-elevation.jpg', label: '05 / 门厅背景墙立面图', alt: '山东省供销社幼儿园门厅背景墙立面图' },
+  { src: '/images/kindergarten/drawing-corridor-classroom-elevations.jpg', label: '06 / 走廊与教室立面图', alt: '山东省供销社幼儿园走廊与教室立面图' },
+  { src: '/images/kindergarten/drawing-ceiling-washroom-details.jpg', label: '07 / 顶面与卫生间节点', alt: '山东省供销社幼儿园顶面与卫生间节点图' },
+  { src: '/images/kindergarten/drawing-washroom-wall-details.jpg', label: '08 / 墙面与门槛节点', alt: '山东省供销社幼儿园墙面与门槛节点图' },
+]
+
+const yangshuoComparisons = [
+  { concept: '/images/yangshuo/render-room-01.jpg', built: '/images/yangshuo/built-comparison-room.jpg', label: '01 / 度假客房', alt: '自由鸟阳朔民宿客房方案效果与建成实景' },
+  { concept: '/images/yangshuo/render-courtyard-02.jpg', built: '/images/yangshuo/built-courtyard.jpg', label: '02 / 私属庭院', alt: '自由鸟阳朔民宿私属庭院方案效果与建成实景' },
+  { concept: '/images/yangshuo/render-room-02.jpg', built: '/images/yangshuo/built-twin-room.jpg', label: '03 / 客房与露台', alt: '自由鸟阳朔民宿客房露台方案效果与建成实景' },
+]
+
+const yangshuoBuilt = [
+  { src: '/images/yangshuo/built-aerial.jpg', label: '01 / 峰林田园中的度假民宿', alt: '自由鸟阳朔民宿建成航拍', wide: true },
+  { src: '/images/yangshuo/built-suite-view.jpg', label: '02 / 超大开窗借景', alt: '自由鸟阳朔民宿客房借景' },
+  { src: '/images/yangshuo/built-lounge.jpg', label: '03 / 客房休憩界面', alt: '自由鸟阳朔民宿客房休憩空间' },
+  { src: '/images/yangshuo/built-rooftop.jpg', label: '04 / 屋顶观景水景', alt: '自由鸟阳朔民宿屋顶水景', wide: true },
+  { src: '/images/yangshuo/built-pool-lawn.jpg', label: '05 / 户外草坪活动场地', alt: '自由鸟阳朔民宿草坪活动空间' },
+  { src: '/images/yangshuo/built-room-view.jpg', label: '06 / 客房观景面', alt: '自由鸟阳朔民宿客房山景' },
+  { src: '/images/yangshuo/built-terrace.jpg', label: '07 / 私属露台停留', alt: '自由鸟阳朔民宿私属露台' },
+  { src: '/images/yangshuo/built-twin-terrace.jpg', label: '08 / 庭院休憩平台', alt: '自由鸟阳朔民宿庭院休憩平台' },
+]
+
+const yangshuoDrawings = [
+  { src: '/images/yangshuo/drawing-master-layout.jpg', label: '01 / 整体平面布置图', alt: '自由鸟阳朔民宿整体平面布置图' },
+  { src: '/images/yangshuo/drawing-master-floor.jpg', label: '02 / 整体地面铺装图', alt: '自由鸟阳朔民宿整体地面铺装图' },
+  { src: '/images/yangshuo/drawing-master-ceiling.jpg', label: '03 / 整体天花布置图', alt: '自由鸟阳朔民宿整体天花布置图' },
+  { src: '/images/yangshuo/drawing-master-lighting.jpg', label: '04 / 整体灯具布置图', alt: '自由鸟阳朔民宿整体灯具布置图' },
+  { src: '/images/yangshuo/drawing-room-layout.jpg', label: '05 / 客房平面布置图', alt: '自由鸟阳朔民宿客房平面布置图' },
+  { src: '/images/yangshuo/drawing-room-floor.jpg', label: '06 / 客房地面铺装图', alt: '自由鸟阳朔民宿客房地面铺装图' },
+  { src: '/images/yangshuo/drawing-room-lighting.jpg', label: '07 / 客房灯具布置图', alt: '自由鸟阳朔民宿客房灯具布置图' },
+  { src: '/images/yangshuo/drawing-room-electrical.jpg', label: '08 / 客房综合点位图', alt: '自由鸟阳朔民宿客房综合点位图' },
+  { src: '/images/yangshuo/drawing-room-elevations.jpg', label: '09 / 客房立面图', alt: '自由鸟阳朔民宿客房立面图' },
+  { src: '/images/yangshuo/drawing-room-details.jpg', label: '10 / 客房立面节点', alt: '自由鸟阳朔民宿客房立面节点图' },
+]
+
 const caseSequence = {
   guangping: {
     previous: { number: '06', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
@@ -912,14 +1054,26 @@ const caseSequence = {
   },
   rizhao: {
     previous: { number: '04', title: '石兰古村文旅活化改造设计', href: '/?case=shilan' },
-    next: { number: '06', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
+    next: { number: '06', title: '济南轨道交通集团职工活动中心', href: '/?case=jinan' },
+  },
+  jinan: {
+    previous: { number: '05', title: '日照城市规划展厅', href: '/?case=rizhao' },
+    next: { number: '07', title: '山东省供销社幼儿园改造', href: '/?case=kindergarten' },
+  },
+  kindergarten: {
+    previous: { number: '06', title: '济南轨道交通集团职工活动中心', href: '/?case=jinan' },
+    next: { number: '08', title: '自由鸟·阳朔民宿', href: '/?case=yangshuo' },
+  },
+  yangshuo: {
+    previous: { number: '07', title: '山东省供销社幼儿园改造', href: '/?case=kindergarten' },
+    next: { number: '09', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
   },
   sanxun: {
-    previous: { number: '05', title: '日照城市规划展厅', href: '/?case=rizhao' },
-    next: { number: '07', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
+    previous: { number: '08', title: '自由鸟·阳朔民宿', href: '/?case=yangshuo' },
+    next: { number: '10', title: 'LA NIKAR 线下体验店', href: '/?case=lanikar' },
   },
   lanikar: {
-    previous: { number: '06', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
+    previous: { number: '09', title: '三旬火塘民谣小酒馆', href: '/?case=sanxun' },
     next: { number: '01', title: '广平村孝文化长廊', href: '/?case=guangping' },
   },
 }
@@ -1464,7 +1618,7 @@ function HuangtianCasePage() {
             <dl className="case-meta-list">
               <div><dt>项目类型</dt><dd>乡村文化馆 / 古民居活化 / 文旅展览</dd></div>
               <div><dt>项目地点</dt><dd>福建省平和县九峰镇黄田村</dd></div>
-              <div><dt>项目时间</dt><dd>2023 / 已建成</dd></div>
+              <div><dt>项目时间</dt><dd>2024 / 已建成</dd></div>
               <div><dt>改造原则</dt><dd>尊古不复古 / 新旧共生 / 低成本低干预</dd></div>
               <div><dt>工作内容</dt><dd>文旅规划 / 方案 / 模型 / 渲染 / 施工图 / 落地</dd></div>
             </dl>
@@ -1616,7 +1770,7 @@ function ShilanCasePage() {
             <dl className="case-meta-list">
               <div><dt>项目类型</dt><dd>古村保护 / 文旅规划 / 民宿与展厅改造</dd></div>
               <div><dt>项目地点</dt><dd>福建省福鼎市石兰村</dd></div>
-              <div><dt>项目时间</dt><dd>2025 / 在建</dd></div>
+              <div><dt>项目时间</dt><dd>2026 / 在建</dd></div>
               <div><dt>个人角色</dt><dd>项目主导</dd></div>
               <div><dt>工作内容</dt><dd>调研 / 总体规划 / 方案 / 效果图 / 施工图 / 现场配合</dd></div>
             </dl>
@@ -1682,6 +1836,136 @@ function ShilanCasePage() {
   )
 }
 
+function JinanCasePage() {
+  const designPoints = [
+    { number: '01', en: 'INTEGRATION', title: '复合功能整合', text: '将阅读、休闲、健身、交流、展示与小型活动纳入同一空间系统，让有限面积支持更高频、更丰富的职工使用。' },
+    { number: '02', en: 'COMFORT', title: '人性化场景营造', text: '以暖木色、浅米色、蓝灰色和柔和照明建立轻松基调，结合低矮家具与软包界面，降低公共空间的压迫感。' },
+    { number: '03', en: 'FLOW', title: '分区与动线组织', text: '利用书架、柜体、座椅组合及地面材质划分功能边界，在保持视觉通透的同时，让阅读、运动与交流互不干扰。' },
+    { number: '04', en: 'OPERATION', title: '服务企业日常运营', text: '将文化展示、职工服务、设备维护与长期使用频率一并纳入设计判断，形成从功能布局到施工落地的完整表达。' },
+  ]
+
+  return (
+    <main className="case-study-page jinan-case-page" id="case-content">
+      <header className="case-detail-header frame">
+        <a className="brand" href="/#top" aria-label="返回作品集首页">AT<span>®</span></a>
+        <nav aria-label="案例导航">
+          <a href="#jinan-overview">项目概览</a>
+          <a href="#jinan-strategy">设计思路</a>
+          <a href="#jinan-comparison">方案对照</a>
+          <a href="#jinan-built">落地实景</a>
+          <a href="#jinan-drawings">施工图纸</a>
+        </nav>
+        <a className="contact-link" href="/#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a>
+      </header>
+
+      <section className="case-detail-hero" id="case-top">
+        <div className="case-detail-hero-media">
+          <img src="/images/jinan/built-gym-overview.jpg" alt="济南轨道交通集团职工活动中心健身训练区建成实景" />
+          <span>BUILT PUBLIC SPACE / 建成公共空间</span>
+        </div>
+        <div className="case-detail-title frame">
+          <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
+          <p><span>CASE 06</span> / EMPLOYEE ACTIVITY CENTER</p>
+          <h1>济南轨道交通集团<br />职工活动中心</h1>
+          <div className="case-detail-intro">
+            <p>以开放、亲和的空间语言，承接职工的休憩、阅读、健身、交流与社群活动。</p>
+            <span>SHANDONG · JINAN<br />2024 / BUILT</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="case-overview case-detail-section" id="jinan-overview">
+        <div className="section-frame">
+          <div className="case-section-label"><span>01</span><p>PROJECT OVERVIEW / 项目概览</p></div>
+          <div className="case-overview-grid">
+            <div className="case-overview-copy">
+              <h2>把单一室内空间重新组织为可休憩、可交流、可运动的职工生活场景。</h2>
+              <p>济南轨道交通集团职工活动中心面向企业职工日常使用，以休憩、阅读交流、健身放松、小型活动与社群互动为核心需求，整合阅读区、休闲交流区、健身活动区、展示等候区与多功能活动区。</p>
+              <p>设计以明亮、开放、亲和为基调；模块化书架、灵活座椅、可移动家具、软包墙面与分区地面材料共同建立清晰边界，同时保留整体空间的通透感与使用弹性。</p>
+            </div>
+            <dl className="case-meta-list">
+              <div><dt>项目类型</dt><dd>企业公共空间 / 职工活动中心</dd></div>
+              <div><dt>项目地点</dt><dd>山东省济南市</dd></div>
+              <div><dt>项目时间</dt><dd>2024 / 已建成</dd></div>
+              <div><dt>个人角色</dt><dd>核心设计参与</dd></div>
+              <div><dt>工作内容</dt><dd>建模 / 部分施工图绘制 / 落地配合</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section className="tourism-strategy case-detail-section" id="jinan-strategy">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>02</span><p>DESIGN STRATEGY / 核心设计能力</p></div>
+          <div className="built-gallery-heading"><h2>从功能整合到日常体验，让公共空间真正服务于人。</h2><p>设计不以单一造型为主导，而以职工高频使用、分区独立、空间开放和运营维护之间的平衡为判断依据。</p></div>
+          <div className="tourism-strategy-grid">{designPoints.map((point) => <article key={point.number}><div><span>{point.number}</span><small>{point.en}</small></div><h3>{point.title}</h3><p>{point.text}</p></article>)}</div>
+        </div>
+      </section>
+
+      <section className="jinan-comparison case-detail-section" id="jinan-comparison">
+        <div className="section-frame">
+          <div className="case-section-label"><span>03</span><p>CONCEPT TO BUILT / 方案与落地对照</p></div>
+          <div className="drawing-heading"><h2>从效果表达回到真实使用，逐一核验空间意图的落地。</h2><p>精选方案文件中的效果视图，与对应区域的建成照片并置呈现，集中展示阅读、活动、运动、展示等场景由设计推演至实际使用的转化。</p></div>
+          <div className="jinan-comparison-grid">{jinanComparisons.map((item) => <figure key={item.label}><div><img src={item.concept} alt={`${item.alt}方案效果`} loading="lazy" /><img src={item.built} alt={`${item.alt}建成实景`} loading="lazy" /></div><figcaption>{item.label}<span>CONCEPT / BUILT</span></figcaption></figure>)}</div>
+        </div>
+      </section>
+
+      <section className="built-gallery case-detail-section" id="jinan-built">
+        <div className="section-frame">
+          <div className="case-section-label light"><span>04</span><p>BUILT WORK / 落地实景</p></div>
+          <div className="built-gallery-heading"><h2>从入口识别到日常活动，记录空间在真实使用中的状态。</h2><p>此处仅保留启用、运动等使用场景，以及未纳入方案对照的建成视图；其余空间均已在前文以方案与落地对照呈现。</p></div>
+          <div className="built-photo-grid">{jinanBuilt.map((image) => <figure className={image.wide ? 'wide' : ''} key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div>
+        </div>
+      </section>
+
+      <section className="technical-drawings case-detail-section" id="jinan-drawings">
+        <div className="section-frame">
+          <div className="case-section-label"><span>05</span><p>TECHNICAL DELIVERY / 施工图纸</p></div>
+          <div className="drawing-heading"><h2>按平面、立面、节点的逻辑，把公共空间落实为可施工的技术表达。</h2><p>图纸依次呈现天花与平面布置、机电点位、立面索引与空间立面，以及墙面、柜体和顶面构造节点，体现本人从建模到部分施工图深化的参与过程。</p></div>
+          <div className="drawing-grid">{jinanDrawings.map((drawing) => <figure key={drawing.src}><img src={drawing.src} alt={drawing.alt} loading="lazy" /><figcaption>{drawing.label}</figcaption></figure>)}</div>
+          <CaseNavigation current="jinan" />
+        </div>
+      </section>
+    </main>
+  )
+}
+
+function KindergartenCasePage() {
+  const designPoints = [
+    { number: '01', en: 'RENOVATION', title: '存量校园品质升级', text: '在不改动主体墙体的前提下，以轻介入重塑门厅、走廊和楼梯的空间气质，让原有校园获得更完整、更温暖的公共界面。' },
+    { number: '02', en: 'CHILD-SAFE', title: '儿童友好与安全细节', text: '围绕幼儿尺度落实防撞护墙、防滑地坪、圆角构造、安全扶手与柔和无眩光照明，在安全规范中保留童趣与探索感。' },
+    { number: '03', en: 'JOURNEY', title: '动线成为成长场景', text: '门厅迎宾、走廊展示与楼梯互动墙面被串联为连续体验，让原本的交通空间成为可以停留、玩耍和探索的美育课堂。' },
+    { number: '04', en: 'IDENTITY', title: '导视与文化墙面一体化', text: '以卡通指引、主题墙板和儿童作品展示建立可阅读的园区视觉环境，兼顾导向、班级识别与日常成果展示。' },
+  ]
+  return <main className="case-study-page kindergarten-case-page" id="case-content">
+    <header className="case-detail-header frame"><a className="brand" href="/#top" aria-label="返回作品集首页">AT<span>®</span></a><nav aria-label="案例导航"><a href="#kindergarten-overview">项目概览</a><a href="#kindergarten-strategy">设计思路</a><a href="#kindergarten-comparison">方案对照</a><a href="#kindergarten-built">落地实景</a><a href="#kindergarten-drawings">施工图纸</a></nav><a className="contact-link" href="/#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a></header>
+    <section className="case-detail-hero" id="case-top"><div className="case-detail-hero-media"><img src="/images/kindergarten/built-lobby.jpg" alt="山东省供销社幼儿园门厅建成实景" /><span>BUILT EDUCATION SPACE / 建成教育空间</span></div><div className="case-detail-title frame"><a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a><p><span>CASE 07</span> / KINDERGARTEN RENOVATION</p><h1>山东省供销社<br />幼儿园改造</h1><div className="case-detail-intro"><p>以温润、安全、可探索的空间语言，把校园公共动线更新为陪伴儿童成长的日常场景。</p><span>SHANDONG · JINAN<br />2024 / BUILT</span></div></div></section>
+    <section className="case-overview case-detail-section" id="kindergarten-overview"><div className="section-frame"><div className="case-section-label"><span>01</span><p>PROJECT OVERVIEW / 项目概览</p></div><div className="case-overview-grid"><div className="case-overview-copy"><h2>让门厅、走廊和楼梯，不再只是通行空间。</h2><p>本次改造聚焦幼儿园门厅、走廊、楼梯等公共动线空间，在原有建筑基底上完成适幼化更新。原木与柔和白色奠定温暖基调，弧形造型、圆角构件、童趣开窗和互动展示墙面共同削弱空间的硬质感。</p><p>设计将墙面转化为儿童作品展示载体，配合卡通导视系统，让交通廊道成为可以玩耍、展示、探索的成长场景，并通过安全细节保障高频日常使用。</p></div><dl className="case-meta-list"><div><dt>项目类型</dt><dd>幼儿园更新 / 学前教育公共空间</dd></div><div><dt>项目地点</dt><dd>山东省济南市</dd></div><div><dt>项目时间</dt><dd>2024 / 已建成</dd></div><div><dt>个人角色</dt><dd>核心设计参与</dd></div><div><dt>工作内容</dt><dd>建模 / 部分施工图绘制 / 落地配合</dd></div></dl></div></div></section>
+    <section className="tourism-strategy case-detail-section" id="kindergarten-strategy"><div className="section-frame"><div className="case-section-label light"><span>02</span><p>DESIGN STRATEGY / 核心设计能力</p></div><div className="built-gallery-heading"><h2>以安全为底线，以童趣激发儿童的探索与表达。</h2><p>从存量结构条件、儿童尺度到园区识别系统，设计将空间安全、行为体验与美育展示统一为一套可落地的校园更新逻辑。</p></div><div className="tourism-strategy-grid">{designPoints.map((point) => <article key={point.number}><div><span>{point.number}</span><small>{point.en}</small></div><h3>{point.title}</h3><p>{point.text}</p></article>)}</div></div></section>
+    <section className="jinan-comparison kindergarten-comparison case-detail-section" id="kindergarten-comparison"><div className="section-frame"><div className="case-section-label"><span>03</span><p>CONCEPT TO BUILT / 方案与落地对照</p></div><div className="drawing-heading"><h2>将效果图与建成空间并置，核验适幼化设计的真实落地。</h2><p>从门厅、走廊到楼梯互动界面，方案中的弧形语言、原木材质、儿童尺度与展示逻辑均在建成空间中得到延续。</p></div><div className="jinan-comparison-grid">{kindergartenComparisons.map((item) => <figure key={item.label}><div><img src={item.concept} alt={`${item.alt}方案效果`} loading="lazy" /><img src={item.built} alt={`${item.alt}建成实景`} loading="lazy" /></div><figcaption>{item.label}<span>CONCEPT / BUILT</span></figcaption></figure>)}</div></div></section>
+    <section className="built-gallery case-detail-section" id="kindergarten-built"><div className="section-frame"><div className="case-section-label light"><span>04</span><p>BUILT WORK / 落地实景</p></div><div className="built-gallery-heading"><h2>从园区形象到班级与生活空间，呈现完整的儿童友好校园环境。</h2><p>保留未在方案对照中出现的园区外观、导视形象、主题班级、卫生间及阅读空间，补充呈现改造后的校园日常。</p></div><div className="built-photo-grid">{kindergartenBuilt.map((image) => <figure className={image.wide ? 'wide' : ''} key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div></div></section>
+    <section className="technical-drawings case-detail-section" id="kindergarten-drawings"><div className="section-frame"><div className="case-section-label"><span>05</span><p>TECHNICAL DELIVERY / 施工图纸</p></div><div className="drawing-heading"><h2>通过平面、立面与节点，落实安全构造与童趣界面。</h2><p>图纸依次呈现平面布置、灯光与机电点位、门厅和走廊立面，以及卫生间、顶面和墙面节点，体现从建模到部分施工图深化的参与过程。</p></div><div className="drawing-grid">{kindergartenDrawings.map((drawing) => <figure key={drawing.src}><img src={drawing.src} alt={drawing.alt} loading="lazy" /><figcaption>{drawing.label}</figcaption></figure>)}</div><CaseNavigation current="kindergarten" /></div></section>
+  </main>
+}
+
+function YangshuoCasePage() {
+  const designPoints = [
+    { number: '01', en: 'RESORT PRODUCT', title: '文旅度假商业空间策划', text: '从文旅消费产品的逻辑出发，统筹客房、公区、草坪活动场地与打卡景观面，在居住舒适度、社交场景与商业竞争力之间取得平衡。' },
+    { number: '02', en: 'FRAMED LANDSCAPE', title: '景观借景与室内外一体化', text: '通过超大开窗、私属露台、庭院与水景完成框景、对景与延景，让室内、户外平台和远处峰林成为连续的观景动线。' },
+    { number: '03', en: 'ROOM & COURTYARD', title: '度假客房与庭院精细化营造', text: '以原木、竹艺、素色墙面与微景观建立低饱和自然基底，细化客房尺度、私属露台和小院停留体验，营造安静而松弛的度假质感。' },
+    { number: '04', en: 'OPERATION', title: '文旅业态综合把控', text: '完整覆盖客房、屋顶公区、无边水景与户外草坪活动区，以从客房细节到整体场地的设计思维回应酒店民宿的长期运营。' },
+  ]
+  return <main className="case-study-page yangshuo-case-page" id="case-content">
+    <header className="case-detail-header frame"><a className="brand" href="/#top" aria-label="返回作品集首页">AT<span>®</span></a><nav aria-label="案例导航"><a href="#yangshuo-overview">项目概览</a><a href="#yangshuo-strategy">设计策略</a><a href="#yangshuo-comparison">方案对照</a><a href="#yangshuo-built">落地实景</a><a href="#yangshuo-drawings">施工图纸</a></nav><a className="contact-link" href="/#contact">联系我 <ArrowUpRight size={18} strokeWidth={2.5} /></a></header>
+    <section className="case-detail-hero" id="case-top"><div className="case-detail-hero-media"><img src="/images/yangshuo/built-aerial.jpg" alt="自由鸟阳朔民宿建成航拍" /><span>BUILT & OPERATING / 建成运营</span></div><div className="case-detail-title frame"><a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a><p><span>CASE 08</span> / MOUNTAIN RESORT HOMESTAY</p><h1>自由鸟·<br />阳朔民宿</h1><div className="case-detail-intro"><p>让客房、公区与户外场地共同面向峰林田园展开，将山水体验转化为可停留、可传播、可运营的度假产品。</p><span>GUANGXI · YANGSHUO<br />BUILT / OPERATING</span></div></div></section>
+    <section className="case-overview case-detail-section" id="yangshuo-overview"><div className="section-frame"><div className="case-section-label"><span>01</span><p>PROJECT OVERVIEW / 项目概览</p></div><div className="case-overview-grid"><div className="case-overview-copy"><h2>借景山水，让度假体验从客房延伸到整片峰林田园。</h2><p>项目选址于阳朔山水田园之间，定位为集客房、公区休闲、屋顶观景庭院与户外草坪活动空间于一体的沉浸式度假民宿。设计以“借景山水”为核心策略，打破建筑室内与自然风景的边界，将喀斯特峰林引入日常停留与社交体验。</p><p>温润原木、素色墙面与竹艺隔断共同构成克制质朴的现代自然风格；无边水景、观景平台和草坪活动场地则强化打卡与传播属性，在度假氛围、民宿运营实用性与商业溢价之间建立平衡。</p></div><dl className="case-meta-list"><div><dt>项目类型</dt><dd>山水文旅度假民宿</dd></div><div><dt>项目地点</dt><dd>广西壮族自治区阳朔县</dd></div><div><dt>项目状态</dt><dd>已建成 / 运营中</dd></div><div><dt>个人角色</dt><dd>核心设计参与</dd></div><div><dt>工作内容</dt><dd>前期调研 / 运营探讨 / 建模</dd></div></dl></div></div></section>
+    <section className="tourism-strategy case-detail-section" id="yangshuo-strategy"><div className="section-frame"><div className="case-section-label light"><span>02</span><p>DESIGN STRATEGY / 核心设计能力</p></div><div className="built-gallery-heading"><h2>以自然景观为主角，将空间体验与文旅运营组织为一个整体。</h2><p>从借景视线、客房尺度到公共活动场地，设计同步回应度假氛围、拍摄传播与长期经营的真实需求。</p></div><div className="tourism-strategy-grid">{designPoints.map((point) => <article key={point.number}><div><span>{point.number}</span><small>{point.en}</small></div><h3>{point.title}</h3><p>{point.text}</p></article>)}</div></div></section>
+    <section className="jinan-comparison yangshuo-comparison case-detail-section" id="yangshuo-comparison"><div className="section-frame"><div className="case-section-label"><span>03</span><p>CONCEPT TO BUILT / 方案与落地对照</p></div><div className="drawing-heading"><h2>从客房到庭院，检验自然材质与度假场景的落地质感。</h2><p>将方案效果与建成实景并置，呈现客房、露台及庭院如何通过竹艺、原木、景观与开窗关系形成安静松弛的度假体验。</p></div><div className="jinan-comparison-grid">{yangshuoComparisons.map((item) => <figure key={item.label}><div><img src={item.concept} alt={`${item.alt}方案效果`} loading="lazy" /><img src={item.built} alt={`${item.alt}建成实景`} loading="lazy" /></div><figcaption>{item.label}<span>CONCEPT / BUILT</span></figcaption></figure>)}</div></div></section>
+    <section className="built-gallery case-detail-section" id="yangshuo-built"><div className="section-frame"><div className="case-section-label light"><span>04</span><p>BUILT WORK / 落地实景</p></div><div className="built-gallery-heading"><h2>在峰林田园中，完成从客房尺度到屋顶与草坪的完整度假场景。</h2><p>实景补充呈现未在对照区重复使用的山水客房、屋顶水景、户外草坪及私属露台，完整记录项目的多层次停留体验。</p></div><div className="built-photo-grid">{yangshuoBuilt.map((image) => <figure className={image.wide ? 'wide' : ''} key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /><figcaption>{image.label}</figcaption></figure>)}</div></div></section>
+    <section className="technical-drawings case-detail-section" id="yangshuo-drawings"><div className="section-frame"><div className="case-section-label"><span>05</span><p>TECHNICAL DELIVERY / 施工图纸</p></div><div className="drawing-heading"><h2>按整体平面、客房平面、立面图的顺序，呈现空间深化过程。</h2><p>图纸依次展示整体功能与铺装、天花灯光系统，再进入客房平面与点位深化，最后呈现客房立面及节点，体现从方案建模到施工落地的协作过程。</p></div><div className="drawing-grid">{yangshuoDrawings.map((drawing) => <figure key={drawing.src}><img src={drawing.src} alt={drawing.alt} loading="lazy" /><figcaption>{drawing.label}</figcaption></figure>)}</div><CaseNavigation current="yangshuo" /></div></section>
+  </main>
+}
+
 function SanxunCasePage() {
   const brandPoints = [
     { number: '01', en: 'IDENTITY', title: '品牌识别进入空间', text: '将火塘、民谣、木质肌理和暖色灯光转化为稳定的空间语言，使门店从外立面到内部体验保持一致识别。' },
@@ -1711,7 +1995,7 @@ function SanxunCasePage() {
         </div>
         <div className="case-detail-title frame">
           <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
-          <p><span>CASE 05</span> / BRAND COMMERCIAL SPACE</p>
+          <p><span>CASE 09</span> / BRAND COMMERCIAL SPACE</p>
           <h1>三旬火塘<br />民谣小酒馆</h1>
           <div className="case-detail-intro">
             <p>让品牌故事、现场演艺与餐饮运营共同发生，把空间设计转化为可感知、可消费、可复制的连锁门店体验。</p>
@@ -1839,7 +2123,7 @@ function LanikarCasePage() {
         </div>
         <div className="case-detail-title frame">
           <a href="/#projects"><ArrowLeft size={20} /> 返回案例目录</a>
-          <p><span>CASE 06</span> / BRAND RETAIL EXPERIENCE</p>
+          <p><span>CASE 10</span> / BRAND RETAIL EXPERIENCE</p>
           <h1>LA NIKAR<br />线下体验店</h1>
           <div className="case-detail-intro">
             <p>把零售、社交与直播内容生产组织在同一空间中，让线下门店成为品牌体验、运营转化与持续传播的共同载体。</p>
@@ -2482,6 +2766,16 @@ function App() {
         description: '公共展示类空间案例：围绕环形中庭、城市沙盘与巨型大屏组织观展动线、政务接待与展陈界面，呈现方案效果、落地实景与施工图纸。',
         image: '/images/rizhao/IMG_20240228_160422.webp',
       },
+      jinan: {
+        title: '济南轨道交通集团职工活动中心｜安桐空间设计作品集',
+        description: '面向企业职工的复合型公共活动空间案例：呈现阅读、休闲、健身、展示与多功能活动场景的设计思路、效果与建成对照及施工图纸。',
+        image: '/images/jinan/built-gym-overview.jpg',
+      },
+      kindergarten: {
+        title: '山东省供销社幼儿园改造｜安桐空间设计作品集',
+        description: '幼儿园公共空间更新案例：通过适幼化安全构造、原木与圆角语言、互动展示和童趣导视，将门厅、走廊与楼梯转化为儿童成长场景。',
+        image: '/images/kindergarten/built-lobby.jpg',
+      },
       sanxun: {
         title: '三旬火塘民谣小酒馆｜安桐空间设计作品集',
         description: '面向连锁品牌的商业空间设计：以火塘舞台、民谣演艺、吧台与客席动线，协同品牌识别、消费体验与门店运营。',
@@ -2540,6 +2834,18 @@ function App() {
     return <RizhaoCasePage />
   }
 
+  if (activeCase === 'jinan') {
+    return <JinanCasePage />
+  }
+
+  if (activeCase === 'kindergarten') {
+    return <KindergartenCasePage />
+  }
+
+  if (activeCase === 'yangshuo') {
+    return <YangshuoCasePage />
+  }
+
   if (activeCase === 'sanxun') {
     return <SanxunCasePage />
   }
@@ -2580,7 +2886,7 @@ function App() {
             <div className="hero-bottom hero-bottom-cases">
               <p>我从在地文化与真实使用出发，把复杂问题转译为空间策略、体验场景与可落地的设计成果。</p>
               <div className="hero-case-count" aria-label="作品概览">
-                <strong>17</strong><span>PROJECT INDEX<br />07 FEATURED CASES</span>
+                <strong>20</strong><span>PROJECT INDEX<br />10 FEATURED CASES</span>
               </div>
               <a href="#projects" className="scroll-cue" aria-label="查看精选案例"><ArrowDownRight size={30} /></a>
             </div>
@@ -2724,7 +3030,7 @@ function App() {
             <div className="secondary-case-row">
               <SecondaryCaseShowcase
                 id="tulanduo"
-                number="08"
+                number="11"
                 label="S.I. DESIGN"
                 title="图兰朵 S.I.终端系统"
                 summary="以统一的门店界面、陈列秩序与模块化道具，建立可识别、可落地、可复制的品牌终端语言。"
@@ -2734,7 +3040,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="fengyu"
-                number="09"
+                number="12"
                 label="RURAL RENEWAL"
                 title="丰余村环境提升设计"
                 summary="以“微更新、轻介入、重在地”为核心，围绕建筑立面修缮、公共灰空间重构与景观长廊建设，让传统村落的日常交往重新发生。"
@@ -2744,7 +3050,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="like"
-                number="10"
+                number="13"
                 label="RURAL HOMESTAY"
                 title="李窠村乡村民宿改造"
                 summary="在保留旧房尺度与乡村肌理的前提下，二层木构增建释放客房容量，并以外廊串联到达、停留与住宿，清晰分离客人与后勤流线，使小体量改造兼具舒适体验与运营效率。"
@@ -2754,7 +3060,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="xiuqiao"
-                number="11"
+                number="14"
                 label="RURAL ACTIVATION"
                 title="秀峤村民宿与文旅活动中心"
                 summary="以穿斗木构为骨、滨水景观为境，活化老宅为集旅居、康养与公共活动于一体的复合空间。设计完整保留并修复原有木构梁柱、夯土墙面与青瓦坡顶，通过空间重组与功能植入，让旧屋成为可栖居、可共享的乡野活力载体。"
@@ -2764,7 +3070,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="sishu"
-                number="12"
+                number="15"
                 label="CULTURAL SPACE"
                 title="私塾馆文化空间改造"
                 summary="以在地文化和教育空间的重塑为目标，通过分层夯土工艺的再演绎，将不同色阶的夯土肌理转化为空间叙事；竹木、青砖与旧屋架共同延续古建记忆，并为文化展示、小型沙龙与乡村公共活动提供舒适场所。"
@@ -2774,7 +3080,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="robinhood"
-                number="13"
+                number="16"
                 label="RETAIL INTERIOR"
                 title="罗宾汉连锁服装门店"
                 summary="围绕连锁服装门店的品牌识别、陈列效率与顾客停留展开空间设计：以简洁的灰白基调、品牌绿和山形光带建立统一视觉，并通过入口橱窗、收银服务、展示中岛与试衣动线形成清晰、可复制的零售体验。"
@@ -2784,7 +3090,7 @@ function App() {
 
               <SecondaryCaseShowcase
                 id="fanhuayin"
-                number="14"
+                number="17"
                 label="JEWELLERY RETAIL"
                 title="繁花吟珠宝门店"
                 summary="围绕连锁珠宝门店的陈列秩序与体验氛围展开：以深色木饰面、柔和米色基底和弧形界面组织空间，串联首饰展示、服饰搭配、顾客洽谈与休憩场景；中岛展柜与墙面陈列共同建立清晰的浏览节奏与品牌记忆。"
@@ -2793,7 +3099,7 @@ function App() {
               />
               <SecondaryCaseShowcase
                 id="nailsalon"
-                number="15"
+                number="18"
                 label="INDEPENDENT STORE"
                 title="美甲店·甜品复合空间"
                 summary="以独立门店的风格化体验为核心，将等候休闲、美甲服务、产品展示与后勤功能沿清晰动线组织；以柔和中性色、木质家具与弧形界面建立轻松而有辨识度的复合消费场景。"
@@ -2802,7 +3108,7 @@ function App() {
               />
               <SecondaryCaseShowcase
                 id="live-fashion"
-                number="16"
+                number="19"
                 label="LIVE COMMERCE RETAIL"
                 title="服装品牌直播展示空间"
                 summary="围绕服装品牌的直播与展示需求，将镜头取景、产品陈列、主播动线与观众体验统筹组织；以温润材质、层叠界面与可切换的展示背景，建立适配线上视觉传播和线下到店体验的复合空间。"
@@ -2811,7 +3117,7 @@ function App() {
               />
               <SecondaryCaseShowcase
                 id="disney-live"
-                number="17"
+                number="20"
                 label="LIVE COMMERCE HOME"
                 title="迪士尼家纺直播展示空间"
                 summary="以家纺产品的生活方式表达为主线，将睡眠场景、直播背景、产品展示与设备支持整合在连续平面中；以柔和色彩和主题化画面建立更具记忆点的直播视觉，并兼顾品牌展示与实景体验。"

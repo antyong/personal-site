@@ -447,8 +447,8 @@ h1 span:last-child { margin-left: 10vw; }
 .case-overview-copy h2, .built-gallery-heading h2, .drawing-heading h2 { font-size: clamp(42px, 5.4vw, 92px); line-height: .98; letter-spacing: -.067em; }
 .case-overview-copy > p { max-width: 900px; margin-top: 34px; font-size: clamp(15px, 1.2vw, 19px); line-height: 1.85; }
 .case-overview-copy > p + p { color: #555; }
-.case-meta-list { margin: 0; border-right: 3px solid black; }
-.case-meta-list div { padding: 26px 24px; border-bottom: 3px solid black; }
+.case-meta-list { display: grid; grid-template-rows: repeat(5, minmax(0, 1fr)); margin: 0; border-right: 3px solid black; }
+.case-meta-list div { display: flex; flex-direction: column; justify-content: center; padding: 26px 24px; border-bottom: 3px solid black; }
 .case-meta-list dt { color: var(--red); font-size: 9px; font-weight: 900; letter-spacing: .14em; }
 .case-meta-list dd { margin: 12px 0 0; font-size: 13px; font-weight: 700; line-height: 1.55; }
 .concept-built-grid { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 110px; border-top: 3px solid black; border-left: 3px solid black; }
@@ -542,6 +542,16 @@ h1 span:last-child { margin-left: 10vw; }
 .huangtian-planning-points span { color: var(--red); font-size: 11px; font-weight: 900; }
 .huangtian-planning-points h3 { margin: auto 0 16px; font-size: clamp(28px, 2.6vw, 44px); line-height: 1; letter-spacing: -.05em; }
 .huangtian-planning-points p { color: #555; font-size: 13px; line-height: 1.75; }
+
+/* Sanxun brand commercial case */
+.jinan-case-page .case-detail-hero-media img { object-position: center 52%; }
+.jinan-comparison { background: var(--paper); }
+.jinan-comparison-grid { display: grid; grid-template-columns: 1fr; border-top: 3px solid black; border-left: 3px solid black; }
+.jinan-comparison-grid figure { border-right: 3px solid black; border-bottom: 3px solid black; background: white; }
+.jinan-comparison-grid figure > div { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: black; }
+.jinan-comparison-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #eee; }
+.jinan-comparison-grid figcaption { display: flex; justify-content: space-between; gap: 16px; padding: 16px 18px; font-size: 10px; font-weight: 900; letter-spacing: .11em; }
+.jinan-comparison-grid figcaption span { color: var(--red); white-space: nowrap; }
 
 /* Sanxun brand commercial case */
 .sanxun-case-page .case-detail-header nav { gap: clamp(18px, 2vw, 34px); }
@@ -777,6 +787,7 @@ h1 span:last-child { margin-left: 10vw; }
   .case-detail-hero-media > span { display: none; }
   .case-detail-section { padding: 76px 0; }
   .concept-built-grid { margin-top: 70px; }
+  .jinan-comparison-grid figcaption { align-items: flex-start; flex-direction: column; gap: 7px; }
   .built-gallery-heading, .drawing-heading { gap: 28px; padding: 46px 0 60px; }
   .case-sequence-nav { grid-template-columns: 1fr; margin-top: 74px; }
   .case-sequence-nav .case-sequence-home { grid-column: auto; grid-row: auto; }
